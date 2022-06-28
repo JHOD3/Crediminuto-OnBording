@@ -1,0 +1,33 @@
+doctype html
+html(lang="es")
+    block variables
+    include ../components/_head
+    body
+        .d-block.d-md-flex.min-vh-100
+            .col-md-7.order-1.order-md-2.card-radius#top-card
+                .col-md-11.mx-auto.col-11.mx-auto.px-md-4
+                    nav.navbar.navbar-light.border-bottom
+                        .container-fluid.d-none.d-m-block
+                            if page_datos.back === true
+                                a(href="/").navbar-brand.text-primary.font-18-md
+                                    i.fa-solid.fa-angle-left
+                                    span.p-2 Volver
+                        if page_datos.back === true
+                            .container-fluid.justify-content-between.d-flex.py-md-3.py-2
+                                a(href="/").navbar-brand.text-primary.font-25-px.d-md-none
+                                        i.fa-solid.fa-angle-left
+                                a(href="/").navbar-brand
+                                    img(src="image/logo-crediminuto.svg", alt="").py-md-2.logo
+                                div
+                        else            
+                            .container-fluid.justify-content-center.justify-content-md-start.d-flex.py-md-3.py-2
+                                a(href="/").navbar-brand
+                                    img(src="image/logo-crediminuto.svg", alt="").py-md-2.logo
+                    block content_right                
+            .col-md-5.order-2.order-md-1#down-card.card-radius-down
+                .bg-primary.h-100
+                    a(href="").position-absolute.text-primary.arrow-control#arrow
+                        img(src="", alt="", width="60").arrow-up
+                    block content_left
+        include ../components/_footer
+        include ../components/_script

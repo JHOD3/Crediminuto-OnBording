@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.359" height="16.387" viewBox="0 0 21.359 16.387">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_22" data-name="Rectángulo 22" width="21.359" height="16.387" fill="#59595b"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_603" data-name="Grupo 603" transform="translate(0 0)">
+    <g id="Grupo_8" data-name="Grupo 8" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="Trazado_64" data-name="Trazado 64" d="M11.086,12.022a1.9,1.9,0,0,1,0,2.638L9.614,16.132a1.9,1.9,0,0,1-2.638,0L.533,9.637A1.9,1.9,0,0,1,.533,7L2,5.529a1.9,1.9,0,0,1,2.638,0Z" transform="translate(0 -0.277)" fill="#59595b"/>
+      <path id="Trazado_65" data-name="Trazado 65" d="M17.012.533a1.9,1.9,0,0,1,2.638,0L21.122,2a1.9,1.9,0,0,1,0,2.638L9.96,15.753a1.9,1.9,0,0,1-2.638,0L5.851,14.281a1.9,1.9,0,0,1,0-2.638Z" transform="translate(-0.295 0)" fill="#59595b"/>
+    </g>
+  </g>
+</svg>
