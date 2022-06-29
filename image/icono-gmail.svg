@@ -1,0 +1,14 @@
+<svg id="Grupo_209" data-name="Grupo 209" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.854" height="24.64" viewBox="0 0 32.854 24.64">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_82" data-name="Rectángulo 82" width="32.854" height="24.64" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_68" data-name="Grupo 68" clip-path="url(#clip-path)">
+    <path id="Trazado_411" data-name="Trazado 411" d="M2.24,59.246H7.467V46.552L0,40.952V57.006a2.24,2.24,0,0,0,2.24,2.24" transform="translate(0 -34.606)" fill="#4285f4"/>
+    <path id="Trazado_412" data-name="Trazado 412" d="M163.825,59.246h5.227a2.24,2.24,0,0,0,2.24-2.24V40.952l-7.467,5.6Z" transform="translate(-138.438 -34.606)" fill="#34a853"/>
+    <path id="Trazado_413" data-name="Trazado 413" d="M163.825,2.241v9.706l7.467-5.6V3.361A3.36,3.36,0,0,0,165.916.673Z" transform="translate(-138.438 -0.001)" fill="#fbbc04"/>
+    <path id="Trazado_414" data-name="Trazado 414" d="M48.186,24.162V14.457l8.96,6.72,8.96-6.72v9.706l-8.96,6.72Z" transform="translate(-40.719 -12.216)" fill="#ea4335"/>
+    <path id="Trazado_415" data-name="Trazado 415" d="M0,3.36V6.346l7.467,5.6V2.24L5.376.672A3.36,3.36,0,0,0,0,3.36" transform="translate(0 0.001)" fill="#c5221f"/>
+  </g>
+</svg>

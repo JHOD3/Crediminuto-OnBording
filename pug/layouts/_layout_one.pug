@@ -7,22 +7,40 @@ html(lang="es")
             .col-md-7.order-1.order-md-2.card-radius#top-card
                 .col-md-11.mx-auto.col-11.mx-auto.px-md-4
                     nav.navbar.navbar-light.border-bottom
-                        .container-fluid.d-none.d-m-block
+                        .container-fluid.d-none.d-md-block
                             if page_datos.back === true
                                 a(href="/").navbar-brand.text-primary.font-18-md
                                     i.fa-solid.fa-angle-left
                                     span.p-2 Volver
                         if page_datos.back === true
-                            .container-fluid.justify-content-between.d-flex.py-md-3.py-2
+                            .container-fluid.justify-content-between.d-flex.pb-md-3.pt-md-0.py-2
                                 a(href="/").navbar-brand.text-primary.font-25-px.d-md-none
                                         i.fa-solid.fa-angle-left
                                 a(href="/").navbar-brand
                                     img(src="image/logo-crediminuto.svg", alt="").py-md-2.logo
-                                div
-                        else            
+                                div.d-md-flex.d-block
+                                    if page_datos.cliente === true
+                                        div.d-md-flex.d-none
+                                            img(src="image/icono-user.svg")
+                                            div.ms-3(style="line-height:20px")
+                                                div.font-14-md CLIENTE
+                                                div.font-25-md.text-primary Juan Pérez Moreno
+                        else
                             .container-fluid.justify-content-center.justify-content-md-start.d-flex.py-md-3.py-2
                                 a(href="/").navbar-brand
                                     img(src="image/logo-crediminuto.svg", alt="").py-md-2.logo
+                    if page_datos.cliente === true
+                        .d-md-none.d-flex.border-bottom.mt-3.pb-3
+                            img(src="image/icono-user.svg").img-w-6-vh
+                            div.ms-3(style="line-height:18px")
+                                div.font-10-sm CLIENTE
+                                div.font-15-sm.text-primary #[b Juan Pérez Moreno]
+                    if page_datos.phone === true
+                        .d-flex.mt-3.pb-3.align-items-center.pt-md-5
+                            img(src="image/icono-phone-2.svg").img-w-5-vh.img-w-6-vh-xs
+                            div.ms-3.align-items-center.lh-1
+                                div.font-11-sm.font-14-md EQUIPO ADQUIRIDO
+                                div.font-20-sm.font-25-md.text-primary.mt-2 #[b Xiaomi Redmi 9A 128GB]
                     block content_right                
             .col-md-5.order-2.order-md-1#down-card.card-radius-down
                 .bg-primary.h-100

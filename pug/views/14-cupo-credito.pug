@@ -1,0 +1,32 @@
+extends ../layouts/_layout_one
+block variables
+    - var page_datos = { title: 'crediminuto || Cuenta correo', back: true, cliente:true}
+block content_left
+    div
+        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
+            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
+                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
+                | Desliza para consejos y recomendaciones
+        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
+            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
+                | Más CUPO CRÉDITO, #[br]
+                | más beneficios para todos.
+            img(src="image/elemento-10.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-5.mt-5
+block content_right
+    form(id="form-validate-code").pt-69-px-md.pt-40-px.pb-64-px
+        .text-primary.aling-items-center.d-flex
+            i.fa-solid.fa-circle-check.font-35-md.font-25-px.mt-md-1
+            span.pl-1-vh.font-28-md.font-18-px.fw-normal 05. Cupo Crédito
+        .mt-md-5.font-24-md.font-20-px.mt-40-px
+            div.text-primary.fw-normal
+        .font-24-md.font-15-px  Por favor indicar el monto del CUPO CRÉDITO: #[br.d-md-block.d-none]
+            | El cliente puede disponer del monto desde #[span.text-primary $XXX.XXX]  hasta #[span.text-primary $XXX.XXX]
+        div.mt-4.col-md-8.pt-10-px-md.pt-10-px
+            label.form-label.ps-2.ms-1 INGRESA EL CÓDIGO
+            input(type="number", name="codigo").form-control
+        .text-primary.aling-items-center.d-flex.mt-70-px-md.mt-50-px-xs.align-items-center.pe-5.col-md-9
+            img(src="image/icono-phone.svg").img-w-5-vh-xs.img-w-5-vh-md
+            .pl-2-vh
+                .font-25-md.font-16-px.fw-normal Se enviará un #[b código a la APP de Crediminuto] #[br.d-md-block.d-none] para terminar de validar el crédito.
+        .mt-80-px-md.mt-60-px.justify-content-md-between.justify-content-center.d-flex.d-md-block
+            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs Continuar

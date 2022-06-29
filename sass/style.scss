@@ -43,7 +43,103 @@ body{
     background: white;
     border-radius: 20px;
 }
+.input-code{
+    width: 75px !important;
+}
+.btn-check:checked + .btn-outline-light, .btn-check:active + .btn-outline-light, .btn-outline-light:active, .btn-outline-light.active, .btn-outline-light.dropdown-toggle.show{
+    background-color: rgba(224, 4, 32, 0.34);
+    border-color: #E00520;
+    color:white;
+}
+.btn-outline-light {
+    color: #59595B;
+    border-color: #DDDDDD;
+    background-color: #DDDDDD;
+}
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
+    outline: 0;
+}
+.progress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 1.5rem;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    padding: 3px;
+    border: 2px solid $primary;
+}
+.progress-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $primary;
+    -webkit-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+    border-radius: 2rem;
+}
+.form-check-input[type=radio]:checked{
+    background-color: $primary !important;
+    background-image: none;
+    margin-top: .1em !important;
+    border-color: $primary;
+}
+.form-check-input[type=radio]{
+    width: 1.5rem;
+    height: 1.5em;
+}
+.table > :not(caption) > * > *{
+    padding: 1em;
+    border: none;
+}
+.table > :not(caption) > * {
+    padding: 4em;
+}
+.table tr td:first-child{
+    color: #9B9B9B;
+}
+.table tr td:nth-child(2){
+    color: #59595B;
+}
+.btn-lg-c{
+    min-height: 73px !important;
+}
+/* Dashed red border */
+hr.hr {
+    border-top: 2px dashed #DDDDDD;
+}
+
 @media (max-width:768px) {
+    .input-code{
+        width: 60px !important;
+    }
     .card-radius{
         border-radius: 0 0 2rem 2rem;
         background: white;
@@ -92,6 +188,20 @@ body{
     }
     .raya{
         display: none    ;
+    }
+    .form-control{
+        min-height: 50px;
+    }
+    .form-label{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .form-switch   .form-check-input[type="checkbox"] {
+        border-radius: 20px;
+        width: 3.5em;
+        background-size: 2rem;
+        height: 30px;
     }
 }
 @for $i from 1 to 200 {

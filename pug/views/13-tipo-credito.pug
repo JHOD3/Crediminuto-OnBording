@@ -1,0 +1,37 @@
+extends ../layouts/_layout_one
+block variables
+    - var page_datos = { title: 'crediminuto || Cuenta correo', back: true, cliente:true}
+block content_left
+    div
+        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
+            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
+                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
+                | Desliza para consejos y recomendaciones
+        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
+            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
+                | ¿Qué es el CUPO CRÉDITO?
+                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
+            .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal
+                | Cuando un cliente Crediminuto ya canceló 4 cuotas, tiene habilitados 300.000COL para utilizar en la tienda. Puede utilizar el crédito para lo que desee.
+            img(src="image/elemento-8.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+block content_right
+    form(id="form-validate-code").pt-69-px-md.pt-40-px.pb-64-px
+        .text-primary.aling-items-center.d-flex
+            i.fa-solid.fa-circle-check.font-35-md.font-25-px.mt-md-1
+            span.pl-1-vh.font-28-md.font-18-px.fw-normal 05. Tipo de crédito
+        .mt-md-5.font-24-md.font-20-px.mt-40-px
+            div.text-primary.fw-normal
+        .font-24-md.font-15-px  Por favor seleccionar:
+        .mt-30-px-md.mt-30-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
+            button(type="submit").btn.btn-lg.continuar-btn.font-14-xs.btn-light.col-md-5.col-12.d-flex.justify-content-center
+                | SMARTPHONE
+        .mt-30-px-md.mt-30-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
+            button(type="submit").btn.btn-lg.continuar-btn.font-14-xs.btn-light.col-md-5.col-12.d-flex.justify-content-center
+                | Cupo Crédito
+        div.font-12-sm.font-18-md.d-flex.mt-md-2.mt-4(style="line-height:18px")
+            img(src="image/icono-warning.svg").img-w-3-vh-xs.me-1.me-md-2
+            div.mt-md-4.pt-md-3
+                div.text-primary   Atención para el cliente
+                div.mt-md-2 Para hacer uso del cupo crédito debe tener a la mano el #[br.d-md-block.d-none] dispositivo donde tiene instalada la app de Crediminuto.
+        .mt-80-px-md.mt-60-px.justify-content-md-between.justify-content-center.d-flex.d-md-block
+            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs Continuar

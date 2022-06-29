@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="74" viewBox="0 0 74 74">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_22" data-name="Rectángulo 22" width="36.836" height="28.262" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_241" data-name="Grupo 241" transform="translate(-71.654 -287.653)">
+    <g id="Elipse_9" data-name="Elipse 9" transform="translate(71.654 287.653)" fill="#e00520" stroke="#e00520" stroke-width="2">
+      <circle cx="37" cy="37" r="37" stroke="none"/>
+      <circle cx="37" cy="37" r="36" fill="none"/>
+    </g>
+    <g id="Grupo_9" data-name="Grupo 9" transform="translate(86.092 310.77)">
+      <g id="Grupo_8" data-name="Grupo 8" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Trazado_65" data-name="Trazado 65" d="M25.486.919a3.276,3.276,0,0,1,4.55,0l2.538,2.538a3.276,3.276,0,0,1,0,4.55L13.324,27.167a3.276,3.276,0,0,1-4.55,0L6.237,24.629a3.276,3.276,0,0,1,0-4.55Z" transform="translate(3.345 0)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Grupo_100" data-name="Grupo 100" transform="translate(122.928 302.196) rotate(90)">
+      <g id="Grupo_8-2" data-name="Grupo 8" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Trazado_65-2" data-name="Trazado 65" d="M20.168.919a3.276,3.276,0,0,1,4.55,0l2.538,2.538a3.276,3.276,0,0,1,0,4.55L8.006,27.167a3.276,3.276,0,0,1-4.55,0L.919,24.629a3.276,3.276,0,0,1,0-4.55Z" transform="translate(8.663 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
