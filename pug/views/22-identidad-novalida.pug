@@ -1,27 +1,22 @@
 extends ../layouts/_layout_one
 block variables
+
     - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:false}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-10.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | ¡Aviso!
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-left.text-white.font-26-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal.text-center
-                | Lamentablemente no podemos #[br.d-md-block.d-block] continuar con la solicitud.
-            img(src="image/elemento-17.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+    - var   text_1  =   "¡Aviso!";
+    - var   text_2  =   "Lamentablemente no podemos <br class='d-md-block d-block'> continuar con la solicitud.";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-17.svg";
+
 block content_right
     form(id="upload-selfie").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.aling-items-center.d-md-flex.d-grid.mt-30-px-md.mt-50-px-xs.align-items-center.pe-md-5.col-md-9.justify-content-md-start.justify-content-center
             img(src="image/icono-error-2.svg").img-w-8-vh-xs.img-w-7-vh-md.mx-md-0.mx-auto
             .pl-2-vh.mt-md-0.mt-3
-                .font-25-md.font-20-px.fw-normal ¡Ups! Identidad no validada
-        .font-24-md.font-15-px.mt-50-px-md.mt-10-px-sm.mt-10-px-xs.text-md-start.text-center
+                .font-35-md.font-20-px.fw-normal ¡Ups! Identidad no validada
+        .font-24-md.font-15-px.mt-50-px-md.mt-10-px-sm.mt-10-px-xs.text-md-start.text-center.fw-light
             |   #[b Sentimos], no se ha podido validar la identidad a #[br.d-md-block.d-block]través de las preguntas de seguridad.
         .mt-70-px-md.mt-60-px.d-flex.d-md-block.justify-content-md-between.justify-content-center
-            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.font-14-xs Salir
+            button(type="submit").btn.btn-primary.btn-lg.font-14-xs Salir
 

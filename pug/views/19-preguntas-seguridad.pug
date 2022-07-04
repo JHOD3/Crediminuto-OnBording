@@ -1,29 +1,24 @@
 extends ../layouts/_layout_one
 block variables
-    - var page_datos = { title: 'crediminuto || Datos personales', back: true, cliente:true}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | ¡Importante!
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal
-                |   Si alguna de las 4 preguntas no son #[br.d-md-block.d-none] respuestas correctamente le daremos al #[br.d-md-block.d-none] cliente la posibilidad de responder 4 nuevas #[br.d-md-block.d-none] preguntas. Se podrá dar cuenta si nota que #[br.d-md-block.d-none] vuelve a la pregunta 1.
-            img(src="image/elemento-16.svg", alt="", sizes="", srcset="").img-w-40-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+
+    - var page_datos = { title: 'crediminuto || Preguntas se seguridad', back: true, cliente:true}
+    - var   text_1  =   "¡Importante!";
+    - var   text_2  =   "Si alguna de las 4 preguntas no son <br class='d-md-block d-none'> respuestas correctamente le daremos al <br class='d-md-block d-none'> cliente la posibilidad de responder 4 nuevas <br class='d-md-block d-none'> preguntas. Se podrá dar cuenta si nota que <br class='d-md-block d-none'> vuelve a la pregunta 1";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-16.svg";
+
 block content_right
     form(id="form-datos-personales").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.justify-content-center.d-grid.d-md-flex.justify-content-md-start
-            div.pl-1-vh.font-28-md.font-18-px.fw-normal.mt-3.mt-md-0 Preguntas de seguridad #[b 1 de 4]
+            div.pl-1-vh.font-24-md.font-18-px.fw-normal.mt-3.mt-md-0 Preguntas de seguridad #[b 1 de 4]
         .mt-md-5.font-24-md.font-20-px.mt-40-px
             div.text-primary.fw-normal
         .font-24-md.font-15-px.text-center.text-md-start ¿Con cual de las siguientes entidades usted tiene o #[br.d-none.d-md-block] ha tenido en los últimos 5 años (entre mayo 2017 y #[br.d-none.d-md-block] abril 2021) un/una plan/paquete telefonía celular?
         .form-check.mt-md-5.mt-5.mb-md-4.mb-3
             input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault' checked)
-            label.form-check-label(for='flexRadioDefault1')
+            label.form-check-label.pt-5-px-md(for='flexRadioDefault1')
                 | Claro - comunicación celular - comcel SA
         .form-check.mb-md-4.mb-3
             input#flexRadioDefault2.form-check-input(type='radio' name='flexRadioDefault')

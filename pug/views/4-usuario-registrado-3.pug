@@ -1,36 +1,31 @@
 extends ../layouts/_layout_one
 block variables
+
     - var page_datos = { title: 'crediminuto || Nro. de celular registrado', back: true, cliente:false}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | Ups, algo no está bien
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-center.text-white.font-26-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal
-                | Este número ya fue utilizado.
-            img(src="image/elemento-4.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+    - var   text_1  =   "Ups, algo no está bien";
+    - var   text_2  =   "Este número ya fue utilizado.";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-4.svg";
+
 block content_right
     form(id="form-page-register").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px.mt-md-1
-            span.pl-1-vh.font-28-md.font-18-px.fw-normal 01. Usuario registrado
-        .text-primary.aling-items-center.d-flex.mt-50-px-md.mt-30-px-xs.pl-35-px.align-items-center
-            img(src="image/icono-i.svg").img-w-4-vh-xs
-            span.pl-2-vh.font-25-md.font-18-px.fw-normal Nro. de celular registrado
-        .mt-md-5.font-24-md.font-20-px.mt-40-px
+            i.fa-solid.fa-circle-check.font-35-md.font-25-px
+            span.pl-1-vh.font-24-md.font-18-px.fw-normal 01. Usuario registrado
+        .text-primary.aling-items-center.d-flex.mt-60-px-md.mt-30-px-xs.pl-35-px.align-items-center
+            img(src="image/icono-i.svg")
+            span.pl-2-vh.font-24-md.font-18-px.fw-normal Nro. de celular registrado
+        .mt-md-5.font-20-md.font-20-px.mt-40-px
             div.text-primary.fw-normal
-        .font-24-md.font-15-px   El numero
+        .font-20-md.font-15-px.pt-20-px-md   El numero
             span.text-primary  telf. ingresado en vista 1
-            | ya está registrado por
+            | ya está registrado <br class="d-md-block d-none"> por
             span.text-primary  nombre cliente. <br class="d-md-block d-none">
             | El cliente deberá registrarse con otro número de celular.
         .mt-80-px-md.mt-60-px.justify-content-between.d-flex.d-md-block
             a(href="").btn.btn-outline-primary.btn-lg.font-14-xs Si
-            button(type="submit", disabled="true").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs No
+            button.btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs No
 block script
     script(src="js/script-page/usuario-registrado.js")

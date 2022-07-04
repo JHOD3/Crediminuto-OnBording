@@ -112,8 +112,8 @@ body{
     border-color: $primary;
 }
 .form-check-input[type=radio]{
-    width: 1.5rem;
-    height: 1.5em;
+    width: 2rem;
+    height: 2em;
 }
 .table > :not(caption) > * > *{
     padding: 1em;
@@ -129,13 +129,19 @@ body{
     color: #59595B;
 }
 .btn-lg-c{
-    min-height: 73px !important;
+    min-height: 100px !important;
 }
 /* Dashed red border */
 hr.hr {
     border-top: 2px dashed #DDDDDD;
 }
-
+.btn-light-color{
+    color: #6c6b6b !important;
+    border-color: #c8c8c8 !important;
+}
+.form-check-input[type='checkbox'][role='switch']{
+    height: 2.3em;
+}
 @media (max-width:768px) {
     .input-code{
         width: 60px !important;
@@ -209,8 +215,8 @@ hr.hr {
         font-size: #{$i}vh;
     }
     
-    .img-w-#{$i}-vh{
-        width: #{$i}vh;
+    .img-w-#{$i}-rem{
+        width: #{$i}rem;
     }
     .pt-#{$i}-vh{
         padding-top: #{$i}vh;
@@ -258,7 +264,7 @@ hr.hr {
 
 @include media-breakpoint-up(xs) {
     .logo{
-        width: 13rem;
+        width: 15rem;
     }
     @for $i from 1 to 200 {
         .font-#{$i}-xs{
@@ -289,8 +295,8 @@ hr.hr {
         .mr-#{$i}-px-xs{
             margin-right: #{$i}px;
         }
-        .img-w-#{$i}-vh-xs{
-            width: #{$i}vh;
+        .img-w-#{$i}-rem-xs{
+            width: #{$i}rem;
         }
     }
 }
@@ -359,8 +365,8 @@ hr.hr {
         .mr-#{$i}-px-md{
             margin-right: #{$i}px;
         }
-        .img-w-#{$i}-vh-md{
-            width: #{$i}vh;
+        .img-w-#{$i}-rem-md{
+            width: #{$i}rem;
         }
     }
     .btn{

@@ -1,29 +1,22 @@
 extends ../layouts/_layout_one
 block variables
-    - var page_datos = { title: 'crediminuto || Datos personales', back: true, cliente:true}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | Recomendación
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal
-                | #[b Pago mensual:] será una cuota al mes.
-                | #[br]
-                | #[b Pago quicenal:] serán dos cuotas al mes.
-            img(src="image/elemento-15.svg", alt="", sizes="", srcset="").img-w-37-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+
+    - var page_datos = { title: 'crediminuto ||Buenas noticias', back: true, cliente:true}
+    - var   text_1  =   "¡Vienes muy bien! <br class='d-md-block d-none'> Ya queda muy poco";
+    - var   text_2  =   false;
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-15.svg";
+
 block content_right
-    form(id="form-datos-personales").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="form-datos-personales").pt-90-px-md.pt-40-px.pb-64-px
         .text-primary.justify-content-center.d-grid.d-md-flex.justify-content-md-start
-            i.fa-solid.fa-circle-check.font-35-md.font-50-px.mt-md-1.mx-auto.mx-md-0
-            div.pl-1-vh.font-28-md.font-18-px.fw-normal.mt-3.mt-md-0 ¡Buenas noticias!
+            i.fa-solid.fa-circle-check.font-65-md.font-50-px.mt-md-1.mx-auto.mx-md-0
+            div.pl-1-vh.font-30-md.font-18-px.fw-normal.mt-3.mt-md-3 ¡Buenas noticias!
         .mt-md-5.font-24-md.font-20-px.mt-40-px
             div.text-primary.fw-normal
-        .font-24-md.font-15-px.text-center.text-md-start #[b ¡Tu cliente tiene pr-aprobado el crédito, felicítalo! ] #[br.d-md-block.d-none]
+        .font-20-md.font-15-px.text-center.text-md-start.pt-20-px-md #[b ¡Tu cliente tiene pr-aprobado el crédito, felicítalo! ] #[br.d-md-block.d-none]
             |   Ahora solo queda validar su identidad con 4 preguntas #[br.d-md-block.d-none] que deberá responder a continuación.
         .mt-80-px-md.mt-40-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
             button.btn.btn-primary.btn-lg.continuar-btn.font-14-xs Validar identidad

@@ -1,40 +1,35 @@
 extends ../layouts/_layout_one
 block variables
+
     - var page_datos = { title: 'crediminuto || Cuenta correo', back: true, cliente:true}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | Recomendación
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal
-                | Es importante que sea el correo electrónico REAL del cliente. De otra forma, es posible que no pueda terminar satisfactoriamente el proceso con Crediminuto.
-            img(src="image/elemento-8.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+    - var   text_1  =   "Recomendación";
+    - var   text_2  = "Es importante que sea el correo electrónico<br class='d-md-block d-none'> REAL del cliente. De otra forma, es posible<br class='d-md-block d-none'> que no pueda terminar satisfactoriamente el<br class='d-md-block d-none'> proceso con Crediminuto.";
+    - var   text_3  = false;
+    - var   ol      = false;
+    - var   ol2     =   false;
+    - var   img     = "elemento-8.svg";
+
 block content_right
     form(id="form-validate-code").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px.mt-md-1
-            span.pl-1-vh.font-28-md.font-18-px.fw-normal 04. Crear usuario Crediminuto
+            i.fa-solid.fa-circle-check.font-35-md.font-25-px
+            span.pl-1-vh.font-24-md.font-18-px.fw-normal 04. Crear usuario Crediminuto
         .mt-md-5.font-24-md.font-20-px.mt-40-px
             div.text-primary.fw-normal
-        .font-24-md.font-15-px  Para poder terminar el registro y luego enrolar al cliente  #[br.d-md-block.d-none] correctamente vamos a tener que crear rápidamente un #[br.d-md-block.d-none] usuario y contraseña de Cliente Crediminuto.
-        div.mt-4.col-md-8.pt-10-px-md.pt-30-px
-            label.form-label.ps-2.ms-1.font-16-px USUARIO (Cédula identidad)
+        .font-20-md.font-15-px.fw-light  Para poder terminar el registro y luego enrolar al cliente  #[br.d-md-block.d-none] correctamente vamos a tener que crear rápidamente un #[br.d-md-block.d-none] usuario y contraseña de Cliente Crediminuto.
+        div.mt-4.mt-md-2.col-md-8.pt-10-px-md.pt-30-px
+            label.form-label.ps-2.ms-1.font-12-px USUARIO (Cédula identidad)
             input(type="number", name="dni", placeholder="cliente@mail.com").form-control
         div.row
-            div.mt-4.col-md-6.pt-10-px-md.pt-1-px
-                label.form-label.ps-2.ms-1.font-16-px NUEVA CONTRASEÑA
+            div.mt-4.mt-md-3.col-md-6.pt-10-px-md.pt-1-px
+                label.form-label.ps-2.ms-1.font-12-px NUEVA CONTRASEÑA
                 input(type="password", name="password", placeholder="********").form-control
-            div.mt-4.col-md-6.pt-10-px-md.pt-1-px
-                label.form-label.ps-2.ms-1.font-16-px REPITA CONTRASEÑA
+            div.mt-4.mt-md-3.col-md-6.pt-10-px-md.pt-1-px
+                label.form-label.ps-2.ms-1.font-12-px REPITA CONTRASEÑA
                 input(type="password", name="password_confirm", placeholder="********").form-control
-        .font-24-md.font-15-px.pt-45-px-md.pt-40-px  Por favor solicite al cliente una dirección de correo alternativo para el envío de documentación:
-        div.mt-4.col-md-8.pt-10-px-md.pt-5-px
-            label.form-label.ps-2.ms-1.font-16-px EMAIL ALTERNATIVO
+        .font-20-md.font-15-px.pt-45-px-md.pt-40-px  Por favor solicite al cliente una dirección de correo alternativo <br class='d-md-block d-none'> para el envío de documentación:
+        div.mt-4.mt-md-3.col-md-8.pt-10-px-md.pt-5-px
+            label.form-label.ps-2.ms-1.font-12-px EMAIL ALTERNATIVO
             input(type="email", name="email", placeholder="cliente@mail.com").form-control
-        .mt-80-px-md.mt-60-px.justify-content-md-between.justify-content-center.d-flex.d-md-block
+        .mt-50-px-md.mt-60-px.justify-content-md-between.justify-content-center.d-flex.d-md-block
             a(href="").btn.btn-primary.btn-lg.font-14-xs Confirmar

@@ -1,38 +1,32 @@
 extends ../layouts/_layout_one
 block variables
+
     - var page_datos = { title: 'crediminuto || Cuenta correo', back: true, cliente:true}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | Recomendación
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal
-                | Es importante que sea el correo electrónico REAL del cliente. De otra forma, es posible que no pueda terminar satisfactoriamente el proceso con Crediminuto.
-            img(src="image/elemento-8.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+    - var   text_1  =   "Recomendación";
+    - var   text_2  =   "Es importante que sea el correo electrónico<br class='d-md-block d-none'> REAL del cliente. De otra forma, es posible<br class='d-md-block d-none'> que no pueda terminar satisfactoriamente el<br class='d-md-block d-none'> proceso con Crediminuto.";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-8.svg"
+
 block content_right
     form(id="form-validate-code").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.aling-items-center.d-flex
             i.fa-solid.fa-circle-check.font-35-md.font-25-px.mt-md-1
-            span.pl-1-vh.font-28-md.font-18-px.fw-normal 04. Cuenta de correo electrónico
+            span.pl-1-vh.font-24-md.font-18-px.fw-normal 04. Cuenta de correo electrónico
         .mt-md-5.font-24-md.font-20-px.mt-40-px
             div.text-primary.fw-normal
-        .font-24-md.font-15-px  Para poder terminar el registro y luego enrolar al cliente #[br.d-md-block.d-none] correctamente es necesario que se registre de alguna de #[br.d-md-block.d-none] las siguientes formas:
-
+        .font-20-md.font-15-px.fw-light  Para poder terminar el registro y luego enrolar al cliente #[br.d-md-block.d-none] correctamente es necesario que se registre de alguna de #[br.d-md-block.d-none] las siguientes formas:
         div.text-primary.mt-md-3#time-code
         .mt-80-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            button(type="submit").btn.btn-lg.ms-md-4.continuar-btn.font-14-xs.btn-light.col-md-5.col-12.d-flex.justify-content-center
+            button(type="submit").btn.btn-lgbtn-light-color.btn-light-color.ms-md-4.continuar-btn.font-14-xs.btn-light.col-md-5.col-12.d-flex.justify-content-center
                 img(src="image/icono-gmail.svg").me-md-3.me-3
                 | Cuenta Gmail
         .mt-30-px-md.mt-30-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            button(type="submit").btn.btn-lg.ms-md-4.continuar-btn.font-14-xs.btn-light.col-md-5.col-12.d-flex.justify-content-center
+            button(type="submit").btn.btn-lg.ms-md-4.btn-light-color.continuar-btn.font-14-xs.btn-light.col-md-5.col-12.d-flex.justify-content-center
                 img(src="image/icono-email.svg").me-md-3.me-3
                 | Cuenta de correo electrónico
         .mt-30-px-md.mt-30-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            button(type="submit").btn.btn-lg.ms-md-4.continuar-btn.font-14-xs.btn-light.col-md-5.col-12.d-flex.justify-content-center
+            button(type="submit").btn.btn-lg.ms-md-4.btn-light-color.continuar-btn.font-14-xs.btn-light.col-md-5.col-12.d-flex.justify-content-center
                 img(src="image/icono-error.svg").me-md-3.me-3
                 | El cliente no tiene correo

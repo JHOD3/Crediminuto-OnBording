@@ -1,38 +1,30 @@
 extends ../layouts/_layout_one
 block variables
+
     - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:false}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-10.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | Recomendación
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-left.text-white.font-26-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal.text-center
-                | En caso de que el cliente quiera modificar la frecuencia o no este de acuerdo con el monto de la cuota puede utilizar el botón “Atrás”.
-            img(src="image/elemento-18.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+    - var   text_1  =   "Recomendación";
+    - var   text_2  = "En caso de que el cliente quiera<br class='d-md-block d-block'> modificar la frecuencia o no este<br class='d-md-block d-block'> de acuerdo con el monto de la cuota puede<br class='d-md-block d-block'> utilizar el botón “Atrás”.";
+    - var   text_3  = false;
+    - var   ol      = false;
+    - var   ol2     = false;
+    - var   img     = "elemento-18.svg";
+
 block content_right
     form(id="upload-selfie").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.aling-items-center.d-flex
             i.fa-solid.fa-circle-check.font-35-md.font-25-px.mt-md-1
             span.pl-1-vh.font-28-md.font-18-px.fw-normal 08. Solicitud aprobada
         .font-24-md.font-15-px.mt-20-px-sm.mb-10-px-sm.mb-10-px-xs.mt-18-px-xs   Aumentar financiación:
-        .mt-md-5.d-block.col-md-4
+        .mt-md-5.d-block.col-md-6
             input#btnradio11.btn-check(type='radio' name='cuota' autocomplete='off' checked='')
-            label.btn.btn-outline-light.font-16-md.col-md-12.me-md-3.col-12.mt-3.btn-lg-c(for='btnradio11')
-                |   #[strong Cuota inicial: COP 300.000]
-                small   +6 cuotas mensuales de COP 120.000
+            label.btn.btn-outline-light.font-20-md.col-md-12.me-md-3.col-12.mt-3.btn-lg-c.lh-base(for='btnradio11')
+                |   #[strong Cuota inicial: COP 300.000 #[br] #[span.fw-light +6 cuotas mensuales de COP 120.000]]
             input#btnradio12.btn-check(type='radio' name='cuota' autocomplete='off')
-            label.btn.btn-outline-light.font-16-md.col-md-12.me-md-3.col-12.mt-3.btn-lg-c(for='btnradio12')
-                |   #[strong Cuota inicial: COP 300.000]
-                small   +6 cuotas mensuales de COP 120.000
+            label.btn.btn-outline-light.font-20-md.col-md-12.me-md-3.col-12.mt-3.btn-lg-c(for='btnradio12')
+                |   #[strong Cuota inicial: COP 300.000 #[br] #[span.fw-light +6 cuotas mensuales de COP 120.000]]
             input#btnradio13.btn-check(type='radio' name='cuota' autocomplete='off')
-            label.btn.btn-outline-light.font-16-md.col-md-12.mt-md-4.me-md-3.col-12.mt-3.btn-lg-c(for='btnradio13')
-                |   #[strong Cuota inicial: COP 300.000]
-                small   +6 cuotas mensuales de COP 120.000
+            label.btn.btn-outline-light.font-20-md.col-md-12.mt-md-4.me-md-3.col-12.mt-3.btn-lg-c(for='btnradio13')
+                |   #[strong Cuota inicial: COP 300.000 #[br] #[span.fw-light +6 cuotas mensuales de COP 120.000]]
         .mt-70-px-md.mt-60-px.d-flex.d-md-block.justify-content-md-between.justify-content-center
             button(type="submit").btn.btn-primary.btn-lg.ms-md-4.font-14-xs CONTINUAR
 

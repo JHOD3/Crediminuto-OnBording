@@ -37,15 +37,42 @@ html(lang="es")
                                 div.font-15-sm.text-primary #[b Juan Pérez Moreno]
                     if page_datos.phone === true
                         .d-flex.mt-3.pb-3.align-items-center.pt-md-5
-                            img(src="image/icono-phone-2.svg").img-w-5-vh.img-w-6-vh-xs
+                            img(src="image/icono-phone-2.svg").img-w-4-rem.img-w-6-vh-xs
                             div.ms-3.align-items-center.lh-1
-                                div.font-11-sm.font-14-md EQUIPO ADQUIRIDO
+                                div.font-11-sm.font-15-md EQUIPO ADQUIRIDO
                                 div.font-20-sm.font-25-md.text-primary.mt-2 #[b Xiaomi Redmi 9A 128GB]
                     block content_right                
             .col-md-5.order-2.order-md-1#down-card.card-radius-down
                 .bg-primary.h-100
                     a(href="").position-absolute.text-primary.arrow-control#arrow
                         img(src="", alt="", width="60").arrow-up
-                    block content_left
+                    div
+                        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
+                            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
+                                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
+                                | Desliza para consejos y recomendaciones
+                        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
+                            if text_1 != false
+                                .text-center.text-white.font-24-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-110-px-md.pt-55-px.fw-normal.lh-base !{text_1}
+                                if text_2 != false || ol2 == true
+                                    .raya.col-md-2.col-2.mx-auto.mt-md-3.mb-md-4.my-3
+                            if text_2 != false
+                                .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-light   !{text_2}
+                            if ol != false
+                                ol.text-white.col-md-9.col-sm-10.mx-auto.mt-md-4.ps-md-5.pt-20-px-md
+                                    each val in ol
+                                        li.font-17-md.fw-light #{val}
+                            if ol2 != false
+                                ol.text-white.col-md-9.col-sm-10.mx-auto.mt-md-4.mt-4
+                                    li.d-flex.align-items-center.font-20-md.font-14-sm.font-14-xs  #[img(src="image/icono-number-1.png").me-md-2.me-2.img-w-6-vh-xs]
+                                        |   Tus credenciales están encintadas y no serán almacenadas
+                                    li.d-flex.align-items-center.font-20-md.font-14-sm.my-md-3.my-3.font-14-xs  #[img(src="image/icono-number-2.png").me-md-2.me-2.img-w-6-vh-xs]
+                                        |   Fusce sed diam semper, sodales odio quis, posuere nisl
+                                    li.d-flex.align-items-center.font-20-md.font-14-sm.font-14-xs  #[img(src="image/icono-number-3.png").me-md-2.me-2.img-w-6-vh-xs]
+                                        |   Quisque auctor, enim id consectetur rhoncus
+                        if img != false
+                            embed(src="image/"+img, alt="", sizes="", srcset="").img-w-35-vh.mx-auto.d-block.mt-md-4.img-w-20-rem-md
+                            if text_3 != false
+                                .text-center.text-white.font-21-md.font-16-sm.font-14-xs.col-md-10.mx-auto.fw-light.mt-md-4 !{text_3}
         include ../components/_footer
         include ../components/_script

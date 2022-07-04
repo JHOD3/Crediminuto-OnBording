@@ -1,27 +1,21 @@
 extends ../layouts/_layout_one
 block variables
+
     - var page_datos = { title: 'crediminuto || Envío de SMS', back: true, cliente:true, phone:true}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | Recomendación
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal
-                | Al iniciar el equipo validar que las app de kuipermake y crediminuto ya se encuentren descargadas para continuar el proceso.
-            img(src="image/elemento-22.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+    - var   text_1  =   "Recomendación";
+    - var   text_2  =   "Al iniciar el equipo validar que las app de<br class='d-md-block d-none'> kuipermake y crediminuto ya se encuentren<br class='d-md-block d-none'> descargadas para continuar el proceso. ";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-22.svg";
+
 block content_right
     form(id="form-enrolar-equipo").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.justify-content-center.d-grid.d-md-flex.justify-content-md-start
-            //- i.fa-solid.fa-circle-check.font-35-md.font-50-px.mt-md-1.mx-auto.mx-md-0
             img(src="image/icono-like.svg")
             div.pl-1-vh.font-35-md.font-18-px.fw-normal.mt-3.mt-md-0.pt-2.d-md-block.d-none ¡Buenas noticias!
-        .font-24-md.font-15-px.mt-md-4.text-md-start.text-center.mt-3
-            | #[b.text-primary.font-20-sm Ahora es momento de #[br.d-md-none.d-block] encender el equipo.] #[br]
-            | Una vez hecho esto se habilitará el #[br.d-md-none.d-block]botón para #[br.d-md-block.d-none] continuar.
+        .font-24-md.font-15-px.mt-md-4.text-md-start.text-center.mt-3.fw-light
+            | #[b.text-primary.font-20-sm.fw-bold Ahora es momento de #[br.d-md-none.d-block] encender el equipo.] #[br]
+            | Una vez encendido presiona continuar.
         .mt-80-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-start.justify-content-center
             button(type="submit").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs Descargar APPS

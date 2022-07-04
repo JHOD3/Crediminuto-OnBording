@@ -1,28 +1,22 @@
 extends ../layouts/_layout_one
 block variables
-    - var page_datos = { title: 'crediminuto || Datos personales', back: true, cliente:false}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | ¡Importante!
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal
-                | Para seleccionar el modelo escribir las primeras letras del quipo en el campo y seleccionar el equipo requerido.
-            img(src="image/elemento-13.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+
+    - var page_datos = { title: 'crediminuto || Seleccione dispositivo', back: true, cliente:false}
+    - var   text_1  =   "¡Importante!";
+    - var   text_2  =   "Para seleccionar el modelo escribir las<br class='d-md-block d-none'> primeras letras del quipo en el campo<br class='d-md-block d-none'> y seleccionar el equipo requerido.";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-13.svg";
+
 block content_right
     form(id="form-datos-personales").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px.mt-md-1
-            span.pl-1-vh.font-28-md.font-18-px.fw-normal 05. Selección de dispositivo
+            i.fa-solid.fa-circle-check.font-35-md.font-25-px
+            span.pl-1-vh.font-24-md.font-18-px.fw-normal 05. Selección de dispositivo
         .mt-md-5.font-24-md.font-20-px.mt-40-px
             div.text-primary.fw-normal
-        .font-24-md.font-15-px   Si alguno de los datos está incompleto o no es correcto <br class="d-md-block d-none"> por favor completar manualmente antes de avanzar.
-        div.mt-4.col-md-8.pt-50-px-md.pt-20-px
+        div.mt-4.mt-md-2.col-md-8.pt-10-px-md.pt-20-px
             label.form-label.ps-2.ms-1 MARCA DEL EQUIPO
             select.form-select
                 option 1
@@ -35,7 +29,7 @@ block content_right
         div.mt-4.col-md-8.pt-10-px-md.pt-10-px
             label.form-label.ps-2.ms-1 MONTO DEL DISPOSITIVO
             input(type="number", name="document", placeholder="$120.000").form-control
-        .mt-80-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
+        .mt-50-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
             button(type="submit", disabled="true").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
 block script
     script(src="js/script-page/datos-personales.js")

@@ -1,32 +1,27 @@
 extends ../layouts/_layout_one
 block variables
+
     - var page_datos = { title: 'crediminuto || Envío de SMS', back: true, cliente:false}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-26-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-bold
-                | Recomendación
-                .raya.col-md-2.col-2.mx-auto.my-md-3.my-3
-            .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-normal
-                | Puede suceder que el sistema no tome automáticamente todos los datos o no estén correctamente escritos. En esos casos es importante revisar y corregir manualmente con la información de la cédula del cliente.
-            img(src="image/elemento-6.svg", alt="", sizes="", srcset="").img-w-35-vh-md.img-w-35-vh.mx-auto.d-block.mt-md-4
+    - var   text_1  =   "Recomendación";
+    - var   text_2  =   "Es importante para recibir el SMS al <br class='d-md-block d-none'> momento que el número esté activo, con <br class='d-md-block d-none'>  buena señal y a mano.";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-7.svg"
+
 block content_right
     form(id="form-datos-personales").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px.mt-md-1
-            span.pl-1-vh.font-28-md.font-18-px.fw-normal 04. Envío de SMS
+            i.fa-solid.fa-circle-check.font-35-md.font-25-px
+            span.pl-1-vh.font-24-md.font-18-px.fw-normal 04. Envío de SMS
         .mt-md-5.font-24-md.font-20-px.mt-40-px
             div.text-primary.fw-normal
-        .font-24-md.font-15-px  Por favor, escribe el número del celular en donde
-            b se quiere <br class="d-md-block d-none"> recibir el código:
-        div.mt-4.col-md-8.pt-50-px-md.pt-20-px
+        .font-20-md.font-15-px  Por favor, escribe el número del celular en donde
+            |se quiere <br class="d-md-block d-none"> recibir el código:
+        div.mt-4.col-md-8.pt-20-px-md.pt-20-px
             label.form-label.ps-2.ms-1 CELULAR
             input(type="tel", name="phone").form-control
-        .mt-80-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
+        .mt-60-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
             button(type="submit", disabled="true").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs ENVIAR
 block script
     script(src="js/script-page/envio-sms.js")

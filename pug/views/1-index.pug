@@ -1,31 +1,25 @@
 extends ../layouts/_layout_one
-block variables 
-    - var page_datos = { title: 'crediminuto || Inicio', back: false, cliente:false}
-block content_left
-    div
-        .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
-                | Desliza para consejos y recomendaciones
-        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
-            .text-center.text-white.font-28-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-120-px-md.pt-55-px.fw-normal
-                | Registra a tu cliente para que pueda acceder a ese celular que tanto quiere y en cuotas 
-            img(src="image/elemento-1.svg", alt="", sizes="", srcset="").img-w-40-vh-md.img-w-35-vh.mx-auto.d-block
-            .text-center.text-white.font-24-md.font-16-sm.font-14-xs.col-md-10.mx-auto.fw-light
-                | Ten en cuenta que el botón 
-                b.fw-bold “Login Cliente Registrado”
-                | únicamente es para un cliente que ya ha comenzado o se ha registrado anteriormente.
+block variables
+
+    - var page_datos    = { title: 'crediminuto || Inicio', back: false, cliente:false}
+    - var   text_1  =   "Registra a tu cliente para que <br class='d-md-block d-none'> pueda acceder a ese celular que <br class='d-md-block d-none'> tanto quiere y en cuotas";
+    - var   text_2  =   false;
+    - var   text_3  =   "Ten en cuenta que el botón <b class='fw-bold'> “Login Cliente <br class='d-md-block d-none'> Registrado” </b> únicamente es para un cliente <br class='d-md-block d-none'> que ya ha comenzado o se ha registrado<br class='d-md-block d-none'> anteriormente.";
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   'elemento-1.svg';
+
 block content_right
     form(id="form-page-register").pt-69-px-md.pt-40-px.pb-64-px
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-30-px.mt-md-1
-            span.pl-1-vh.font-28-md.font-22-px.fw-normal 01. Registro
-        .mt-md-5.font-24-md.font-20-px.mt-40-px 
+            i.fa-solid.fa-circle-check.font-35-md.font-30-px
+            span.pl-1-vh.font-24-md.font-22-px.fw-normal 01. Registro
+        .mt-md-5.font-20-md.font-20-px.mt-40-px.fw-bolder
             div.text-primary.fw-normal
                 | ¡Comencemos!
-        .font-24-md.font-20-px   Escribe el número de celular del cliente
-        div.mt-4.col-md-8.pt-45-px-md.pt-30-px
-            label.form-label.ps-2.ms-1.font-16-px NÚMERO CELULAR
+        .font-20-md.font-20-px.fw-light   Escribe el número de celular del cliente
+        div.mt-4.col-md-7.pt-45-px-md.pt-30-px
+            label.form-label.ps-2.ms-1.font-15-px NÚMERO CELULAR
             input(type="tel", min="0", inputmode="tel", name="tel-number", placeholder="Número de celular de tu cliente").form-control
         .mt-80-px-md.mt-60-px.justify-content-between.d-flex.d-md-block
             a(href="").btn.btn-outline-primary.btn-lg CLIENTE REGISTRADO
@@ -33,17 +27,17 @@ block content_right
         .mt-80-px-md.mt-60-px
             .form-check
                 input#flexCheckDefault.form-check-input(type='checkbox' value='' checked='' name="term" required)
-                label.form-check-label(for='flexCheckDefault').font-18-md.font-13-xs
+                label.form-check-label(for='flexCheckDefault').font-16-md.font-13-xs
                     | Aceptar 
                     a(href="") Términos y condiciones 
             .form-check
                 input#flexCheckChecked1.form-check-input(type='checkbox' value='' name="policy" required)
-                label.form-check-label(for='flexCheckChecked1').font-18-md.font-13-xs
+                label.form-check-label(for='flexCheckChecked1').font-16-md.font-13-xs
                     | Aceptar 
                     a(href="") Políticas de Protección al Consumidor
             .form-check
                 input#flexCheckChecked2.form-check-input(type='checkbox' value='' name="policy-dato" required)
-                label.form-check-label(for='flexCheckChecked2').font-18-md.font-13-xs
+                label.form-check-label(for='flexCheckChecked2').font-16-md.font-13-xs
                     | Aceptar 
                     a(href="") Políticas de Tratamiento de Datos Personales
 block script 
