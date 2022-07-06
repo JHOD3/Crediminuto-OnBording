@@ -1,0 +1,27 @@
+extends ../layouts/_layout_one
+block variables
+
+    - var page_datos = { title: 'crediminuto || Usuario registrado', back: true, cliente:false}
+    - var   text_1  =   "¡Ahora Crediminuto tiene <br class='d-md-block d-none'> más<br class='d-md-none d-block'> y mejores beneficios<br class='d-md-block d-none'> para tí<br class='d-md-none d-block'> y tus clientes!";
+    - var   text_2  =   false;
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-2.svg";
+
+block content_right
+    form(id="form-page-register").pt-6-89-vh-md.pt-4-vh
+        .text-primary.aling-items-center.d-flex
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 01. Usuario registrado
+        .mt-md-5.font-2-vh-md.mt-3-vh.fw-bolder.font-2-vh
+            div.text-primary.fw-normal
+                | ¿Tu cliente ya esta registrado?
+        .font-2-vh-md.fw-light.font-2-vh   Por favor escribe el número de cédula de la persona únicamente <br class='d-md-block d-none'> si ya ha sido registrado en otra oportunidad.
+        div.mt-0.col-md-8.pt-30-px-md.pt-30-px
+            label.form-label.ps-2.ms-1.font-1-5-vh-md NÚMERO CÉDULA DE CIUDADANÍA
+            input(type="tel", min="0", inputmode="tel", name="tel-number", placeholder="Número de cedula de ciudadania").form-control
+        .mt-md-5.pt-md-5.mt-2.pt-5.justify-content-md-start.d-flex.d-md-block.justify-content-center
+            button(type="submit", disabled="true").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
+block script
+    script(src="js/script-page/usuario-registrado.js")

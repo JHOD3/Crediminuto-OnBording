@@ -1,21 +1,19 @@
 extends ../layouts/_layout_one
 block variables
 
-    - var page_datos = { title: 'crediminuto || Datos personales', back: true, cliente:false}
+    - var page_datos = { title: 'crediminuto || Datos personales', back: true, cliente:true}
     - var   text_1  =   "Recomendación";
-    - var   text_2  =   "Valida con el cliente el día del primer pago.<br class='d-md-block d-none'> Selecciona el día, el sistema determinará el<br class='d-md-block d-none'> mes y los siguientes días de pago.";
+    - var   text_2  =   "Valida con el cliente el día del primer pago.<br class='d-md-block d-block'> Selecciona el día, el sistema determinará el<br class='d-md-block d-block'> mes y los siguientes días de pago.";
     - var   text_3  =   false;
     - var   ol      =   false;
     - var   ol2     =   false;
     - var   img     =   "elemento-19.svg";
 
 block content_right
-    form(id="form-datos-personales").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="upload-selfie").pt-6-89-vh-md.pt-4-vh
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px
-            span.pl-1-vh.font-24-md.font-18-px.fw-normal 09. Selección de fecha de pago
-        .mt-md-5.font-24-md.font-20-px.mt-40-px
-            div.text-primary.fw-normal
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 09. Selección de fecha de pago
         div.mt-4.mt-md-3.col-md-8.pt-10-px-md.pt-20-px
             label.form-label.ps-2.ms-1 PRIMERA FECHA DE PAGO
             select.form-select
@@ -26,16 +24,16 @@ block content_right
                         option !{i}
                     - }
                 - }
-        div.mt-md-5.mt-3.font-22-md
+        div.mt-md-5.mt-5.font-2-vh.font-2-vh-md
             div.mt-md-3 Cuota 01
                 span.text-primary.ms-4 05/05/2022
             div.mt-md-3 Cuota 02
                 span.text-primary.ms-4 20/05/2022
-        div.font-12-sm.font-16-md.d-flex.mt-5(style="line-height:14px").align-items-start
-            img(src="image/icono-warning.svg").img-w-3-vh-xs.me-1.me-md-2
-            div.lh-base.mt-md-1.mt-sm-1.mt-1.font-14-sm.font-12-xs    #[span.text-primary.mb-3.font-20-md Validar con el cliente la fecha a seleccionar] #[br]
-                |   #[span.font-20-md.fw-light Asegurate de que el cliente cuente con el #[br] disponible para cancelar su cuota.]
-        .mt-50-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
+        div.d-flex.mt-5(style="line-height:14px").align-items-start
+            img(src="image/icono-warning.svg").img-w-3-vh-xs.me-3.me-md-2
+            div.lh-base.mt-md-1.mt-sm-1.mt-1.font-1-80-vh.font-1-80-vh-md   #[span.text-primary.mb-3.font-1-80-vh.font-1-80-vh-md  Validar con el cliente la fecha a seleccionar] #[br]
+                |   #[span.font-1-80-vh.font-1-80-vh-md.fw-light Asegurate de que el cliente cuente con el #[br] disponible para cancelar su cuota.]
+        .justify-content-center.d-flex.d-md-block.justify-content-md-between.mt-5
+            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.continuar-btn CONFIRMAR
 block script
     script(src="js/script-page/datos-personales.js")

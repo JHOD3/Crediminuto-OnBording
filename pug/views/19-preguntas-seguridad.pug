@@ -3,34 +3,32 @@ block variables
 
     - var page_datos = { title: 'crediminuto || Preguntas se seguridad', back: true, cliente:true}
     - var   text_1  =   "¡Importante!";
-    - var   text_2  =   "Si alguna de las 4 preguntas no son <br class='d-md-block d-none'> respuestas correctamente le daremos al <br class='d-md-block d-none'> cliente la posibilidad de responder 4 nuevas <br class='d-md-block d-none'> preguntas. Se podrá dar cuenta si nota que <br class='d-md-block d-none'> vuelve a la pregunta 1";
+    - var   text_2  =   "Si alguna de las 4 preguntas no son <br class='d-md-block d-none'> respuestas<br class='d-md-none d-block'> correctamente le daremos al <br class='d-md-block d-none'> cliente la posibilidad<br class='d-md-none d-block'> de responder 4 nuevas <br class='d-md-block d-none'> preguntas. Se podrá dar <br class='d-md-none d-block'>cuenta si nota que <br class='d-md-block d-none'> vuelve a la pregunta 1";
     - var   text_3  =   false;
     - var   ol      =   false;
     - var   ol2     =   false;
     - var   img     =   "elemento-16.svg";
 
 block content_right
-    form(id="form-datos-personales").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="form-datos-personales").pt-6-89-vh-md.pt-4-vh.mb-5
         .text-primary.justify-content-center.d-grid.d-md-flex.justify-content-md-start
-            div.pl-1-vh.font-24-md.font-18-px.fw-normal.mt-3.mt-md-0 Preguntas de seguridad #[b 1 de 4]
-        .mt-md-5.font-24-md.font-20-px.mt-40-px
-            div.text-primary.fw-normal
-        .font-24-md.font-15-px.text-center.text-md-start ¿Con cual de las siguientes entidades usted tiene o #[br.d-none.d-md-block] ha tenido en los últimos 5 años (entre mayo 2017 y #[br.d-none.d-md-block] abril 2021) un/una plan/paquete telefonía celular?
-        .form-check.mt-md-5.mt-5.mb-md-4.mb-3
+            div.pl-1-vh.fw-normal.mt-0.mt-md-0.font-2-40-vh-md.font-2-50-vh Preguntas de seguridad #[b 1 de 4]
+        .font-2-vh-md.fw-light.font-2-vh.mt-3.pt-3.text-center.text-md-start ¿Con cual de las siguientes entidades usted tiene o #[br.d-none.d-md-block] ha tenido en los últimos 5 años (entre mayo 2017 y #[br.d-none.d-md-block] abril 2021) un/una plan/paquete telefonía celular?
+        .form-check.mt-md-5.mt-5.mb-md-4.mb-4.align-items-center
             input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault' checked)
-            label.form-check-label.pt-5-px-md(for='flexRadioDefault1')
+            label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault1')
                 | Claro - comunicación celular - comcel SA
-        .form-check.mb-md-4.mb-3
+        .form-check.mb-md-4.mb-4.align-items-center
             input#flexRadioDefault2.form-check-input(type='radio' name='flexRadioDefault')
-            label.form-check-label(for='flexRadioDefault2')
+            label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault2')
                 | Movistar - telefonia moviles colombia SA
-        .form-check.mb-md-4.mb-3
+        .form-check.mb-md-4.mb-4.align-items-center
             input#flexRadioDefault3.form-check-input(type='radio' name='flexRadioDefault')
-            label.form-check-label(for='flexRadioDefault3')
+            label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault3')
                 | Tigo - Colombia movil SA
-        .form-check.mb-md-4.mb-3
+        .form-check.mb-md-4.mb-4.align-items-center
             input#flexRadioDefault4.form-check-input(type='radio' name='flexRadioDefault')
-            label.form-check-label(for='flexRadioDefault4')
+            label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault4')
                 | Ninguna de las anteriores
         .mt-80-px-md.mt-40-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
             button.btn.btn-primary.btn-lg.continuar-btn.font-14-xs Continuar

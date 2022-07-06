@@ -1,0 +1,34 @@
+extends ../layouts/_layout_one
+block variables
+
+    - var page_datos = { title: 'crediminuto || Datos personales', back: true, cliente:true}
+    - var   text_1  =   ' ';
+    - var   text_2  =   "<div class='row pt-10-2-vh-md pt-8-vh'><div class='col mt-5'><b class='font-3-vh font-2-24-vh-md'>Pago mensual:</b> <br> Significa que será una<br> cuota al mes.</div> <div class='col mt-5'> <b class='font-3-vh font-2-24-vh-md'>Pago quicenal:</b> <br> Significa que serán<br> dos cuotas al mes.</div></div>";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-14.svg";
+
+block content_right
+    form(id="form-validate-code").pt-6-89-vh-md.pt-4-vh.mb-5
+        .text-primary.aling-items-center.d-flex
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal Plan pospago
+        .font-2-vh-md.fw-light.font-2-vh.mt-3.pt-0 Incluir la primer la cuota del plan pospago en la financiación.
+        div.mt-md-5
+            img(src="image/icono-claro.svg").img-w-11-vh.img-w-11-vh-md.my-4
+            .border-bottom.font-2-vh-md.fw-bold.font-2-vh
+                | Plan posago a financiar
+            .btn-group.mt-3.col-12.col-md-8.d-block.d-md-flex.mb-md-4.d-md-flex(role='group' aria-label='Basic radio toggle button group')
+                input#btnradio01.btn-check(type='radio' name='plan_pago' value="m" autocomplete='off' checked='')
+                label.btn.btn-outline-light.font-16-md.mt-3.mt-md-2.col-md-5.col-12(for='btnradio01') COP 55.900
+                input#btnradio02.btn-check(type='radio' name='plan_pago' value="q" autocomplete='off')
+                label.btn.btn-outline-light.ms-md-3.mt-4.mt-md-2.font-16-md.col-md-5.col-12(for='btnradio02') COP 64.900
+            .d-md-flex
+                input#btnradio03.btn-check(type='radio' name='plan_pago' value="q" autocomplete='off')
+                label.btn.btn-outline-light.mt-4.mt-md-2.font-16-md.col-md-5.col-12(for='btnradio03') SIN INCLUIR PLAN POSPAGO
+        .mt-50-px-md.mt-40-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
+            a(data-bs-toggle="modal" role="button").btn.btn-primary.btn-lg.continuar-btn.font-14-xs CONINUAR
+        include ../components/_modal_procesando
+block script
+    script(src="js/script-page/forma-pago.js")

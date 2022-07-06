@@ -1,7 +1,7 @@
 extends ../layouts/_layout_one
 block variables
 
-    - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:false}
+    - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:true}
     - var   text_1  =   "Recomendación";
     - var   text_2  = "En caso de que el cliente quiera<br class='d-md-block d-block'> modificar la frecuencia o no este<br class='d-md-block d-block'> de acuerdo con el monto de la cuota puede<br class='d-md-block d-block'> utilizar el botón “Atrás”.";
     - var   text_3  = false;
@@ -10,11 +10,11 @@ block variables
     - var   img     = "elemento-18.svg";
 
 block content_right
-    form(id="upload-selfie").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="upload-selfie").pt-6-89-vh-md.pt-4-vh
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px.mt-md-1
-            span.pl-1-vh.font-28-md.font-18-px.fw-normal 08. Solicitud aprobada
-        .font-24-md.font-15-px.mt-20-px-sm.mb-10-px-sm.mb-10-px-xs.mt-18-px-xs   Aumentar financiación:
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 08. Solicitud aprobada
+        .font-2-vh-md.fw-light.font-2-vh.mt-4.pt-2.pb-1   Aumentar financiación por Selecciona la cuota inicial del cliente:
         .mt-md-5.d-block.col-md-6
             input#btnradio11.btn-check(type='radio' name='cuota' autocomplete='off' checked='')
             label.btn.btn-outline-light.font-20-md.col-md-12.me-md-3.col-12.mt-3.btn-lg-c.lh-base(for='btnradio11')

@@ -2,33 +2,31 @@ extends ../layouts/_layout_one
 block variables
 
     - var page_datos = { title: 'crediminuto || Envío de SMS', back: true, cliente:false}
-    - var   text_1  =   "Recomendación";
-    - var   text_2  =   "Es importante para recibir el SMS al <br class='d-md-block d-none'> momento que el número esté activo, con <br class='d-md-block d-none'>  buena señal y a mano.";
+    - var   text_1  =   "<p class='mb-2 mb-md-0'>Recomendación</p>";
+    - var   text_2  =   "Es importante para recibir el SMS al <br> momento que el número esté activo, con <br>  buena señal y a mano.";
     - var   text_3  =   false;
     - var   ol      =   false;
     - var   ol2     =   false;
     - var   img     =   "elemento-7.svg"
 
 block content_right
-    form(id="form-validate-code").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="form-envio-sms").pt-6-89-vh-md.pt-4-vh
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px
-            span.pl-1-vh.font-24-md.font-18-px.fw-normal 04. Envío de SMS
-        .mt-md-5.font-20-md.font-20-px.mt-40-px
-            div.text-primary.fw-normal
-        .font-20-md.font-15-px.fw-light  Ahora, escribe el código recibido por SMS <br class="d-md-block d-none">
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 04. Envío de SMS
+        .font-2-vh-md.fw-light.font-2-vh.mt-4.pt-2   Ahora, escribe el código recibido por SMS <br>
             | en
             b.text-primary  Nro de telefono:
-        div.mt-4.col-md-5.pt-50-px-md.pt-20-px.d-flex.justify-content-center.justify-content-md-start.align-items-center.input-group
-            input(type="number", name="code_1", pattern="[0-9]{1}", placeholder="0" required, maxlength="1").form-control.input-code.me-md-3.me-2.text-center
-            input(type="number", name="code_2", pattern="[0-9]{1}", placeholder="0" required, maxlength="1").form-control.input-code.me-md-3.me-2.text-center
-            input(type="number", name="code_3", pattern="[0-9]{1}", placeholder="0" required, maxlength="1").form-control.input-code.me-md-3.me-2.text-center
+        div.mt-5.col-md-10.col-10.mx-auto.d-flex.justify-content-center.justify-content-md-start.align-items-center.input-group.d-md-inline-flex
+            input(type="number", name="code_1", pattern="[0-9]{1}", placeholder="0" required, maxlength="1").form-control.input-code.me-md-3.me-3.text-center
+            input(type="number", name="code_2", pattern="[0-9]{1}", placeholder="0" required, maxlength="1").form-control.input-code.me-md-3.me-3.text-center
+            input(type="number", name="code_3", pattern="[0-9]{1}", placeholder="0" required, maxlength="1").form-control.input-code.me-md-3.me-3.text-center
             input(type="number", name="code_4", pattern="[0-9]{1}", placeholder="0" required, maxlength="1").form-control.input-code.text-center
-            span#check-code.ms-md-4.d-none
-                i.fa-solid.fa-check.font-40-md.text-success
-        div.text-primary.mt-md-3.mt-3#time-code
-        .mt-80-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            a.btn.btn-outline-primary.btn-lg.ms-md-4.font-14-xs#resend-code REENVIAR CÓDIGO
+        div#check-code.ms-md-4.d-none.text-center.text-md-start
+            i.fa-solid.fa-check.font-40-md.text-success
+        div.text-primary.mt-md-3.mt-3.text-center.text-md-start#time-code
+        .mt-md-5.pt-md-4.pt-5.mt-3.justify-content-between.d-flex.d-md-block.justify-content-md-between
+            a.btn.btn-outline-primary.btn-lg.font-14-xs#resend-code REENVIAR CÓDIGO
             button(type="submit", disabled="true").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs VALIDAR
 block script
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js")

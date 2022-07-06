@@ -2,44 +2,42 @@ extends ../layouts/_layout_one
 block variables
 
     - var page_datos = { title: 'crediminuto || Datos personales', back: true, cliente:true}
-    - var   text_1  =   "Recomendación";
-    - var   text_2  =   "<b>Pago mensual:</b> será una cuota al mes.  <br class='d-md-block d-none'><b>Pago quicenal:</b> serán dos cuotas al mes.";
+    - var   text_1  =   ' ';
+    - var   text_2  =   "<div class='row pt-10-2-vh-md pt-8-vh'><div class='col mt-5'><b class='font-3-vh font-2-24-vh-md'>Pago mensual:</b> <br> Significa que será una<br> cuota al mes.</div> <div class='col mt-5'> <b class='font-3-vh font-2-24-vh-md'>Pago quicenal:</b> <br> Significa que serán<br> dos cuotas al mes.</div></div>";
     - var   text_3  =   false;
     - var   ol      =   false;
     - var   ol2     =   false;
     - var   img     =   "elemento-14.svg";
 
 block content_right
-    form(id="form-datos-personales").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="form-validate-code").pt-6-89-vh-md.pt-4-vh.mb-5
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px
-            span.pl-1-vh.font-24-md.font-18-px.fw-normal 06. Forma de pago
-        .mt-md-5.font-24-md.font-20-px.mt-40-px
-            div.text-primary.fw-normal
-        .font-20-md.font-15-px.fw-light   Al momento de seleccionar la frecuencia de pago, #[br.d-md-block.d-none] se habilitará la opción de los plazos disponibles para esa frecuencia.
-        div.mt-md-5.mt-3
-            .border-bottom.font-24-md.font-15-px
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 06. Forma de pago
+        .font-2-vh-md.fw-light.font-2-vh.mt-3.pt-0 Al momento de seleccionar la frecuencia de pago, #[br.d-md-block.d-none] se habilitará la opción de los plazos disponibles para esa frecuencia.
+        div.mt-md-5.mt-4
+            .border-bottom.font-2-vh-md.fw-bold.font-2-vh
                 | Frecuencia
-            .btn-group.mt-4.col-12.col-md-10.d-block.d-md-flex.mb-4(role='group' aria-label='Basic radio toggle button group')
+            .btn-group.mt-3.col-12.col-md-10.d-block.d-md-flex.mb-4(role='group' aria-label='Basic radio toggle button group')
                 input#btnradio01.btn-check(type='radio' name='frecuencia' value="m" autocomplete='off' checked='')
                 label.btn.btn-outline-light.font-16-md.mt-3.mt-md-2.col-md-5.col-12(for='btnradio01') MENSUAL
                 input#btnradio02.btn-check(type='radio' name='frecuencia' value="q" autocomplete='off')
-                label.btn.btn-outline-light.ms-md-3.mt-3.mt-md-2.font-16-md.col-md-5.col-12(for='btnradio02') QUINCENAL
-        div.mt-md-5
-            .border-bottom.font-24-md.font-15-px
+                label.btn.btn-outline-light.ms-md-3.mt-4.mt-md-2.font-16-md.col-md-5.col-12(for='btnradio02') QUINCENAL
+        div.mt-md-5.mt-5
+            .border-bottom.font-2-vh-md.fw-bold.font-2-vh
                 | Plazo
-            .mt-md-4(role='group' aria-label='Basic radio toggle button group').plazo#mensual
+            .mt-md-4.mt-2(role='group' aria-label='Basic radio toggle button group').plazo#mensual
                 input#btnradio11.btn-check(type='radio' name='cuotamensual' autocomplete='off' checked='')
                 label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-3(for='btnradio11') 6 CUOTAS
                 input#btnradio12.btn-check(type='radio' name='cuotamensual' autocomplete='off')
-                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-3(for='btnradio12') 12 CUOTAS
+                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-4(for='btnradio12') 12 CUOTAS
                 input#btnradio13.btn-check(type='radio' name='cuotamensual' autocomplete='off')
                 label.btn.btn-outline-light.font-16-md.col-md-5.mt-md-4.me-md-3.col-12.mt-3(for='btnradio13') 18 CUOTAS
-            .mt-md-4(role='group' aria-label='Basic radio toggle button group', style="display:none").plazo#quincenal
+            .mt-md-4.mt-2(role='group' aria-label='Basic radio toggle button group', style="display:none").plazo#quincenal
                 input#btnradio21.btn-check(type='radio' name='cuotamensual' autocomplete='off' checked='')
                 label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-3(for='btnradio21') 3 CUOTAS
                 input#btnradio22.btn-check(type='radio' name='cuotamensual' autocomplete='off')
-                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-3(for='btnradio22') 6 CUOTAS
+                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-4(for='btnradio22') 6 CUOTAS
         .mt-50-px-md.mt-40-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
             a(data-bs-toggle="modal" role="button").btn.btn-primary.btn-lg.continuar-btn.font-14-xs ENVIAR SOLICITUD
         include ../components/_modal_procesando

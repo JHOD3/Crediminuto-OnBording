@@ -1,35 +1,33 @@
 extends ../layouts/_layout_one
 block variables
 
-    - var page_datos = { title: 'crediminuto || Seleccione dispositivo', back: true, cliente:false}
-    - var   text_1  =   "¡Importante!";
-    - var   text_2  =   "Para seleccionar el modelo escribir las<br class='d-md-block d-none'> primeras letras del quipo en el campo<br class='d-md-block d-none'> y seleccionar el equipo requerido.";
+    - var page_datos = { title: 'crediminuto || Seleccione dispositivo', back: true, cliente:true}
+    - var   text_1  =   "<p class='mb-2 mb-md-0'>¡Importante!</p>";
+    - var   text_2  =   "Para seleccionar el modelo escribir las<br class='d-md-block d-none'> primeras<br class='d-md-none d-block'> letras del quipo en el campo<br class='d-md-block d-none'> y seleccionar el<br class='d-md-none d-block'> equipo requerido.";
     - var   text_3  =   false;
     - var   ol      =   false;
     - var   ol2     =   false;
     - var   img     =   "elemento-13.svg";
 
 block content_right
-    form(id="form-datos-personales").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="form-selected.device").pt-6-89-vh-md.pt-4-vh.mb-5
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px
-            span.pl-1-vh.font-24-md.font-18-px.fw-normal 05. Selección de dispositivo
-        .mt-md-5.font-24-md.font-20-px.mt-40-px
-            div.text-primary.fw-normal
-        div.mt-4.mt-md-2.col-md-8.pt-10-px-md.pt-20-px
-            label.form-label.ps-2.ms-1 MARCA DEL EQUIPO
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 05. Selección de dispositivo
+        div.mt-2.mt-md-4.col-md-8.pt-10-px-md.pt-20-px
+            label.form-label.ps-2.ms-1.font-1-5-vh-md MARCA DEL EQUIPO
             select.form-select
                 option 1
                 option 2
                 option 3
                 option 4
         div.mt-4.col-md-8.pt-10-px-md.pt-10-px
-            label.form-label.ps-2.ms-1 MODELO (INGRESA LAS PRIMERAS LETRAS)
+            label.form-label.ps-2.ms-1.font-1-5-vh-md MODELO (INGRESA LAS PRIMERAS LETRAS)
             input(type="text", name="last_name", placeholder="Ingresa las primeras letras del modelo").form-control
         div.mt-4.col-md-8.pt-10-px-md.pt-10-px
-            label.form-label.ps-2.ms-1 MONTO DEL DISPOSITIVO
+            label.form-label.ps-2.ms-1.font-1-5-vh-md MONTO DEL DISPOSITIVO
             input(type="number", name="document", placeholder="$120.000").form-control
-        .mt-50-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
+        .mt-5.pt-md-2.justify-content-center.d-flex.d-md-block.justify-content-md-start
             button(type="submit", disabled="true").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
 block script
     script(src="js/script-page/datos-personales.js")

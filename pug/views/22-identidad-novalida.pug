@@ -1,7 +1,7 @@
 extends ../layouts/_layout_one
 block variables
 
-    - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:false}
+    - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:true}
     - var   text_1  =   "¡Aviso!";
     - var   text_2  =   "Lamentablemente no podemos <br class='d-md-block d-block'> continuar con la solicitud.";
     - var   text_3  =   false;
@@ -10,13 +10,13 @@ block variables
     - var   img     =   "elemento-17.svg";
 
 block content_right
-    form(id="upload-selfie").pt-69-px-md.pt-40-px.pb-64-px
-        .text-primary.aling-items-center.d-md-flex.d-grid.mt-30-px-md.mt-50-px-xs.align-items-center.pe-md-5.col-md-9.justify-content-md-start.justify-content-center
-            img(src="image/icono-error-2.svg").img-w-8-vh-xs.img-w-7-vh-md.mx-md-0.mx-auto
-            .pl-2-vh.mt-md-0.mt-3
-                .font-35-md.font-20-px.fw-normal ¡Ups! Identidad no validada
-        .font-24-md.font-15-px.mt-50-px-md.mt-10-px-sm.mt-10-px-xs.text-md-start.text-center.fw-light
+    form(id="upload-selfie").pt-6-89-vh-md.pt-4-vh
+        .text-primary.aling-items-center.d-md-flex.d-grid.align-items-center.pe-md-5.col-md-9.justify-content-md-start.justify-content-center.pt-1
+            img(src="image/icono-error-2.svg").mx-md-0.mx-auto.img-w-8-vh.img-w-8-vh-md
+            .pl-2-vh.mt-md-0.mt-4
+                .fw-normal.text-center.font-3-vh.font-3-vh-md.text-md-start ¡Ups!, no pudimos validar<br class='d-md-block d-none'> la identidad del cliente
+        .text-md-start.text-center.fw-light.font-2-vh.font-2-vh-md.mt-md-5.mt-4
             |   #[b Sentimos], no se ha podido validar la identidad a #[br.d-md-block.d-block]través de las preguntas de seguridad.
-        .mt-70-px-md.mt-60-px.d-flex.d-md-block.justify-content-md-between.justify-content-center
-            button(type="submit").btn.btn-primary.btn-lg.font-14-xs Salir
+        .d-flex.d-md-block.justify-content-md-between.justify-content-center.mt-4.mt-md-5.pt-3
+            a.btn.btn-primary.btn-lg.font-14-xs Volver
 

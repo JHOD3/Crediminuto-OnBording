@@ -3,28 +3,27 @@ block variables
 
     - var page_datos = { title: 'crediminuto || Envío de SMS', back: true, cliente:true, phone:true}
     - var   text_1  =   "Validar IMEI";
-    - var   text_2  =   "Validar el imei en la caja del dispositivo <br class='d-md-block d-none'> (Se debe registrar el imei 1) <br> <br> El dispositivo no debe haber sido encendido<br class='d-md-block d-none'> antes de este paso, en caso de que haya sido<br class='d-md-block d-none'> encendido realizar un reset de fabrica previo. ";
+    - var   text_2  =   "Validar el imei en la caja del dispositivo <br class='d-md-block d-block'> (Se debe registrar el imei 1) <br> <br> El dispositivo no debe haber sido encendido<br class='d-md-block d-block'> antes de este paso, en caso de que haya sido<br class='d-md-block d-block'> encendido realizar un reset de fabrica previo. ";
     - var   text_3  =   false;
     - var   ol      =   false;
     - var   ol2     =   false;
     - var   img     =   "elemento-21-1.svg";
 
 block content_right
-    form(id="form-enrolar-equipo").pt-50-px-md.pt-40-px.pb-64-px
-        .text-primary.aling-items-center.d-flex
-            span.font-28-md.font-18-px.fw-normal Enrolamiento del equipo
-        .font-20-md.font-15-px.fw-light  Escribir el código IMEI del dispositivo a financiar.
-        div.mt-4.col-md-8.pt-10-px-md.pt-10-px
-            label.form-label.ps-2.ms-1 IMEI DEL EQUIPO
+    form(id="form-enrolar-equipo").pt-6-89-vh-md.pt-4-vh
+        .text-primary.text-center.text-md-start
+            span.fw-normal.font-2-50-vh.font-2-50-vh-md Enrolamiento del equipo
+        .font-2-1-vh.font-2-1-vh-md.fw-light.text-center.text-md-start.pt-2  Ingresa el IMEI del dispositivo #[b.fw-bolder SIN <br> encender el equipo.]
+        div.mt-3.col-md-8.mt-md-4.pt-md-2
+            label.form-label.ps-2.ms-1.font-1-5-vh-md IMEI DEL EQUIPO
             input(type="number", name="imei", placeholder="000000000000000000000000").form-control
-        .font-24-md.font-15-px.mt-md-5.mt-4
-        .form-check.form-switch.mt-md-3.d-md-grid.d-flex.ps-0
-            label.form-check-label.order-0(for='flexSwitchCheckChecked') ¿El cliente ha adquirido #[br.d-md-none.d-block] una nueva SIM Card?
-            input#flexSwitchCheckChecked.form-check-input.mt-2.order-1.ms-md-0.ms-4(type='checkbox' role='switch' name="sincad" checked='')
-        div.mt-4.col-md-8.pt-10-px-md.pt-10-px
-            label.form-label.ps-2.ms-1 REGISTRA SU NÚMERO AQUÍ
+        .form-check.form-switch.mt-md-3.d-md-grid.d-flex.ps-0.mt-4.pt-3
+            label.form-label.ps-2.ms-1.fw-bolder.font-2-vh-md.font-2-vh(for='flexSwitchCheckChecked') ¿El cliente ha adquirido #[br.d-md-none.d-block] una nueva SIM Card?
+            input#flexSwitchCheckChecked.form-check-input.mt-2.order-1.ms-md-0.ms-4(type='checkbox' role='switch' name="sincad")
+        div.mt-4.col-md-8.pt-10-px-md.pt-10-px#number-here.d-none
+            label.form-label.ps-2.ms-1.font-1-5-vh-md REGISTRA SU NÚMERO AQUÍ
             input(type="number", name="number_phone", placeholder="Nuevo número de celular").form-control
         .mt-80-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-start.justify-content-center
-            button(type="submit", disabled).btn.btn-primary.btn-lg.continuar-btn.font-14-xs CONTINUAR
+            button(type="submit").btn.btn-primary.btn-lg.continuar-btn.font-14-xs CONTINUAR
 block script
     script(src="js/script-page/enrolar-equipo.js")

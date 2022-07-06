@@ -2,31 +2,29 @@ extends ../layouts/_layout_one
 block variables
 
     - var page_datos = { title: 'crediminuto || Datos personales', back: true, cliente:false}
-    - var   text_1  =   "Recomendación";
-    - var   text_2  =   "Puede suceder que el sistema no tome automáticamente todos los datos o no estén correctamente escritos. En esos casos es importante revisar y corregir manualmente con la información de la cédula del cliente.";
+    - var   text_1  =   "<p class='mb-2'>Recomendación</p>";
+    - var   text_2  =   "Puede suceder que el sistema no tome<br class='d-md-none d-block'> automáticamente todos los datos o no estén<br class='d-md-none d-block'> correctamente escritos. En esos casos es <br class='d-md-none d-block'>importante revisar y corregir manualmente con la<br class='d-md-none d-block'> información de la cédula del cliente.";
     - var   text_3  =   false;
     - var   ol      =   false;
     - var   ol2     =   false;
     - var   img     =   "elemento-6.svg"
 
 block content_right
-    form(id="form-datos-personales").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="form-datos-personales").pt-6-89-vh-md.pt-4-vh
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px
-            span.pl-1-vh.font-24-md.font-18-px.fw-normal 03. Datos personales
-        .mt-md-5.font-24-md.font-20-px.mt-40-px
-            div.text-primary.fw-normal
-        .font-20-md.font-15-px.fw-light  Si alguno de los datos está incompleto o no es correcto <br class="d-md-block d-none"> por favor completar manualmente antes de avanzar.
-        div.mt-4.col-md-8.pt-20-px-md.pt-20-px
-            label.form-label.ps-2.ms-1 NOMBRES
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 03. Datos personales
+        .font-2-vh-md.fw-light.font-2-vh.mt-4.pt-2  Si alguno de los datos está incompleto o no es<br class="d-md-none d-block"> correcto <br class="d-md-block d-none"> por favor completar manualmente antes<br class="d-md-none d-block"> de avanzar.
+        div.mt-4.mt-md-4.col-md-8
+            label.form-label.ps-2.ms-1.font-1-5-vh-md NOMBRES
             input(type="text", name="name").form-control
         div.mt-4.col-md-8.pt-10-px-md.pt-10-px
-            label.form-label.ps-2.ms-1 APELLIDOS
+            label.form-label.ps-2.ms-1.font-1-5-vh-md APELLIDOS
             input(type="text", name="last_name").form-control
         div.mt-4.col-md-8.pt-10-px-md.pt-10-px
-            label.form-label.ps-2.ms-1 DOCUMENTO
+            label.form-label.ps-2.ms-1.font-1-5-vh-md DOCUMENTO
             input(type="number", name="document").form-control
-        .mt-80-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
+        .mt-md-5.pt-md-4.pt-4.mt-3.justify-content-center.d-flex.d-md-block.justify-content-md-between
             button(type="submit", disabled="true").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
 block script
     script(src="js/script-page/datos-personales.js")

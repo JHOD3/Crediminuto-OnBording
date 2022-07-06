@@ -12,5 +12,11 @@ imgInput.addEventListener('change', () => {
         $('#btn-option').removeClass('d-none');
         $('#btn-submit').removeClass('d-none');
         $('#btn-validate').addClass('d-none');
+
+        // A modo de ejemplo, mustro error de imagen invalidad
+        if ($('#foto_invalida')) {
+            $('#foto_invalida').removeClass('d-none');
+        }
     }
 });
+

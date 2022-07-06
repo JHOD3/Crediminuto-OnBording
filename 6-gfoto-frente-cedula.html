@@ -2,7 +2,7 @@
 <html lang="es">
   <head> 
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,7 +15,7 @@
   <body>
     <div class="d-block d-md-flex min-vh-100">
       <div class="col-md-7 order-1 order-md-2 card-radius" id="top-card">
-        <div class="col-md-11 mx-auto col-11 mx-auto px-md-4">
+        <div class="col-md-11 mx-auto col-11 mx-auto px-md-4 px-3">
           <nav class="navbar navbar-light border-bottom">
             <div class="container-fluid d-none d-md-block"><a class="navbar-brand text-primary font-18-md" href="/"><i class="fa-solid fa-angle-left"></i><span class="p-2">Volver</span></a>
             </div>
@@ -24,13 +24,14 @@
               </div>
             </div>
           </nav>
-          <form class="pt-69-px-md pt-40-px pb-64-px" id="upload-selfie">
-            <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-35-md font-25-px"></i><span class="pl-1-vh font-24-md font-18-px fw-normal">02. Subir foto selfie</span></div>
-            <label class="aling-items-center d-flex mt-70-px-md mt-50-px-xs align-items-center pe-5 col-md-9" for="capture-camera"><img class="img-w-4-rem-xs" src="image/icono-dni.svg"><span class="pl-2-vh font-20-md font-16-px fw-light">A continuación debemos validar de la identidad del cliente mediante una selfie.</span></label>
-            <input class="d-none" type="file" accept="image/*;capture=camera" id="capture-camera"><img class="d-none img-w-40-vh-xs mt-5 img-w-50-vh-md mx-auto d-block mx-md-0" src="" id="capture-preview">
-            <div class="mt-130-px-md mt-60-px d-flex d-md-block justify-content-between"><a class="btn btn-outline-primary btn-lg ms-md-4 font-14-xs d-none" href="" id="btn-option">Volver a cargar</a>
-              <button class="btn btn-primary btn-lg ms-md-4 font-14-xs d-none" type="submit" id="btn-submit">Validar</button>
-              <label class="btn btn-primary btn-lg ms-md-4 font-14-xs mx-auto mx-md-0" for="capture-camera" id="btn-validate">Validar</label>
+          <form class="pt-6-89-vh-md pt-4-vh" id="upload-cedula">
+            <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-3-vh-md font-3-vh mt-1 mt-md-1"></i><span class="pl-1-vh font-2-40-vh-md font-2-50-vh fw-normal">02. Subir frente cédula</span></div>
+            <label class="aling-items-center d-flex align-items-center pe-5 col-md-9 mt-4 pt-3" for="capture-camera"><img class="img-w-7-vh img-w-7-vh-md" src="image/icono-dni.svg"><span class="pl-2-vh font-2-vh-md fw-light font-2-vh d-md-block d-none">Por seguridad del cliente, es necesario cargar o <br class="d-md-block d-none"> tomar una foto del frente de su cédula de ciudadanía<br class="d-md-block d-none"> y confirmar su identidad.</span><span class="pl-2-vh font-2-vh-md fw-light font-2-vh d-md-none d-block">Por seguridad del cliente, es necesario tomar una foto del frente de su cédula de ciudadanía y confirmar su identidad.</span></label>
+            <input class="d-none" type="file" accept="image/*;capture=camera" id="capture-camera"><img class="d-none img-w-43-vh mt-5 img-w-43-vh-md mx-auto d-block mx-md-0" src="" id="capture-preview">
+            <div class="text-warning d-none mt-3 ps-4" id="foto_invalida"><img class="img-w-4-vh img-w-4-vh-md me-2" src="image/icono-i-w.svg"><span class="font-2-vh font-2-vh-md">   Foto no válida</span></div>
+            <div class="mt-md-5 pt-md-5 mt-5 pt-4 d-flex d-md-block justify-content-between"><a class="btn btn-outline-primary btn-lg ms-md-4 font-14-xs d-none" href="" id="btn-option">VOLVAR A CARGAR</a>
+              <button class="btn btn-primary btn-lg ms-md-4 font-14-xs d-none" type="submit" id="btn-submit">VALIDAR</button>
+              <label class="btn btn-primary btn-lg ms-md-4 font-14-xs mx-auto mx-md-0" for="capture-camera" id="btn-validate">VALIDAR</label>
             </div>
           </form>
         </div>
@@ -39,22 +40,22 @@
         <div class="bg-primary h-100"><a class="position-absolute text-primary arrow-control" href="" id="arrow"><img class="arrow-up" src="" alt="" width="60"></a>
           <div>
             <div class="col-sm-11 col-12 mx-auto d-block d-md-none message-top">
-              <div class="text-center text-white font-20-px font-15-xs mx-auto pt-70-px pt-50-px-xs align-items-center"><img class="pe-2 pt-n4" src="image/luz.png" alt="" width="50">Desliza para consejos y recomendaciones</div>
+              <div class="text-center text-white mx-auto pt-70-px pt-50-px-xs align-items-center font-2-vh"><img class="pe-3 pt-n4 img-w-6-vh" src="image/luz.png" alt="" width="50">Desliza para consejos y recomendaciones</div>
             </div>
-            <div class="col-md-9 col-10 col-sm-11 mx-auto min-vh-50 pb-md-0 pb-5">
-              <div class="text-center text-white font-24-md font-21-sm font-18-xs col-md-9 col-sm-10 mx-auto pt-110-px-md pt-55-px fw-normal lh-base">Recomendación</div>
+            <div class="col-md-9 col-11 col-sm-11 mx-auto min-vh-50 pb-md-0 pb-0">
+              <div class="text-center text-white font-2-24-vh-md col-md-9 col-sm-10 mx-auto pt-10-2-vh-md pt-8-vh font-2-50-vh fw-normal lh-base">Recomendación</div>
               <div class="raya col-md-2 col-2 mx-auto mt-md-3 mb-md-4 my-3"></div>
-              <div class="text-center text-white font-20-md font-16-sm font-14-xs col-md-9 col-sm-10 mx-auto fw-light">  ¿Cómo cargar la foto de la cédula <br class='d-md-block d-none'> correctamente? </div>
-              <ol class="text-white col-md-9 col-sm-10 mx-auto mt-md-4 ps-md-5 pt-20-px-md">
-                <li class="font-17-md fw-light">No tomar foto con flash o a contraluz</li>
-                <li class="font-17-md fw-light">Imagen nítida, atención al efecto del holograma o documentos deteriorados</li>
-                <li class="font-17-md fw-light">Enmarcar bien la cédula en la foto sin dejar tanto espacio alrededor</li>
-                <li class="font-17-md fw-light">Revisar que se vean bien tanto foto como datos</li>
-                <li class="font-17-md fw-light">La foto debe ser tomada al documento original del cliente en formato JPG O PNG (No puede ser fotocopia, escaneado, o cualquier otro tipo de formato)</li>
+              <div class="text-center text-white font-1-80-vh font-1-80-vh-md col-md-9 col-sm-10 mx-auto fw-light">  <p class='mb-3 mt-2 my-md-0'>¿Cómo cargar la foto de la cédula <br class='d-md-block d-none'> correctamente?</p></div>
+              <ol class="text-white col-md-10 col-sm-10 mx-auto mt-md-4 ps-md-5">
+                <li class="font-1-80-vh font-1-80-vh-md fw-light">No tomar foto con flash o a contraluz</li>
+                <li class="font-1-80-vh font-1-80-vh-md fw-light">Imagen nítida, atención al efecto del holograma o documentos deteriorados</li>
+                <li class="font-1-80-vh font-1-80-vh-md fw-light">Enmarcar bien la cédula en la foto sin dejar tanto espacio alrededor</li>
+                <li class="font-1-80-vh font-1-80-vh-md fw-light">Revisar que se vean bien tanto foto como datos</li>
+                <li class="font-1-80-vh font-1-80-vh-md fw-light">La foto debe ser tomada al documento original del cliente en formato JPG O PNG (No puede ser fotocopia, escaneado, o cualquier otro tipo de formato)</li>
               </ol>
             </div>
-            <embed class="img-w-35-vh mx-auto d-block mt-md-4 img-w-20-rem-md" src="image/elemento-5-1.svg" alt="" sizes="" srcset="">
-            <div class="text-center text-white font-21-md font-16-sm font-14-xs col-md-10 mx-auto fw-light mt-md-4"><b class='lh-1'>Recuerda que la validación puede <br class='d-md-block d-none'> demorar algunos segundos.</b></div>
+            <embed class="img-w-31-97-vh-md img-w-37-vh mx-auto d-block mt-md-4 mt-2" src="image/elemento-5-1.svg" alt="" sizes="" srcset="">
+            <div class="text-center text-white font-2-10-vh-md font-2-vh col-md-10 mx-auto fw-light mt-md-4 mt-n3"><b class='lh-1 d-md-block d-none'>Recuerda que la validación puede <br class='d-md-block d-none'> demorar algunos segundos.</b></div>
           </div>
         </div>
       </div>

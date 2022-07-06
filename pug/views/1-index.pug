@@ -2,42 +2,42 @@ extends ../layouts/_layout_one
 block variables
 
     - var page_datos    = { title: 'crediminuto || Inicio', back: false, cliente:false}
-    - var   text_1  =   "Registra a tu cliente para que <br class='d-md-block d-none'> pueda acceder a ese celular que <br class='d-md-block d-none'> tanto quiere y en cuotas";
+    - var   text_1  =   "Registra a tu cliente para que <br> pueda acceder a ese celular que <br> tanto quiere y en cuotas";
     - var   text_2  =   false;
-    - var   text_3  =   "Ten en cuenta que el botón <b class='fw-bold'> “Login Cliente <br class='d-md-block d-none'> Registrado” </b> únicamente es para un cliente <br class='d-md-block d-none'> que ya ha comenzado o se ha registrado<br class='d-md-block d-none'> anteriormente.";
+    - var   text_3  =   "Ten en cuenta que el botón <b class='fw-bold'> “Login Cliente <br> Registrado” </b> únicamente es para un cliente <br class='d-md-block d-none'> que ya<br class='d-md-none d-block'> ha comenzado o se ha registrado<br class='d-md-block d-none'> anteriormente.";
     - var   ol      =   false;
     - var   ol2     =   false;
     - var   img     =   'elemento-1.svg';
 
 block content_right
-    form(id="form-page-register").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="form-page-register").pt-6-89-vh-md.pt-4-vh
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-30-px
-            span.pl-1-vh.font-24-md.font-22-px.fw-normal 01. Registro
-        .mt-md-5.font-20-md.font-20-px.mt-40-px.fw-bolder
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 01. Registro
+        .mt-md-5.font-2-vh-md.mt-3-vh.fw-bolder.font-2-vh
             div.text-primary.fw-normal
                 | ¡Comencemos!
-        .font-20-md.font-20-px.fw-light   Escribe el número de celular del cliente
-        div.mt-4.col-md-7.pt-45-px-md.pt-30-px
-            label.form-label.ps-2.ms-1.font-15-px NÚMERO CELULAR
+        .font-2-vh-md.fw-light.font-2-vh   Escribe el número de celular del cliente
+        div.mt-4.col-md-7.mt-md-5.pt-md-2.pt-3
+            label.form-label.ps-2.ms-1.font-1-5-vh-md NÚMERO CELULAR
             input(type="tel", min="0", inputmode="tel", name="tel-number", placeholder="Número de celular de tu cliente").form-control
-        .mt-80-px-md.mt-60-px.justify-content-between.d-flex.d-md-block
+        .mt-md-5.pt-md-5.mt-2.pt-5.justify-content-between.d-flex.d-md-block
             a(href="").btn.btn-outline-primary.btn-lg CLIENTE REGISTRADO
             button(type="submit", disabled="true").btn.btn-primary.btn-lg.ms-md-4.continuar-btn CONTINUAR
-        .mt-80-px-md.mt-60-px
-            .form-check
+        .mt-md-0.pt-md-0.mt-5.pt-4
+            .form-check.mt-5.pt-5
                 input#flexCheckDefault.form-check-input(type='checkbox' value='' checked='' name="term" required)
-                label.form-check-label(for='flexCheckDefault').font-16-md.font-13-xs
+                label.form-check-label(for='flexCheckDefault').font-1-60-vh-md.mt-1.mt-md-0
                     | Aceptar 
                     a(href="") Términos y condiciones 
             .form-check
                 input#flexCheckChecked1.form-check-input(type='checkbox' value='' name="policy" required)
-                label.form-check-label(for='flexCheckChecked1').font-16-md.font-13-xs
+                label.form-check-label(for='flexCheckChecked1').font-1-60-vh-md
                     | Aceptar 
                     a(href="") Políticas de Protección al Consumidor
             .form-check
                 input#flexCheckChecked2.form-check-input(type='checkbox' value='' name="policy-dato" required)
-                label.form-check-label(for='flexCheckChecked2').font-16-md.font-13-xs
+                label.form-check-label(for='flexCheckChecked2').font-1-60-vh-md
                     | Aceptar 
                     a(href="") Políticas de Tratamiento de Datos Personales
 block script 

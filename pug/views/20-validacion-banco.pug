@@ -1,6 +1,6 @@
 extends ../layouts/_layout_one
 block variables
-    - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:false}
+    - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:true}
     - var   text_1  =   "Openbanking";
     - var   text_2  =   false;
     - var   text_3  =   false;
@@ -8,13 +8,13 @@ block variables
     - var   ol2     =   true;
     - var   img     =   false;
 block content_right
-    form(id="upload-selfie").pt-69-px-md.pt-40-px.pb-64-px
-        .text-primary.aling-items-center.d-md-flex.d-grid.mt-20-px-md.mt-50-px-xs.align-items-center.pe-5.col-md-9.justify-content-md-start.justify-content-center
-            img(src="image/icono-banco.svg").img-w-8-vh-xs.img-w-7-vh-md.mx-md-0.mx-auto
-            .ps-md-4.mt-md-0.mt-4
-                .font-35-md.font-20-px.fw-normal Validación con cuenta banco
-        .font-24-md.font-15-px.mt-50-px-md.mt-20-px-sm.mt-20-px-xs.text-md-start.text-center.fw-light
-            |   Lorem ipsum dolor sit amet, consectetur adipiscing elit. #[br.d-md-block.d-none] Maecenas eleifend elementum libero ut rutrum.
+    form(id="upload-selfie").pt-6-89-vh-md.pt-4-vh
+        .text-primary.aling-items-center.d-md-flex.d-grid.align-items-center.pe-md-5.col-md-9.justify-content-md-start.justify-content-center.pt-1
+            img(src="image/icono-banco.svg").img-w-8-vh.img-w-7-vh-md.mx-md-0.mx-auto
+            .ps-md-4.mt-md-2.mt-4
+                .fw-normal.font-3-vh.font-3-vh-md Validación con cuenta banco
+        .font-2-vh-md.fw-light.font-2-vh.text-md-start.text-center.fw-light.mt-4
+            |   Lorem ipsum dolor sit amet, consectetur #[br.d-md-none.d-block] adipiscing elit. #[br.d-md-block.d-none] Maecenas eleifend#[br.d-md-none.d-block] elementum libero ut rutrum.
             div.mt-md-3.mt-2 #[a(href="") Ver privacidad]
-        .mt-100-px-md.mt-60-px.d-flex.d-md-block.justify-content-md-between.justify-content-center
-            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.font-14-xs VALIDAR
+        .d-flex.d-md-block.justify-content-md-between.justify-content-center.mt-5.pt-5.mt-md-4
+            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.mt-4 VALIDAR IDENTIDAD

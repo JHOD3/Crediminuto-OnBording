@@ -3,25 +3,29 @@ block variables
 
     - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:false}
     - var   text_1  =   "Recomendación";
-    - var   text_2  =   "¿Cómo cargar la foto de la cédula <br class='d-md-block d-none'> correctamente? ";
-    - var   text_3  =   "<b class='lh-1'>Recuerda que la validación puede <br class='d-md-block d-none'> demorar algunos segundos.</b>";
+    - var   text_2  =   "<p class='mb-3 mt-2 my-md-0'>¿Cómo cargar la foto de la cédula <br class='d-md-block d-none'> correctamente?</p>";
+    - var   text_3  =   "<b class='lh-1 d-md-block d-none'>Recuerda que la validación puede <br class='d-md-block d-none'> demorar algunos segundos.</b>";
     - var   ol      =   [ "No tomar foto con flash o a contraluz", "Imagen nítida, atención al efecto del holograma o documentos deteriorados", "Enmarcar bien la cédula en la foto sin dejar tanto espacio alrededor", "Revisar que se vean bien tanto foto como datos", "La foto debe ser tomada al documento original del cliente en formato JPG O PNG (No puede ser fotocopia, escaneado, o cualquier otro tipo de formato)"];
     - var   ol2     =   false;
     - var   img     =   "elemento-5-1.svg";
 
 block content_right
-    form(id="upload-selfie").pt-69-px-md.pt-40-px.pb-64-px
+    form(id="upload-cedula").pt-6-89-vh-md.pt-4-vh
         .text-primary.aling-items-center.d-flex
-            i.fa-solid.fa-circle-check.font-35-md.font-25-px
-            span.pl-1-vh.font-24-md.font-18-px.fw-normal 02. Subir foto selfie
-        label(for="capture-camera").aling-items-center.d-flex.mt-70-px-md.mt-50-px-xs.align-items-center.pe-5.col-md-9
-            img(src="image/icono-dni.svg").img-w-4-rem-xs
-            span.pl-2-vh.font-20-md.font-16-px.fw-light A continuación debemos validar de la identidad del cliente mediante una selfie.
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 02. Subir frente cédula
+        label(for="capture-camera").aling-items-center.d-flex.align-items-center.pe-5.col-md-9.mt-4.pt-3
+            img(src="image/icono-dni.svg").img-w-7-vh.img-w-7-vh-md
+            span.pl-2-vh.font-2-vh-md.fw-light.font-2-vh.d-md-block.d-none Por seguridad del cliente, es necesario cargar o <br class="d-md-block d-none"> tomar una foto del frente de su cédula de ciudadanía<br class="d-md-block d-none"> y confirmar su identidad.
+            span.pl-2-vh.font-2-vh-md.fw-light.font-2-vh.d-md-none.d-block Por seguridad del cliente, es necesario tomar una foto del frente de su cédula de ciudadanía y confirmar su identidad.
         input(type="file", accept="image/*;capture=camera").d-none#capture-camera
-        img(src="").d-none#capture-preview.img-w-40-vh-xs.mt-5.img-w-50-vh-md.mx-auto.d-block.mx-md-0
-        .mt-130-px-md.mt-60-px.d-flex.d-md-block.justify-content-between
-            a(href="").btn.btn-outline-primary.btn-lg.ms-md-4.font-14-xs.d-none#btn-option Volver a cargar
-            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.font-14-xs.d-none#btn-submit Validar
-            label(for="capture-camera").btn.btn-primary.btn-lg.ms-md-4.font-14-xs.mx-auto.mx-md-0#btn-validate Validar
+        img(src="").d-none#capture-preview.img-w-43-vh.mt-5.img-w-43-vh-md.mx-auto.d-block.mx-md-0
+        div.text-warning#foto_invalida.d-none.mt-3.ps-4
+            img(src="image/icono-i-w.svg").img-w-4-vh.img-w-4-vh-md.me-2
+            span.font-2-vh.font-2-vh-md    Foto no válida
+        .mt-md-5.pt-md-5.mt-5.pt-4.d-flex.d-md-block.justify-content-between
+            a(href="").btn.btn-outline-primary.btn-lg.ms-md-4.font-14-xs.d-none#btn-option VOLVAR A CARGAR
+            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.font-14-xs.d-none#btn-submit VALIDAR
+            label(for="capture-camera").btn.btn-primary.btn-lg.ms-md-4.font-14-xs.mx-auto.mx-md-0#btn-validate VALIDAR
 block script
     script(src="js/script-page/foto-cedula.js?v=1")

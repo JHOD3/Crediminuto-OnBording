@@ -3,20 +3,19 @@ block variables
 
     - var page_datos = { title: 'crediminuto || Envío de SMS', back: true, cliente:true, phone:true}
     - var   text_1  =   "Recomendación";
-    - var   text_2  =   "Al iniciar el equipo validar que las app de<br class='d-md-block d-none'> kuipermake y crediminuto ya se encuentren<br class='d-md-block d-none'> descargadas para continuar el proceso. ";
+    - var   text_2  =   "Al iniciar el equipo validar que las app de<br class='d-md-block d-block'> kuipermake y crediminuto ya se encuentren<br class='d-md-block d-block'> descargadas para continuar el proceso. ";
     - var   text_3  =   false;
     - var   ol      =   false;
     - var   ol2     =   false;
     - var   img     =   "elemento-22.svg";
 
 block content_right
-    form(id="form-enrolar-equipo").pt-69-px-md.pt-40-px.pb-64-px
-        .text-primary.justify-content-center.d-grid.d-md-flex.justify-content-md-start
-            //- i.fa-solid.fa-circle-check.font-35-md.font-50-px.mt-md-1.mx-auto.mx-md-0
-            img(src="image/icono-like.svg")
-            div.pl-1-vh.font-35-md.font-18-px.fw-normal.mt-3.mt-md-0.pt-2.d-md-block.d-none ¡Buenas noticias!
-        .font-24-md.font-15-px.mt-md-4.text-md-start.text-center.mt-3.fw-light
-            | #[b.text-primary.font-20-sm.fw-bold Ahora es momento de #[br.d-md-none.d-block] encender el equipo.] #[br]
+    form(id="form-enrolar-equipo").pt-6-89-vh-md.pt-2-vh
+        .text-primary.text-center.text-md-start
+            img(src="image/icono-like.svg").img-w-6-vh.img-w-6-vh-md
+            div.pl-1-vhfw-normal.mt-3.mt-md-0.pt-2.d-md-block.d-none ¡Buenas noticias!
+        .font-2-50-vh.font-2-50-vh-md.font-24-md.font-15-px.mt-md-4.text-md-start.text-center.mt-4.fw-light
+            | #[b.text-primary Ahora es momento de #[br.d-md-none.d-block] encender el equipo.] #[br]
             | Una vez hecho esto se habilitará el #[br.d-md-none.d-block]botón para #[br.d-md-block.d-none] continuar.
-        .mt-80-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-start.justify-content-center
+        .mt-5.justify-content-center.d-flex.d-md-block.justify-content-md-start.justify-content-center
             button(type="submit").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR

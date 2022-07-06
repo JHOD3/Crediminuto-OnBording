@@ -1,0 +1,44 @@
+extends ../layouts/_layout_one
+block variables
+
+    - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:true}
+    - var   text_1  =   "Recomendación";
+    - var   text_2  = "En caso de que el cliente quiera<br class='d-md-block d-block'> modificar la frecuencia o no este<br class='d-md-block d-block'> de acuerdo con el monto de la cuota puede<br class='d-md-block d-block'> utilizar el botón “Atrás”.";
+    - var   text_3  = false;
+    - var   ol      = false;
+    - var   ol2     = false;
+    - var   img     = "elemento-18.svg";
+
+block content_right
+    form(id="upload-selfie").pt-6-89-vh-md.pt-4-vh
+        .text-primary.aling-items-center.d-flex
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 08. Solicitud aprobada
+        .font-2-vh-md.fw-light.font-2-vh.mt-4.pt-2.pb-4   Resumen de crédito:
+        div.bg-light.bg-opacity-50.p-md-5.px-4.py-5
+            div.row
+                span.col-md-4.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md.text-black-50   MARCA
+                span.col-md-6.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md   Samsung
+            div.row.mt-md-2.mt-1
+                span.col-md-4.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md.text-black-50   MODELO
+                span.col-md-6.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md   Galaxy A21 - 128GB
+            div.row.mt-md-2.mt-1
+                span.col-md-4.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md.text-black-50   MONTO A FINANCIAR
+                span.col-md-6.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md   $XXX.XXX
+            div.row.mt-md-2.mt-1
+                span.col-md-4.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md.text-black-50   FRECUENCIA
+                span.col-md-6.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md   Semanal
+            div.row.mt-md-2.mt-1
+                span.col-md-4.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md.text-black-50   PLAZO
+                span.col-md-6.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md   6 cuotas
+            div.row.mt-md-2.mt-1
+                span.col-md-4.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md.text-black-50   MONTO CUOTA
+                span.col-md-6.col-6.font-14-sm.font-1-80-vh.font-1-80-vh-md   $XXX.XXX
+        .text-primary.aling-items-center.d-md-flex.d-flex.align-items-center.pe-md-5.col-md-9.justify-content-md-start.justify-content-start.mt-4
+            img(src="image/icono-d.svg").img-w-5-vh.img-w-5-vh-md
+            .pl-2-vh.mt-md-0.lh-base
+                .fw-bold.font-2-vh.font-2-vh-md
+                    | #[b No se aprobó la financiación del 30%.] Pero tenemos otras opciones para tu cliente.
+        .d-flex.d-md-block.justify-content-md-between.justify-content-center.mt-4.pt-3
+            button(type="submit").btn.btn-primary.btn-lg.ms-md-4 CONTINUAR
+

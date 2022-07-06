@@ -29,14 +29,14 @@ body{
     scrollbar-width: thin;
 }
 .btn-lg, .btn-group-lg > .btn {
-    padding: 0.8rem 0rem;
-    font-size: 1.125rem;
+    padding: 1.28vh 0vh;
+    font-size: 1.80vh;
     border-radius: 40rem;
 }
 .btn{
     min-width: 48%;
-    font-size: 50%;
-    height: 55px;
+    font-size: 1.7vh;
+    height: 5.49vh;
 }
 .raya{
     height: 4px;
@@ -44,6 +44,7 @@ body{
     border-radius: 20px;
 }
 .input-code{
+    flex: none !important;
     width: 75px !important;
 }
 .btn-check:checked + .btn-outline-light, .btn-check:active + .btn-outline-light, .btn-outline-light:active, .btn-outline-light.active, .btn-outline-light.dropdown-toggle.show{
@@ -112,8 +113,8 @@ body{
     border-color: $primary;
 }
 .form-check-input[type=radio]{
-    width: 2rem;
-    height: 2em;
+    width: 3.4vh;
+    height: 3.4vh;
 }
 .table > :not(caption) > * > *{
     padding: 1em;
@@ -142,7 +143,111 @@ hr.hr {
 .form-check-input[type='checkbox'][role='switch']{
     height: 2.3em;
 }
+
+.btn-check:checked + .btn-outline-light, .btn-check:active + .btn-outline-light, .btn-outline-light:active, .btn-outline-light.active, .btn-outline-light.dropdown-toggle.show{
+    color: #b3041a  !important;
+}
+.btn-lg-c {
+    min-height: 75px !important;
+}
+.btn-lg-c {
+    font-size: 2vh !important;
+}
 @media (max-width:768px) {
+    .border-bottom-m{
+        border-bottom: 1px solid;
+        border-color: #dddddd;
+    }
+    .btn-lg-c {
+        min-height: 63px !important;
+    }
+
+
+    .arrow-up{
+        width: 6.2vh;
+    }
+    .arrow-down{
+        width: 6.2vh;
+    }
+    .btn {
+        height: 6.5vh;
+    }
+
+    @for $i from 1 to 200 {
+        .font-#{$i}-vh{
+            font-size: #{$i}vh;
+        }
+        .pt-#{$i}-vh{
+            padding-top: #{$i}vh;
+        }
+        .pb-#{$i}-vh{
+            padding-bottom: #{$i}vh;
+        }
+        .pl-#{$i}-vh{
+            padding-left: #{$i}vh;
+        }
+        .pr-#{$i}-vh{
+            padding-right: #{$i}vh;
+        }
+        .mt-#{$i}-vh{
+            margin-top: #{$i}vh;
+        }
+        .mb-#{$i}-vh{
+            margin-bottom: #{$i}vh;
+        }
+        .ml-#{$i}-vh{
+            margin-left: #{$i}vh;
+        }
+        .mr-#{$i}-vh{
+            margin-right: #{$i}vh;
+        }
+        .img-w-#{$i}-vh{
+            width: #{$i}vh;
+        }
+    }
+    .font-2-50-vh{
+        font-size: 2.50vh;
+    }
+    .font-1-58-vh{
+        font-size: 1.58vh;
+    }
+    .font-1-3-vh{
+        font-size: 1.3vh;
+    }
+    .font-1-5-vh{
+        font-size: 1.5vh;
+    }
+    .font-1-60-vh{
+        font-size: 1.60vh;
+    }
+    .font-1-8-vh{
+        font-size: 1.80vh;
+    }
+    .font-2-10-vh{
+        font-size: 2.10vh;
+    }
+
+    .font-2-1-vh{
+        font-size: 2.1vh;
+    }
+
+    .font-1-80-vh{
+        font-size: 1.80vh;
+    }
+    .font-2-80-vh{
+        font-size: 2.80vh;
+    }
+    .font-2-30-vh{
+        font-size: 2.30vh;
+    }
+
+    .pt-6-89-vh{
+        padding-top: 6.89vh;
+    }
+    .logo{
+        width: 25vh;
+        padding: 0.4vh 0;
+    }
     .input-code{
         width: 60px !important;
     }
@@ -150,10 +255,10 @@ hr.hr {
         border-radius: 0 0 2rem 2rem;
         background: white;
         height: 90vh;
-        display: inline-flex;
+        /*display: inline-flex;*/
         width: 100%;
         overflow-y: auto;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
     }
     .card-radius-down{
         margin-top: -4vh;
@@ -164,17 +269,17 @@ hr.hr {
     .card-top-up{
         display: inline-flex;
         width: 100%;
-        height: 36vh !important;
+        height: 35vh !important;
     }
     .card-bottom-down{
-        height: 68vh;
+        height: 69vh;
     }
     .arrow-control{
         width: 100%;
         text-align: center;
         height: 2rem;
 
-        border-radius: 0 0 2rem 2rem;
+        border-radius: 0 0 1.1rem 1.1rem;
         background: white;
         box-shadow: 33px 0 $primary;
     }
@@ -198,14 +303,20 @@ hr.hr {
     .form-control{
         min-height: 50px;
     }
-    .form-label{
-        font-size: 12px;
-        margin-bottom: 5px;
+    .form-select {
+        min-height: 50px;
+        font-size: 1.84vh !important;
     }
-
+    .form-label{
+        font-size: 1.3vh;
+        margin-bottom: 0.3vh;
+    }
+    .img-w-3-7-vh{
+        width: 3.7vh;
+    }
     .form-switch   .form-check-input[type="checkbox"] {
         border-radius: 20px;
-        width: 3.5em;
+        width: 8.5vh;
         background-size: 2rem;
         height: 30px;
     }
@@ -263,10 +374,14 @@ hr.hr {
 }
 
 @include media-breakpoint-up(xs) {
-    .logo{
-        width: 15rem;
+
+    .font-2-24-vh-xs{
+        font-size: 2.24vh;
     }
     @for $i from 1 to 200 {
+        .font-#{$i}-vh-xs{
+            font-size: #{$i}vh;
+        }
         .font-#{$i}-xs{
             font-size: #{$i}px;
         }
@@ -304,6 +419,9 @@ hr.hr {
 @include media-breakpoint-up(sm) {
 
     @for $i from 1 to 200 {
+        .font-#{$i}-vh-sm{
+            font-size: #{$i}vh;
+        }
         .font-#{$i}-sm{
             font-size: #{$i}px;
         }
@@ -335,8 +453,66 @@ hr.hr {
     }
 }
 
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-up(md) {
+    .logo{
+        width: 22vh;
+    }
+    .font-1-5-vh-md{
+        font-size: 1.5vh;
+    }
+    .font-1-60-vh-md{
+        font-size: 1.60vh;
+    }
+    .font-1-3-vh-md{
+        font-size: 1.3vh;
+    }
+
+    .font-2-1-vh-md{
+        font-size: 2.1vh;
+    }
+    .font-2-10-vh-md{
+        font-size: 2.10vh;
+    }
+    .font-1-80-vh-md{
+        font-size: 1.80vh;
+    }
+
+    .font-2-24-vh-md{
+        font-size: 2.24vh;
+    }
+
+    .font-2-50-vh-md{
+        font-size: 2.50vh;
+    }
+
+    .font-2-40-vh-md{
+        font-size: 2.40vh;
+    }
+    .font-2-30-vh-md{
+        font-size: 2.30vh;
+    }
+    .font-2-80-vh-md{
+        font-size: 2.80vh;
+    }
+    .font-1-58-vh-md{
+        font-size: 1.58vh;
+    }
+    .pt-10-2-vh-md{
+        padding-top: 10.2vh;
+    }
+    .pt-6-89-vh-md{
+        padding-top: 6.89vh;
+    }
+    .img-w-31-97-vh-md{
+        width: 31.97vh;
+    }
+    .img-w-3-7-vh-md{
+        width: 3.7vh;
+    }
     @for $i from 1 to 200 {
+        .font-#{$i}-vh-md{
+            font-size: #{$i}vh;
+        }
         .font-#{$i}-md{
             font-size: #{$i}px;
         }
@@ -368,19 +544,25 @@ hr.hr {
         .img-w-#{$i}-rem-md{
             width: #{$i}rem;
         }
+        .img-w-#{$i}-vh-md{
+            width: #{$i}vh;
+        }
     }
     .btn{
-        min-width: 289px;
-        min-height: 59px;
+        min-width: 28.87vh;
+        min-height: 5.89vh;
     }
     .btn-lg, .btn-group-lg > .btn {
-        padding: .5rem 2.5rem;
-        font-size: 1.125rem;
-        border-radius: 40rem;
+        padding: .80vh 4vh;
+        font-size: 1.80vh;
+        border-radius: 63.94vh;
     }
 }
 @include media-breakpoint-up(lg) { 
     @for $i from 1 to 200 {
+        .font-#{$i}-vh-lg{
+            font-size: #{$i}vh;
+        }
         .font-#{$i}-lg{
             font-size: #{$i}px;
         }
@@ -413,6 +595,9 @@ hr.hr {
  }
 @include media-breakpoint-up(xl) { 
     @for $i from 1 to 200 {
+        .font-#{$i}-vh-xl{
+            font-size: #{$i}vh;
+        }
         .font-#{$i}-xl{
             font-size: #{$i}px;
         }
@@ -445,6 +630,9 @@ hr.hr {
 }
 @include media-breakpoint-up(xxl) { 
     @for $i from 1 to 200 {
+        .font-#{$i}-vh-xxl{
+            font-size: #{$i}vh;
+        }
         .font-#{$i}-xxl{
             font-size: #{$i}px;
         }

@@ -43,3 +43,11 @@ $("#form-enrolar-equipo").validate({
 
     }
 });
+
+$('#flexSwitchCheckChecked').on('change', function (event) {
+    if ($(this).is(':checked')){
+        $('#number-here').removeClass('d-none');
+    }else{
+        $('#number-here').addClass('d-none');
+    }
+});

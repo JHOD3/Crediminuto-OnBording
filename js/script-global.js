@@ -1,4 +1,4 @@
-let icon_warning = '<i class="fa-solid fa-circle-exclamation me-2 font-25-md font-25-px mt-n1"></i>';
+let icon_warning = '<i class="fa-solid fa-circle-exclamation me-2 font-2-50-vh-md font-2-50-vh  mt-n1"></i>';
 let arrow_up = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116.771' height='27.656' viewBox='0 0 116.771 27.656'%3E%3Cpath id='Trazado_63' data-name='Trazado 63' d='M-22006.529-19980.687l54.406-20.783,54.621,20.783' transform='translate(22010.402 20004.471)' fill='none' stroke='%23e00520' stroke-linecap='round' stroke-linejoin='round' stroke-width='6'/%3E%3C/svg%3E%0A";
 let arrow_down = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116.771' height='27.656' viewBox='0 0 116.771 27.656'%3E%3Cpath id='Trazado_63' data-name='Trazado 63' d='M-22006.529-19980.687l54.406-20.783,54.621,20.783' transform='translate(-21893.631 -19976.814) rotate(180)' fill='none' stroke='%23e00520' stroke-linecap='round' stroke-linejoin='round' stroke-width='6'/%3E%3C/svg%3E";
 jQuery.validator.setDefaults({

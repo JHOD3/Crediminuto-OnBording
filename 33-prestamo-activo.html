@@ -2,7 +2,7 @@
 <html lang="es">
   <head> 
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,52 +15,53 @@
   <body>
     <div class="d-block d-md-flex min-vh-100">
       <div class="col-md-7 order-1 order-md-2 card-radius" id="top-card">
-        <div class="col-md-11 mx-auto col-11 mx-auto px-md-4">
+        <div class="col-md-11 mx-auto col-11 mx-auto px-md-4 px-3">
           <nav class="navbar navbar-light border-bottom">
             <div class="container-fluid d-none d-md-block"><a class="navbar-brand text-primary font-18-md" href="/"><i class="fa-solid fa-angle-left"></i><span class="p-2">Volver</span></a>
             </div>
             <div class="container-fluid justify-content-between d-flex pb-md-3 pt-md-0 py-2"><a class="navbar-brand text-primary font-25-px d-md-none" href="/"><i class="fa-solid fa-angle-left"></i></a><a class="navbar-brand" href="/"><img class="py-md-2 logo" src="image/logo-crediminuto.svg" alt=""></a>
               <div class="d-md-flex d-block">
-                <div class="d-md-flex d-none"><img src="image/icono-user.svg">
-                  <div class="ms-3" style="line-height:20px">
-                    <div class="font-14-md">CLIENTE</div>
-                    <div class="font-25-md text-primary">Juan Pérez Moreno</div>
+                <div class="d-md-flex d-none"><img class="img-w-5-vh-md" src="image/icono-user.svg">
+                  <div class="ms-3" style="line-height:2vh">
+                    <div class="font-1-3-vh-md">CLIENTE</div><strong class="font-2-10-vh-md text-primary">Juan Pérez Moreno</strong>
                   </div>
                 </div>
               </div>
             </div>
           </nav>
-          <div class="d-md-none d-flex border-bottom mt-3 pb-3"><img class="img-w-6-vh" src="image/icono-user.svg">
-            <div class="ms-3" style="line-height:18px">
-              <div class="font-10-sm">CLIENTE</div>
-              <div class="font-15-sm text-primary"><b>Juan Pérez Moreno</b></div>
+          <div class="border-bottom-m mt-3 pb-3">
+            <div class="d-md-none d-flex"><img class="img-w-5-vh" src="image/icono-user.svg">
+              <div class="ms-3" style="line-height:2vh">
+                <div class="font-1-3-vh">CLIENTE</div>
+                <div class="font-2-10-vh text-primary"><b>Juan Pérez Moreno</b></div>
+              </div>
+            </div>
+            <div class="d-flex mt-3 pb-1 align-items-center pt-md-5"><img class="img-w-5-vh img-w-6-vh-md" src="image/icono-phone-2.svg">
+              <div class="ms-3 align-items-center" style="line-height:2vh">
+                <div class="font-1-3-vh">EQUIPO ADQUIRIDO</div>
+                <div class="font-2-10-vh text-primary"><b>Xiaomi Redmi 9A 128GB</b></div>
+              </div>
             </div>
           </div>
-          <div class="d-flex mt-3 pb-3 align-items-center pt-md-5"><img class="img-w-4-rem img-w-6-vh-xs" src="image/icono-phone-2.svg">
-            <div class="ms-3 align-items-center lh-1">
-              <div class="font-11-sm font-15-md">EQUIPO ADQUIRIDO</div>
-              <div class="font-20-sm font-25-md text-primary mt-2"><b>Xiaomi Redmi 9A 128GB</b></div>
+          <form class="pt-6-89-vh-md pt-2-vh" id="form-enrolar-equipo">
+            <div class="text-primary text-center text-md-start d-md-flex"><img class="mx-md-0 mx-auto img-w-6-vh img-w-6-vh-md" src="image/icono-cohete.svg">
+              <div class="pl-2-vh fw-normal mt-3 mt-md-0 pt-2 lh-base text-md-start text-center font-2-50-vh font-2-50-vh-md">El préstamo ya se encuentra <br class="d-md-none d-block"> ACTIVO! <br class="d-md-block d-none"> Ya puedes entregar el <br class="d-md-none d-block"> teléfono al cliente.</div>
             </div>
-          </div>
-          <form class="pt-50-px-md pt-40-px pb-64-px" id="form-enrolar-equipo">
-            <div class="text-primary justify-content-center d-grid d-md-flex justify-content-md-start justify-content-center"><img class="mx-md-0 mx-auto" src="image/icono-cohete.svg">
-              <div class="pl-2-vh font-35-md font-18-px fw-normal mt-3 mt-md-0 pt-2 lh-base text-md-start text-center">El préstamo ya se encuentra <br class="d-md-none d-block"> ACTIVO! <br class="d-md-block d-none"> Ya puedes entregar el <br class="d-md-none d-block"> teléfono al cliente.</div>
-            </div>
-            <div class="mt-80-px-md mt-60-px justify-content-between d-flex d-md-block"><a class="btn btn-outline-primary btn-lg" href="">DETALLE DEL PRÉSTAMO</a>
+            <div class="mt-5 pt-2 justify-content-between d-flex d-md-block"><a class="btn btn-outline-primary btn-lg" href="">DETALLE DEL PRÉSTAMO</a>
               <button class="btn btn-primary btn-lg ms-md-4 continuar-btn" type="submit">FINALIZAR</button>
             </div>
-            <div class="mt-80-px-md mt-60-px">
-              <div class="form-check">
+            <div class="mt-md-0 pt-md-0 mt-md-5 pt-md-4">
+              <div class="form-check mt-5 pt-md-5 pt-3">
                 <input class="form-check-input" id="flexCheckDefault" type="checkbox" value="" checked="" name="term" required>
-                <label class="form-check-label font-18-md font-13-xs" for="flexCheckDefault">Aceptar<a href="">Términos y condiciones</a></label>
+                <label class="form-check-label font-1-60-vh-md mt-1 mt-md-0" for="flexCheckDefault">Aceptar<a href="">Términos y condiciones</a></label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" id="flexCheckChecked1" type="checkbox" value="" name="policy" required>
-                <label class="form-check-label font-18-md font-13-xs" for="flexCheckChecked1">Aceptar<a href="">Políticas de Protección al Consumidor</a></label>
+                <label class="form-check-label font-1-60-vh-md" for="flexCheckChecked1">Aceptar<a href="">Políticas de Protección al Consumidor</a></label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" id="flexCheckChecked2" type="checkbox" value="" name="policy-dato" required>
-                <label class="form-check-label font-18-md font-13-xs" for="flexCheckChecked2">Aceptar<a href="">Políticas de Tratamiento de Datos Personales</a></label>
+                <label class="form-check-label font-1-60-vh-md" for="flexCheckChecked2">Aceptar<a href="">Políticas de Tratamiento de Datos Personales</a></label>
               </div>
             </div>
           </form>
@@ -70,14 +71,14 @@
         <div class="bg-primary h-100"><a class="position-absolute text-primary arrow-control" href="" id="arrow"><img class="arrow-up" src="" alt="" width="60"></a>
           <div>
             <div class="col-sm-11 col-12 mx-auto d-block d-md-none message-top">
-              <div class="text-center text-white font-20-px font-15-xs mx-auto pt-70-px pt-50-px-xs align-items-center"><img class="pe-2 pt-n4" src="image/luz.png" alt="" width="50">Desliza para consejos y recomendaciones</div>
+              <div class="text-center text-white mx-auto pt-70-px pt-50-px-xs align-items-center font-2-vh"><img class="pe-3 pt-n4 img-w-6-vh" src="image/luz.png" alt="" width="50">Desliza para consejos y recomendaciones</div>
             </div>
-            <div class="col-md-9 col-10 col-sm-11 mx-auto min-vh-50 pb-md-0 pb-5">
-              <div class="text-center text-white font-24-md font-21-sm font-18-xs col-md-9 col-sm-10 mx-auto pt-110-px-md pt-55-px fw-normal lh-base">Recomendación</div>
+            <div class="col-md-9 col-11 col-sm-11 mx-auto min-vh-50 pb-md-0 pb-0">
+              <div class="text-center text-white font-2-24-vh-md col-md-9 col-sm-10 mx-auto pt-10-2-vh-md pt-8-vh font-2-50-vh fw-normal lh-base">Recomendación</div>
               <div class="raya col-md-2 col-2 mx-auto mt-md-3 mb-md-4 my-3"></div>
-              <div class="text-center text-white font-20-md font-16-sm font-14-xs col-md-9 col-sm-10 mx-auto fw-light">  Al iniciar el equipo validar que las app de<br class='d-md-block d-none'> kuipermake y crediminuto ya se encuentren<br class='d-md-block d-none'> descargadas para continuar el proceso. </div>
+              <div class="text-center text-white font-1-80-vh font-1-80-vh-md col-md-9 col-sm-10 mx-auto fw-light">  Al iniciar el equipo validar que las app de<br class='d-md-block d-block'> kuipermake y crediminuto ya se encuentren<br class='d-md-block d-block'> descargadas para continuar el proceso. </div>
             </div>
-            <embed class="img-w-35-vh mx-auto d-block mt-md-4 img-w-20-rem-md" src="image/elemento-22.svg" alt="" sizes="" srcset="">
+            <embed class="img-w-31-97-vh-md img-w-37-vh mx-auto d-block mt-md-4 mt-2" src="image/elemento-22.svg" alt="" sizes="" srcset="">
           </div>
         </div>
       </div>

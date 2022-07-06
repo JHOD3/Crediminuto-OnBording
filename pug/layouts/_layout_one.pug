@@ -5,7 +5,7 @@ html(lang="es")
     body
         .d-block.d-md-flex.min-vh-100
             .col-md-7.order-1.order-md-2.card-radius#top-card
-                .col-md-11.mx-auto.col-11.mx-auto.px-md-4
+                .col-md-11.mx-auto.col-11.mx-auto.px-md-4.px-3
                     nav.navbar.navbar-light.border-bottom
                         .container-fluid.d-none.d-md-block
                             if page_datos.back === true
@@ -21,26 +21,27 @@ html(lang="es")
                                 div.d-md-flex.d-block
                                     if page_datos.cliente === true
                                         div.d-md-flex.d-none
-                                            img(src="image/icono-user.svg")
-                                            div.ms-3(style="line-height:20px")
-                                                div.font-14-md CLIENTE
-                                                div.font-25-md.text-primary Juan Pérez Moreno
+                                            img(src="image/icono-user.svg").img-w-5-vh-md
+                                            div.ms-3(style="line-height:2vh")
+                                                div.font-1-3-vh-md CLIENTE
+                                                strong.font-2-10-vh-md.text-primary Juan Pérez Moreno
                         else
                             .container-fluid.justify-content-center.justify-content-md-start.d-flex.py-md-3.py-2
                                 a(href="/").navbar-brand
                                     img(src="image/logo-crediminuto.svg", alt="").py-md-2.logo
                     if page_datos.cliente === true
-                        .d-md-none.d-flex.border-bottom.mt-3.pb-3
-                            img(src="image/icono-user.svg").img-w-6-vh
-                            div.ms-3(style="line-height:18px")
-                                div.font-10-sm CLIENTE
-                                div.font-15-sm.text-primary #[b Juan Pérez Moreno]
-                    if page_datos.phone === true
-                        .d-flex.mt-3.pb-3.align-items-center.pt-md-5
-                            img(src="image/icono-phone-2.svg").img-w-4-rem.img-w-6-vh-xs
-                            div.ms-3.align-items-center.lh-1
-                                div.font-11-sm.font-15-md EQUIPO ADQUIRIDO
-                                div.font-20-sm.font-25-md.text-primary.mt-2 #[b Xiaomi Redmi 9A 128GB]
+                        .border-bottom-m.mt-3.pb-3
+                            .d-md-none.d-flex
+                                img(src="image/icono-user.svg").img-w-5-vh
+                                div.ms-3(style="line-height:2vh")
+                                    div.font-1-3-vh CLIENTE
+                                    div.font-2-10-vh.text-primary #[b Juan Pérez Moreno]
+                            if page_datos.phone === true
+                                .d-flex.mt-3.pb-1.align-items-center.pt-md-5
+                                    img(src="image/icono-phone-2.svg").img-w-5-vh.img-w-6-vh-md
+                                    div.ms-3.align-items-center(style="line-height:2vh")
+                                        div.font-1-3-vh EQUIPO ADQUIRIDO
+                                        div.font-2-10-vh.text-primary #[b Xiaomi Redmi 9A 128GB]
                     block content_right                
             .col-md-5.order-2.order-md-1#down-card.card-radius-down
                 .bg-primary.h-100
@@ -48,31 +49,31 @@ html(lang="es")
                         img(src="", alt="", width="60").arrow-up
                     div
                         .col-sm-11.col-12.mx-auto.d-block.d-md-none.message-top
-                            .text-center.text-white.font-20-px.font-15-xs.mx-auto.pt-70-px.pt-50-px-xs.align-items-center
-                                img(src="image/luz.png", alt="", width="50").pe-2.pt-n4
+                            .text-center.text-white.mx-auto.pt-70-px.pt-50-px-xs.align-items-center.font-2-vh
+                                img(src="image/luz.png", alt="", width="50").pe-3.pt-n4.img-w-6-vh
                                 | Desliza para consejos y recomendaciones
-                        .col-md-9.col-10.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-5
+                        .col-md-9.col-11.col-sm-11.mx-auto.min-vh-50.pb-md-0.pb-0
                             if text_1 != false
-                                .text-center.text-white.font-24-md.font-21-sm.font-18-xs.col-md-9.col-sm-10.mx-auto.pt-110-px-md.pt-55-px.fw-normal.lh-base !{text_1}
+                                .text-center.text-white.font-2-24-vh-md.col-md-9.col-sm-10.mx-auto.pt-10-2-vh-md.pt-8-vh.font-2-50-vh.fw-normal.lh-base !{text_1}
                                 if text_2 != false || ol2 == true
                                     .raya.col-md-2.col-2.mx-auto.mt-md-3.mb-md-4.my-3
                             if text_2 != false
-                                .text-center.text-white.font-20-md.font-16-sm.font-14-xs.col-md-9.col-sm-10.mx-auto.fw-light   !{text_2}
+                                .text-center.text-white.font-1-80-vh.font-1-80-vh-md.col-md-9.col-sm-10.mx-auto.fw-light   !{text_2}
                             if ol != false
-                                ol.text-white.col-md-9.col-sm-10.mx-auto.mt-md-4.ps-md-5.pt-20-px-md
+                                ol.text-white.col-md-10.col-sm-10.mx-auto.mt-md-4.ps-md-5
                                     each val in ol
-                                        li.font-17-md.fw-light #{val}
+                                        li.font-1-80-vh.font-1-80-vh-md.fw-light #{val}
                             if ol2 != false
-                                ol.text-white.col-md-9.col-sm-10.mx-auto.mt-md-4.mt-4
-                                    li.d-flex.align-items-center.font-20-md.font-14-sm.font-14-xs  #[img(src="image/icono-number-1.png").me-md-2.me-2.img-w-6-vh-xs]
-                                        |   Tus credenciales están encintadas y no serán almacenadas
-                                    li.d-flex.align-items-center.font-20-md.font-14-sm.my-md-3.my-3.font-14-xs  #[img(src="image/icono-number-2.png").me-md-2.me-2.img-w-6-vh-xs]
-                                        |   Fusce sed diam semper, sodales odio quis, posuere nisl
-                                    li.d-flex.align-items-center.font-20-md.font-14-sm.font-14-xs  #[img(src="image/icono-number-3.png").me-md-2.me-2.img-w-6-vh-xs]
-                                        |   Quisque auctor, enim id consectetur rhoncus
+                                ol.text-white.col-md-10.col-sm-10.mx-auto.mt-md-4.mt-4
+                                    li.d-flex.align-items-center.font-2-vh-md.font-2-vh  #[img(src="image/icono-number-1.png").img-w-4-vh.img-w-5-vh-md.me-2]
+                                        |   Tus credenciales están encintadas  #[br.d-md-none.d-block] y no serán almacenadas
+                                    li.d-flex.align-items-center.my-md-3.my-3.font-2-vh-md.font-2-vh  #[img(src="image/icono-number-2.png").img-w-4-vh.img-w-5-vh-md.me-2]
+                                        |   Fusce sed diam semper, sodales#[br.d-md-none.d-block] odio quis, posuere nisl
+                                    li.d-flex.align-items-center.font-2-vh-md.font-2-vh  #[img(src="image/icono-number-3.png").img-w-4-vh.img-w-5-vh-md.me-2]
+                                        |   Quisque auctor, enim id#[br.d-md-none.d-block] consectetur rhoncus
                         if img != false
-                            embed(src="image/"+img, alt="", sizes="", srcset="").img-w-35-vh.mx-auto.d-block.mt-md-4.img-w-20-rem-md
+                            embed(src="image/"+img, alt="", sizes="", srcset="").img-w-31-97-vh-md.img-w-37-vh.mx-auto.d-block.mt-md-4.mt-2
                             if text_3 != false
-                                .text-center.text-white.font-21-md.font-16-sm.font-14-xs.col-md-10.mx-auto.fw-light.mt-md-4 !{text_3}
+                                .text-center.text-white.font-2-10-vh-md.font-2-vh.col-md-10.mx-auto.fw-light.mt-md-4.mt-n3 !{text_3}
         include ../components/_footer
         include ../components/_script
