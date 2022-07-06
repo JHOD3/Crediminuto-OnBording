@@ -336,7 +336,9 @@ hr.hr {
     background-color: rgba(224, 4, 32, 0.34) !important;
     border-color: #E00520 !important;
 }
-
+.btn{
+    text-transform: uppercase !important;
+}
 @for $i from 1 to 200 {
     .font-#{$i}-vh{
         font-size: #{$i}vh;

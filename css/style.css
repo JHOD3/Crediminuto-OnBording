@@ -8323,6 +8323,10 @@ hr.hr {
   border-color: #E00520 !important;
 }
 
+.btn {
+  text-transform: uppercase !important;
+}
+
 .font-1-vh {
   font-size: 1vh;
 }
