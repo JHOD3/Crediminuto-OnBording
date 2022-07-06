@@ -153,7 +153,14 @@ hr.hr {
 .btn-lg-c {
     font-size: 2vh !important;
 }
+
 @media (max-width:768px) {
+    .line-h{
+        line-height: 2vh;
+    }
+    .font-1-70-vh{
+        font-size: 1.70vh;
+    }
     .border-bottom-m{
         border-bottom: 1px solid;
         border-color: #dddddd;
@@ -320,7 +327,16 @@ hr.hr {
         background-size: 2rem;
         height: 30px;
     }
+    .font-3-6-vh{
+        font-size: 3.6vh;
+    }
 }
+.btn-red:hover, btn-red:active{
+    color: #b3041a !important;
+    background-color: rgba(224, 4, 32, 0.34) !important;
+    border-color: #E00520 !important;
+}
+
 @for $i from 1 to 200 {
     .font-#{$i}-vh{
         font-size: #{$i}vh;
@@ -455,7 +471,13 @@ hr.hr {
 
 @include media-breakpoint-up(md) {
     .logo{
-        width: 22vh;
+        width: 24vh;
+    }
+    .font-3-6-vh-md{
+        font-size: 3.6vh;
+    }
+    .line-h-md{
+        line-height: 2.5vh;
     }
     .font-1-5-vh-md{
         font-size: 1.5vh;
@@ -465,6 +487,9 @@ hr.hr {
     }
     .font-1-3-vh-md{
         font-size: 1.3vh;
+    }
+    .font-1-70-vh-md{
+        font-size: 1.70vh;
     }
 
     .font-2-1-vh-md{

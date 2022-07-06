@@ -10,12 +10,12 @@ block variables
     - var   img     =   "elemento-22.svg";
 
 block content_right
-    form(id="form-enrolar-equipo").pt-69-px-md.pt-40-px.pb-64-px
-        .text-primary.justify-content-center.d-grid.d-md-flex.justify-content-md-start
-            img(src="image/icono-like.svg")
-            div.pl-1-vh.font-35-md.font-18-px.fw-normal.mt-3.mt-md-0.pt-2.d-md-block.d-none ¡Buenas noticias!
-        .font-24-md.font-15-px.mt-md-4.text-md-start.text-center.mt-3.fw-light
-            | #[b.text-primary.font-20-sm.fw-bold Ahora es momento de #[br.d-md-none.d-block] encender el equipo.] #[br]
-            | Una vez encendido presiona continuar.
-        .mt-80-px-md.mt-60-px.justify-content-center.d-flex.d-md-block.justify-content-md-start.justify-content-center
-            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs Descargar APPS
+    form(id="form-enrolar-equipo").pt-6-89-vh-md.pt-2-vh
+        .text-primary.text-center.text-md-start.d-md-flex
+            img(src="image/icono-like.svg").img-w-6-vh.img-w-7-vh-md
+            div.pl-1-vh.fw-normal.mt-3.mt-md-0.pt-2.d-md-block.d-none.font-2-50-vh.font-3-6-vh-md ¡Buenas noticias!
+        .font-24-md.font-15-px.mt-md-4.text-md-start.text-center.mt-3.fw-light.mt-md-5
+            div #[b.text-primary.font-2-50-vh.font-2-50-vh-md.fw-bolder Ahora es momento de #[br.d-md-none.d-block] encender el equipo.]
+            div.mt-3.mt-md-0 Una vez hecho esto se habilitará #[br.d-md-none.d-block]el botón para descargar la APP.
+        .mt-5.pt-3.pt-md-5.justify-content-center.d-flex.d-md-block.justify-content-md-start.justify-content-center
+            button(type="submit").btn.btn-primary.btn-lg.continuar-btn.font-14-xs Descargar APPS

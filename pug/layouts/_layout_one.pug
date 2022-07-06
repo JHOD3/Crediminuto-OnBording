@@ -6,18 +6,18 @@ html(lang="es")
         .d-block.d-md-flex.min-vh-100
             .col-md-7.order-1.order-md-2.card-radius#top-card
                 .col-md-11.mx-auto.col-11.mx-auto.px-md-4.px-3
-                    nav.navbar.navbar-light.border-bottom
+                    nav.navbar.navbar-light.border-bottom.pt-md-3
                         .container-fluid.d-none.d-md-block
                             if page_datos.back === true
-                                a(href="/").navbar-brand.text-primary.font-18-md
+                                a(href="/").navbar-brand.text-primary.font-1-70-vh.font-1-70-vh-md
                                     i.fa-solid.fa-angle-left
                                     span.p-2 Volver
                         if page_datos.back === true
-                            .container-fluid.justify-content-between.d-flex.pb-md-3.pt-md-0.py-2
+                            .container-fluid.justify-content-between.d-flex.pt-md-0.py-2.pb-md-0
                                 a(href="/").navbar-brand.text-primary.font-25-px.d-md-none
                                         i.fa-solid.fa-angle-left
                                 a(href="/").navbar-brand
-                                    img(src="image/logo-crediminuto.svg", alt="").py-md-2.logo
+                                    img(src="image/logo-crediminuto.svg", alt="").py-md-3.logo
                                 div.d-md-flex.d-block
                                     if page_datos.cliente === true
                                         div.d-md-flex.d-none
@@ -29,9 +29,9 @@ html(lang="es")
                             .container-fluid.justify-content-center.justify-content-md-start.d-flex.py-md-3.py-2
                                 a(href="/").navbar-brand
                                     img(src="image/logo-crediminuto.svg", alt="").py-md-2.logo
-                    if page_datos.cliente === true
+                    if page_datos.cliente === true || page_datos.phone === true
                         .border-bottom-m.mt-3.pb-3
-                            .d-md-none.d-flex
+                            .d-md-none.d-flex.d-md-none.d-block
                                 img(src="image/icono-user.svg").img-w-5-vh
                                 div.ms-3(style="line-height:2vh")
                                     div.font-1-3-vh CLIENTE
@@ -39,9 +39,9 @@ html(lang="es")
                             if page_datos.phone === true
                                 .d-flex.mt-3.pb-1.align-items-center.pt-md-5
                                     img(src="image/icono-phone-2.svg").img-w-5-vh.img-w-6-vh-md
-                                    div.ms-3.align-items-center(style="line-height:2vh")
-                                        div.font-1-3-vh EQUIPO ADQUIRIDO
-                                        div.font-2-10-vh.text-primary #[b Xiaomi Redmi 9A 128GB]
+                                    div.ms-3.align-items-center.line-h.line-h-md
+                                        div.font-1-3-vh.font-1-80-vh-md EQUIPO ADQUIRIDO
+                                        div.font-2-10-vh.font-3-vh-md.text-primary #[b Xiaomi Redmi 9A 128GB]
                     block content_right                
             .col-md-5.order-2.order-md-1#down-card.card-radius-down
                 .bg-primary.h-100
