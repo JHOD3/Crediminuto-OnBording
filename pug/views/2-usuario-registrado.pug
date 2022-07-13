@@ -20,10 +20,10 @@ block content_right
         .font-2-vh-md.fw-light.font-2-vh   Por favor escribe el número de cédula de la persona únicamente <br class='d-md-block d-none'> si ya ha sido registrado en otra oportunidad.
         div.mt-0.col-md-8.pt-30-px-md.pt-30-px
             label.form-label.ps-2.ms-1.font-1-5-vh-md NÚMERO CÉDULA DE CIUDADANÍA
-            input(type="tel", min="0", inputmode="tel", name="tel-number", placeholder="Número de cedula de ciudadania").form-control
+            input(type="number", name="dni", placeholder="Número de cedula de ciudadania").form-control
         .mt-md-5.pt-md-5.mt-2.pt-5.justify-content-between.d-flex.d-md-block
             a(href="").btn.btn-outline-primary.btn-lg.font-14-xs ATRÁS
-            button(type="submit", disabled="true").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
+            button(type="submit", disabled).btn.btn-primary.btn-lg.ms-md-4.font-14-xs.continuar-btn CONTINUAR
         .mt-md-0.pt-md-0.mt-0.pt-0
             .form-check.mt-5.pt-5
                 input#flexCheckDefault.form-check-input(type='checkbox' value='' checked='' name="term" required)
@@ -31,14 +31,14 @@ block content_right
                     | Aceptar
                     a(href="") Términos y condiciones
             .form-check
-                input#flexCheckChecked1.form-check-input(type='checkbox' value='' name="policy" required)
+                input#flexCheckChecked1.form-check-input(type='checkbox' value=''   checked='' name="policy" required)
                 label.form-check-label(for='flexCheckChecked1').font-1-60-vh-md
                     | Aceptar
                     a(href="") Políticas de Protección al Consumidor
             .form-check
-                input#flexCheckChecked2.form-check-input(type='checkbox' value='' name="policy-dato" required)
+                input#flexCheckChecked2.form-check-input(type='checkbox' value=''   checked='' name="policy-dato" required)
                 label.form-check-label(for='flexCheckChecked2').font-1-60-vh-md
                     | Aceptar
                     a(href="") Políticas de Tratamiento de Datos Personales
 block script
-    script(src="js/script-page/usuario-registrado.js")
+    script(src="js/script-page/2-usuario-registrado.js")

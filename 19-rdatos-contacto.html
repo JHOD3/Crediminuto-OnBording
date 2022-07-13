@@ -37,12 +37,12 @@
               </div>
             </div>
           </div>
-          <form class="pt-6-89-vh-md pt-4-vh" id="form-datos-personales">
+          <form class="pt-6-89-vh-md pt-4-vh" id="form-datos-contacto">
             <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-3-vh-md font-3-vh mt-1 mt-md-1"></i><span class="pl-1-vh font-2-40-vh-md font-2-50-vh fw-normal">Datos de contacto</span></div>
             <div class="font-2-vh-md fw-light font-2-vh mt-4 pt-2"> Escribe el número de celular del cliente, <br class="d-md-block d-block"> su mail y número alternativo son opcionales.</div>
             <div class="mt-4 mt-md-4 col-md-8">
               <label class="form-label ps-2 ms-1 font-1-5-vh-md">NÚMERO CELULAR</label>
-              <input class="form-control" type="tel" name="dni" required>
+              <input class="form-control" type="number" name="celular1" required unique="celular">
             </div>
             <div class="mt-4 col-md-8 pt-10-px-md pt-10-px">
               <label class="form-label ps-2 ms-1 font-1-5-vh-md">EMAIL (Opcional)</label>
@@ -50,10 +50,10 @@
             </div>
             <div class="mt-4 col-md-8 pt-10-px-md pt-10-px">
               <label class="form-label ps-2 ms-1 font-1-5-vh-md">NÚMERO ALTERNATIVO (Opcional)</label>
-              <input class="form-control" type="tel" name="document">
+              <input class="form-control" type="number" name="celular2" unique="celular">
             </div>
             <div class="mt-md-5 pt-md-4 pt-4 mt-3 justify-content-center d-flex d-md-block justify-content-md-between">
-              <button class="btn btn-primary btn-lg ms-md-4 continuar-btn font-14-xs" type="submit">CONTINUAR</button>
+              <button class="btn btn-primary btn-lg ms-md-4 continuar-btn font-14-xs" type="submit" disabled>CONTINUAR</button>
             </div>
           </form>
         </div>
@@ -80,5 +80,6 @@
     <script src="js/jquery.validate.min-dist.js"> </script>
     <script src="js/additional-methods-dist.js"></script>
     <script src="js/script-global.js"></script>
+    <script src="js/script-page/19-rdatos-contacto.js"></script>
   </body>
 </html>

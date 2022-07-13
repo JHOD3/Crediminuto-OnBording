@@ -1,66 +1,64 @@
 // Validacion de campo de numero
-$("#form-validate-code").validate({
+let form = $("#form-validate-code");
+form.validate({
     rules:{
         'code_1':{
-            required:true,
-            maxlength: 1
+            required:true
         },
         'code_2':{
-            required:true,
-            maxlength: 1
+            required:true
         },
         'code_3':{
-            required:true,
-            maxlength: 1
+            required:true
         },
         'code_4':{
-            required:true,
-            maxlength: 1
+            required:true
         }
     },
     messages:{
         'code_1':{
-            required:'',
-            maxlength: ''
+            required:icon_warning+'Todos los campos son requeridos',
+            maxlength: icon_warning+'Maximo un digito.'
         },
         'code_2':{
-            required:'',
-            maxlength: ''
+            required:icon_warning+'Todos los campos son requeridos',
+            maxlength: icon_warning+'Maximo un digito.'
         },
         'code_3':{
-            required:'',
-            maxlength: ''
+            required:icon_warning+'Todos los campos son requeridos',
+            maxlength: icon_warning+'Maximo un digito.'
         },
         'code_4':{
-            required:'',
-            maxlength: ''
+            required:icon_warning+'Todos los campos son requeridos',
+            maxlength: icon_warning+'Maximo un digito.'
         }
     },
     errorElement: 'span',
     errorPlacement: function (error, element) {
         error.addClass('invalid-feedback pl-16-px-md pl-10-px aling-items-center d-flex mt-10-px-md mt-10-px');
-        element.closest('.form-group').append(error);
-        $(element).parent().append(error);
-        $(element).prev().addClass('text-warning');
+        $('#error').html(error);
+
     },
     highlight: function (element, errorClass, validClass) {
         $(element).addClass('is-invalid');
-        $('.continuar-btn').prop("disabled", true);
         $(element).prev().addClass('text-warning');
-        $('#check-code').addClass('d-none');
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
-        $('.continuar-btn').removeAttr("disabled");
         $(element).prev().removeClass('text-warning');
-        if ($("#form-validate-code").validate()){
-            // Vefico que el codigo existe mediante una funcion para colocar el check verde
-            $('#check-code').removeClass('d-none'); //Hago visible el check verde si el codigo insertado fue el enviado. esto debe estar dentro del done de la funciona que verifica el codigoqw
-        }
-
-    },
+     },
     submitHandler: function(form) {
 
+    }
+});
+
+$('input').on('keyup change', function (event) {
+    if(form.valid()){
+        $('.continuar-btn').removeAttr("disabled");
+        $('#check-code').removeClass('d-none');
+    }else {
+        $('.continuar-btn').attr("disabled", true);
+        $('#check-code').addClass('d-none');
     }
 });
 countBack();
@@ -84,8 +82,8 @@ function countBack() {
 
         if (event.offset.seconds == 0){
             // EL TIEMPO TERMINO LLAMAR A FUNCIONA PARA VALIDAR QUE TERMINO EL TIEMPO CON EL BACKEND
-
             $('#time-code').countdown('stop');
+            $('#resend-code').removeAttr('disabled'); // Habilitamos el boton de reenviar codigo
         }
     });
 }

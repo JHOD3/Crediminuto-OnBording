@@ -10,7 +10,7 @@ imgInput.addEventListener('change', () => {
         $('#capture-preview').removeClass('d-none');
         reader.readAsDataURL(imgInput.files[0]);
         $('#btn-option').removeClass('d-none');
-        $('#btn-submit').removeClass('d-none');
-        $('#btn-validate').addClass('d-none');
+        $('#btn-submit').removeAttr('disabled');
+
     }
 });

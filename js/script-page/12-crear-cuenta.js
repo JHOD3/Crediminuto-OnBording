@@ -1,38 +1,39 @@
-// Validacion de campo de numero    
-$("#form-page-register").validate({
+// Validacion de campo de numero
+let form = $("#form-crear-cuenta");
+form.validate({
     rules:{
-        'tel-number':{
+        'usuario':{
+            required:true
+        },
+        'password':{
+            required:true
+        },
+        'password_confirm':{
             required:true,
-            phoneUS:true,
-            pattern: '[0-9]*'
+            equalTo:'#password'
         },
-        'term':{
-            required:true
-        },
-        'policy':{
-            required:true
-        },
-        'policy-dato':{
-            required:true
+        'email':{
+            required:true,
+            email: true
         }
     },
     messages:{
-        'tel-number':{
-            required:'Este campo es requerido.',
-            phoneUS:icon_warning+ 'Debe tener un formato valido.',
-            pattern: 'Formato Invalido'
+        'name':{
+            required:icon_warning+ 'Este campo es requerido.'
         },
-        'term':{
+        'password':{
             required:icon_warning+ 'Este campo es requerido.',
         },
-        'policy':{
+        'password_confirm':{
             required:icon_warning+ 'Este campo es requerido.',
+            equalTo : icon_warning+ 'Las contraseñas no coinciden.'
         },
-        'policy-dato':{
+        'email':{
             required:icon_warning+ 'Este campo es requerido.',
+            email: icon_warning+ 'Debe ser un email valido.'
         }
     },
-   errorElement: 'span',
+    errorElement: 'span',
     errorPlacement: function (error, element) {
         error.addClass('invalid-feedback pl-16-px-md pl-10-px aling-items-center d-flex mt-10-px-md mt-10-px');
         element.closest('.form-group').append(error);
@@ -41,15 +42,20 @@ $("#form-page-register").validate({
     },
     highlight: function (element, errorClass, validClass) {
         $(element).addClass('is-invalid');
-        $('.continuar-btn').prop("disabled", true);
         $(element).prev().addClass('text-warning');
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
-        $('.continuar-btn').removeAttr("disabled");
         $(element).prev().removeClass('text-warning');
     },
     submitHandler: function(form) {
 
+    }
+});
+$('input').on('keyup change', function (event) {
+    if(form.valid()){
+        $('.continuar-btn').removeAttr("disabled");
+    }else {
+        $('.continuar-btn').attr("disabled", true);
     }
 });

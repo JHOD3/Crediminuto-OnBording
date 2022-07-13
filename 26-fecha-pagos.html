@@ -37,11 +37,11 @@
               </div>
             </div>
           </div>
-          <form class="pt-6-89-vh-md pt-4-vh" id="upload-selfie">
+          <form class="pt-6-89-vh-md pt-4-vh" id="form-fecha-pago">
             <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-3-vh-md font-3-vh mt-1 mt-md-1"></i><span class="pl-1-vh font-2-40-vh-md font-2-50-vh fw-normal">09. Selección de fecha de pago</span></div>
             <div class="mt-4 mt-md-3 col-md-8 pt-10-px-md pt-20-px">
               <label class="form-label ps-2 ms-1">PRIMERA FECHA DE PAGO</label>
-              <select class="form-select">
+              <select class="form-select" name="fecha-pago">
                 <option>01</option>
                 <option>02</option>
                 <option>03</option>
@@ -82,7 +82,7 @@
               <div class="lh-base mt-md-1 mt-sm-1 mt-1 font-1-80-vh font-1-80-vh-md">  <span class="text-primary mb-3 font-1-80-vh font-1-80-vh-md"> Validar con el cliente la fecha a seleccionar</span> <br>  <span class="font-1-80-vh font-1-80-vh-md fw-light">Asegurate de que el cliente cuente con el <br> disponible para cancelar su cuota.</span></div>
             </div>
             <div class="justify-content-center d-flex d-md-block justify-content-md-between mt-5">
-              <button class="btn btn-primary btn-lg ms-md-4 continuar-btn" type="submit">CONFIRMAR</button>
+              <button class="btn btn-primary btn-lg ms-md-4 continuar-btn" type="submit" disabled>CONFIRMAR</button>
             </div>
           </form>
         </div>
@@ -109,6 +109,6 @@
     <script src="js/jquery.validate.min-dist.js"> </script>
     <script src="js/additional-methods-dist.js"></script>
     <script src="js/script-global.js"></script>
-    <script src="js/script-page/datos-personales.js"></script>
+    <script src="js/script-page/26-fecha-pago.js"></script>
   </body>
 </html>

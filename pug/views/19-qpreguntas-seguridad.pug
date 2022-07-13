@@ -10,21 +10,23 @@ block variables
     - var   img     =   "elemento-16.svg";
 
 block content_right
-    form(id="form-datos-personales").pt-6-89-vh-md.pt-4-vh.mb-5
+    form(id="form-preguntas-seguridad-2").pt-6-89-vh-md.pt-4-vh.mb-5
         .text-primary.justify-content-center.d-grid.d-md-flex.justify-content-md-start
             div.pl-1-vh.fw-normal.mt-0.mt-md-0.font-2-40-vh-md.font-2-50-vh Preguntas de seguridad #[b 2 de 4]
         .font-2-vh-md.fw-light.font-2-vh.mt-3.pt-3 En marzo de 2022 su compra de cartera con red#[br.d-none.d-md-block] Vuelva Instancia SAS:
         .form-check.mt-md-5.mt-5.mb-md-4.mb-4.align-items-center
-            input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault' checked)
+            input#flexRadioDefault1.form-check-input(type='radio' name='preguntas-2')
             label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault1')
                 | Claro - comunicación celular - comcel SA
         .form-check.mb-md-4.mb-4.align-items-center
-            input#flexRadioDefault2.form-check-input(type='radio' name='flexRadioDefault')
+            input#flexRadioDefault2.form-check-input(type='radio' name='preguntas-2')
             label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault2')
                 | Estaba abierto/vigente
         .form-check.mb-md-4.mb-4.align-items-center
-            input#flexRadioDefault3.form-check-input(type='radio' name='flexRadioDefault')
+            input#flexRadioDefault3.form-check-input(type='radio' name='preguntas-2')
             label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault3')
                 | Nunca he tenido compra de cartera con la Entidad
         .mt-80-px-md.mt-40-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            button.btn.btn-primary.btn-lg.continuar-btn.font-14-xs Continuar
+            button(disabled).btn.btn-primary.btn-lg.continuar-btn.font-14-xs Continuar
+block script
+    script(src="js/script-page/19-qpreguntas-seguridad.js")

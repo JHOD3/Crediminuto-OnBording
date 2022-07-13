@@ -10,18 +10,18 @@ block variables
     - var   img     = "elemento-8.svg";
 
 block content_right
-    form(id="form-validate-code").pt-6-89-vh-md.pt-4-vh.mb-5
+    form(id="form-crear-cuenta").pt-6-89-vh-md.pt-4-vh.mb-5
         .text-primary.aling-items-center.d-flex
             i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
             span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 04. Cuenta de correo electrónico
         .font-2-vh-md.fw-light.font-2-vh.mt-4.pt-2  Para poder terminar el registro y luego enrolar al cliente  #[br.d-md-block.d-none] correctamente vamos a tener que crear rápidamente un #[br.d-md-block.d-none] usuario y contraseña de Cliente Crediminuto.
         div.mt-4.mt-md-5.col-md-8
             label.form-label.ps-2.ms-1.font-1-5-vh-md USUARIO (Cédula identidad)
-            input(type="number", name="dni", placeholder="cliente@mail.com").form-control
+            input(type="number", name="usuario", placeholder="12345678").form-control
         div.row.pt-3.col-md-11
             div.mt-4.mt-md-3.col-md-6
                 label.form-label.ps-2.ms-1.font-1-5-vh-md NUEVA CONTRASEÑA
-                input(type="password", name="password", placeholder="********").form-control
+                input(type="password", name="password", placeholder="********")#password.form-control
             div.mt-4.mt-md-3.col-md-6
                 label.form-label.ps-2.ms-1.font-1-5-vh-md REPITA CONTRASEÑA
                 input(type="password", name="password_confirm", placeholder="********").form-control
@@ -30,4 +30,6 @@ block content_right
             label.form-label.ps-2.ms-1.font-1-5-vh-md EMAIL ALTERNATIVO
             input(type="email", name="email", placeholder="cliente@mail.com").form-control
         .mt-5.justify-content-md-between.justify-content-center.d-flex.d-md-block
-            a(href="").btn.btn-primary.btn-lg Confirmar
+            button(href="", disabled).btn.btn-primary.btn-lg.continuar-btn Confirmar
+block script
+    script(src="js/script-page/12-crear-cuenta.js")

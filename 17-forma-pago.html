@@ -37,7 +37,7 @@
               </div>
             </div>
           </div>
-          <form class="pt-6-89-vh-md pt-4-vh mb-5" id="form-validate-code">
+          <form class="pt-6-89-vh-md pt-4-vh mb-5" id="form-forma-pago">
             <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-3-vh-md font-3-vh mt-1 mt-md-1"></i><span class="pl-1-vh font-2-40-vh-md font-2-50-vh fw-normal">06. Forma de pago</span></div>
             <div class="font-2-vh-md fw-light font-2-vh mt-3 pt-0">Al momento de seleccionar la frecuencia de pago, <br class="d-md-block d-none"> se habilitará la opción de los plazos disponibles para esa frecuencia.</div>
             <div class="mt-md-5 mt-4">
@@ -51,22 +51,24 @@
             </div>
             <div class="mt-md-5 mt-5">
               <div class="border-bottom font-2-vh-md fw-bold font-2-vh">Plazo</div>
-              <div class="mt-md-4 mt-2 plazo" role="group" aria-label="Basic radio toggle button group" id="mensual">
-                <input class="btn-check" id="btnradio11" type="radio" name="cuotamensual" autocomplete="off" checked="">
+              <div class="mt-md-4 mt-2 plazo" role="group" aria-label="Basic radio toggle button group" style="display:none" id="quincenal">
+                <input class="btn-check" id="btnradio11" type="radio" name="plazo" autocomplete="off" checked="">
                 <label class="btn btn-outline-light font-16-md col-md-5 me-md-3 col-12 mt-3" for="btnradio11">6 CUOTAS</label>
-                <input class="btn-check" id="btnradio12" type="radio" name="cuotamensual" autocomplete="off">
+                <input class="btn-check" id="btnradio12" type="radio" name="plazo" autocomplete="off">
                 <label class="btn btn-outline-light font-16-md col-md-5 me-md-3 col-12 mt-4" for="btnradio12">12 CUOTAS</label>
-                <input class="btn-check" id="btnradio13" type="radio" name="cuotamensual" autocomplete="off">
+                <input class="btn-check" id="btnradio13" type="radio" name="plazo" autocomplete="off">
                 <label class="btn btn-outline-light font-16-md col-md-5 mt-md-4 me-md-3 col-12 mt-3" for="btnradio13">18 CUOTAS</label>
               </div>
-              <div class="mt-md-4 mt-2 plazo" role="group" aria-label="Basic radio toggle button group" style="display:none" id="quincenal">
-                <input class="btn-check" id="btnradio21" type="radio" name="cuotamensual" autocomplete="off" checked="">
+              <div class="mt-md-4 mt-2 plazo" role="group" aria-label="Basic radio toggle button group" id="mensual">
+                <input class="btn-check" id="btnradio21" type="radio" name="plazo" autocomplete="off">
                 <label class="btn btn-outline-light font-16-md col-md-5 me-md-3 col-12 mt-3" for="btnradio21">3 CUOTAS</label>
-                <input class="btn-check" id="btnradio22" type="radio" name="cuotamensual" autocomplete="off">
+                <input class="btn-check" id="btnradio22" type="radio" name="plazo" autocomplete="off" checked="">
                 <label class="btn btn-outline-light font-16-md col-md-5 me-md-3 col-12 mt-4" for="btnradio22">6 CUOTAS</label>
               </div>
             </div>
-            <div class="mt-50-px-md mt-40-px justify-content-center d-flex d-md-block justify-content-md-between"><a class="btn btn-primary btn-lg continuar-btn font-14-xs" data-bs-toggle="modal" role="button">ENVIAR SOLICITUD</a></div>
+            <div class="mt-50-px-md mt-40-px justify-content-center d-flex d-md-block justify-content-md-between">
+              <button class="btn btn-primary btn-lg continuar-btn font-14-xs" data-bs-toggle="modal" role="button">ENVIAR SOLICITUD</button>
+            </div>
             <div class="modal fade" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1" id="modalProcesandoSolicitud">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -102,6 +104,6 @@
     <script src="js/jquery.validate.min-dist.js"> </script>
     <script src="js/additional-methods-dist.js"></script>
     <script src="js/script-global.js"></script>
-    <script src="js/script-page/forma-pago.js"></script>
+    <script src="js/script-page/17-forma-pago.js"></script>
   </body>
 </html>

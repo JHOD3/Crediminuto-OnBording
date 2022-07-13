@@ -32,10 +32,10 @@
             <div class="font-2-vh-md fw-light font-2-vh">  Por favor escribe el número de cédula de la persona únicamente <br class='d-md-block d-none'> si ya ha sido registrado en otra oportunidad.</div>
             <div class="mt-0 col-md-8 pt-30-px-md pt-30-px">
               <label class="form-label ps-2 ms-1 font-1-5-vh-md">NÚMERO CÉDULA DE CIUDADANÍA</label>
-              <input class="form-control" type="tel" min="0" inputmode="tel" name="tel-number" placeholder="Número de cedula de ciudadania">
+              <input class="form-control" type="number" name="dni" placeholder="Número de cedula de ciudadania">
             </div>
             <div class="mt-md-5 pt-md-5 mt-2 pt-5 justify-content-between d-flex d-md-block"><a class="btn btn-outline-primary btn-lg font-14-xs" href="">ATRÁS</a>
-              <button class="btn btn-primary btn-lg ms-md-4 continuar-btn font-14-xs" type="submit" disabled="true">CONTINUAR</button>
+              <button class="btn btn-primary btn-lg ms-md-4 font-14-xs continuar-btn" type="submit" disabled>CONTINUAR</button>
             </div>
             <div class="mt-md-0 pt-md-0 mt-0 pt-0">
               <div class="form-check mt-5 pt-5">
@@ -43,11 +43,11 @@
                 <label class="form-check-label font-1-60-vh-md mt-1 mt-md-0" for="flexCheckDefault">Aceptar<a href="">Términos y condiciones</a></label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" id="flexCheckChecked1" type="checkbox" value="" name="policy" required>
+                <input class="form-check-input" id="flexCheckChecked1" type="checkbox" value="" checked="" name="policy" required>
                 <label class="form-check-label font-1-60-vh-md" for="flexCheckChecked1">Aceptar<a href="">Políticas de Protección al Consumidor</a></label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" id="flexCheckChecked2" type="checkbox" value="" name="policy-dato" required>
+                <input class="form-check-input" id="flexCheckChecked2" type="checkbox" value="" checked="" name="policy-dato" required>
                 <label class="form-check-label font-1-60-vh-md" for="flexCheckChecked2">Aceptar<a href="">Políticas de Tratamiento de Datos Personales</a></label>
               </div>
             </div>
@@ -74,6 +74,6 @@
     <script src="js/jquery.validate.min-dist.js"> </script>
     <script src="js/additional-methods-dist.js"></script>
     <script src="js/script-global.js"></script>
-    <script src="js/script-page/usuario-registrado.js"></script>
+    <script src="js/script-page/2-usuario-registrado.js"></script>
   </body>
 </html>

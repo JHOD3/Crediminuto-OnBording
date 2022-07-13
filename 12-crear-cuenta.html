@@ -37,17 +37,17 @@
               </div>
             </div>
           </div>
-          <form class="pt-6-89-vh-md pt-4-vh mb-5" id="form-validate-code">
+          <form class="pt-6-89-vh-md pt-4-vh mb-5" id="form-crear-cuenta">
             <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-3-vh-md font-3-vh mt-1 mt-md-1"></i><span class="pl-1-vh font-2-40-vh-md font-2-50-vh fw-normal">04. Cuenta de correo electrónico</span></div>
             <div class="font-2-vh-md fw-light font-2-vh mt-4 pt-2"> Para poder terminar el registro y luego enrolar al cliente  <br class="d-md-block d-none"> correctamente vamos a tener que crear rápidamente un <br class="d-md-block d-none"> usuario y contraseña de Cliente Crediminuto.</div>
             <div class="mt-4 mt-md-5 col-md-8">
               <label class="form-label ps-2 ms-1 font-1-5-vh-md">USUARIO (Cédula identidad)</label>
-              <input class="form-control" type="number" name="dni" placeholder="cliente@mail.com">
+              <input class="form-control" type="number" name="usuario" placeholder="12345678">
             </div>
             <div class="row pt-3 col-md-11">
               <div class="mt-4 mt-md-3 col-md-6">
                 <label class="form-label ps-2 ms-1 font-1-5-vh-md">NUEVA CONTRASEÑA</label>
-                <input class="form-control" type="password" name="password" placeholder="********">
+                <input class="form-control" type="password" name="password" placeholder="********" id="password">
               </div>
               <div class="mt-4 mt-md-3 col-md-6">
                 <label class="form-label ps-2 ms-1 font-1-5-vh-md">REPITA CONTRASEÑA</label>
@@ -59,7 +59,9 @@
               <label class="form-label ps-2 ms-1 font-1-5-vh-md">EMAIL ALTERNATIVO</label>
               <input class="form-control" type="email" name="email" placeholder="cliente@mail.com">
             </div>
-            <div class="mt-5 justify-content-md-between justify-content-center d-flex d-md-block"><a class="btn btn-primary btn-lg" href="">Confirmar</a></div>
+            <div class="mt-5 justify-content-md-between justify-content-center d-flex d-md-block">
+              <button class="btn btn-primary btn-lg continuar-btn" href="" disabled>Confirmar</button>
+            </div>
           </form>
         </div>
       </div>
@@ -85,5 +87,6 @@
     <script src="js/jquery.validate.min-dist.js"> </script>
     <script src="js/additional-methods-dist.js"></script>
     <script src="js/script-global.js"></script>
+    <script src="js/script-page/12-crear-cuenta.js"></script>
   </body>
 </html>

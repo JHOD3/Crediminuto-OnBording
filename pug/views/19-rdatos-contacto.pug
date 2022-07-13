@@ -10,19 +10,21 @@ block variables
     - var   img     =   "elemento-6.svg"
 
 block content_right
-    form(id="form-datos-personales").pt-6-89-vh-md.pt-4-vh
+    form(id="form-datos-contacto").pt-6-89-vh-md.pt-4-vh
         .text-primary.aling-items-center.d-flex
             i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
             span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal Datos de contacto
         .font-2-vh-md.fw-light.font-2-vh.mt-4.pt-2  Escribe el número de celular del cliente, <br class="d-md-block d-block"> su mail y número alternativo son opcionales.
         div.mt-4.mt-md-4.col-md-8
             label.form-label.ps-2.ms-1.font-1-5-vh-md NÚMERO CELULAR
-            input(type="tel", name="dni" required).form-control
+            input(type="number", name="celular1" required, unique="celular").form-control
         div.mt-4.col-md-8.pt-10-px-md.pt-10-px
             label.form-label.ps-2.ms-1.font-1-5-vh-md EMAIL (Opcional)
             input(type="email", name="email").form-control
         div.mt-4.col-md-8.pt-10-px-md.pt-10-px
             label.form-label.ps-2.ms-1.font-1-5-vh-md NÚMERO ALTERNATIVO (Opcional)
-            input(type="tel", name="document").form-control
+            input(type="number", name="celular2", unique="celular").form-control
         .mt-md-5.pt-md-4.pt-4.mt-3.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
+            button(type="submit" , disabled).btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
+block script
+    script(src="js/script-page/19-rdatos-contacto.js")

@@ -48,3 +48,50 @@ $('#arrow').on('click', '.arrow-down', function(event){
     $('#arrow').css('margin-top', '0px');
     $('.message-top').removeClass('d-none').addClass('d-block');
 });
+$('input[type="number"]').on('keypress', function(event){
+    var charCode = (event.which) ? event.which : event.keyCode
+    if ((charCode >= 48 && charCode <= 57)) {
+        return true;
+    }
+    return false;
+});
+
+$('input[data-type="number-limit"]').on('keyup', function(event){
+    var charCode = (event.which) ? event.which : event.keyCode
+    if ((charCode >= 48 && charCode <= 57) || charCode == 46) {
+        if(charCode == 46){
+            $(this).prev('input').focus();
+        }else {
+            $(this).next('input').focus();
+        }
+        return true;
+    }
+    return false;
+});
+
+$('input[data-type="solo-text"]').on('keypress', function(event){
+    var charCode = (event.which) ? event.which : event.keyCode
+    if ((charCode >= 48 && charCode <= 57)) {
+        return false;
+    }
+    return true;
+});
+
+$('a[data-action="none-click"]').on('click', function(event){
+    event.preventDefault();
+    let click = $(this).data('click');
+    $(click).click();
+});
+
+jQuery.validator.addMethod("unique", function(value, element, params) {
+    var prefix = params;
+    var selector = jQuery.validator.format("[name!='{0}'][unique='{1}']", element.name, prefix);
+    var matches = new Array();
+    $(selector).each(function(index, item) {
+        if (value == $(item).val()) {
+            matches.push(item);
+        }
+    });
+
+    return matches.length == 0;
+}, jQuery.validator.format(icon_warning+"Este campo debe ser distinto al anterior"));

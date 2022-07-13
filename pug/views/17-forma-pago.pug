@@ -10,7 +10,7 @@ block variables
     - var   img     =   "elemento-14.svg";
 
 block content_right
-    form(id="form-validate-code").pt-6-89-vh-md.pt-4-vh.mb-5
+    form(id="form-forma-pago").pt-6-89-vh-md.pt-4-vh.mb-5
         .text-primary.aling-items-center.d-flex
             i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
             span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 06. Forma de pago
@@ -26,20 +26,20 @@ block content_right
         div.mt-md-5.mt-5
             .border-bottom.font-2-vh-md.fw-bold.font-2-vh
                 | Plazo
-            .mt-md-4.mt-2(role='group' aria-label='Basic radio toggle button group').plazo#mensual
-                input#btnradio11.btn-check(type='radio' name='cuotamensual' autocomplete='off' checked='')
-                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-3(for='btnradio11') 6 CUOTAS
-                input#btnradio12.btn-check(type='radio' name='cuotamensual' autocomplete='off')
-                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-4(for='btnradio12') 12 CUOTAS
-                input#btnradio13.btn-check(type='radio' name='cuotamensual' autocomplete='off')
-                label.btn.btn-outline-light.font-16-md.col-md-5.mt-md-4.me-md-3.col-12.mt-3(for='btnradio13') 18 CUOTAS
             .mt-md-4.mt-2(role='group' aria-label='Basic radio toggle button group', style="display:none").plazo#quincenal
-                input#btnradio21.btn-check(type='radio' name='cuotamensual' autocomplete='off' checked='')
+                input#btnradio11.btn-check(type='radio' name='plazo' autocomplete='off' checked='')
+                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-3(for='btnradio11') 6 CUOTAS
+                input#btnradio12.btn-check(type='radio' name='plazo' autocomplete='off')
+                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-4(for='btnradio12') 12 CUOTAS
+                input#btnradio13.btn-check(type='radio' name='plazo' autocomplete='off')
+                label.btn.btn-outline-light.font-16-md.col-md-5.mt-md-4.me-md-3.col-12.mt-3(for='btnradio13') 18 CUOTAS
+            .mt-md-4.mt-2(role='group' aria-label='Basic radio toggle button group').plazo#mensual
+                input#btnradio21.btn-check(type='radio' name='plazo' autocomplete='off')
                 label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-3(for='btnradio21') 3 CUOTAS
-                input#btnradio22.btn-check(type='radio' name='cuotamensual' autocomplete='off')
-                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-4(for='btnradio22') 6 CUOTAS
+                input#btnradio22.btn-check(type='radio' name='plazo' autocomplete='off', checked='')
+                label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-4(for='btnradio22' ) 6 CUOTAS
         .mt-50-px-md.mt-40-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            a(data-bs-toggle="modal" role="button").btn.btn-primary.btn-lg.continuar-btn.font-14-xs ENVIAR SOLICITUD
+            button(data-bs-toggle="modal" role="button").btn.btn-primary.btn-lg.continuar-btn.font-14-xs ENVIAR SOLICITUD
         include ../components/_modal_procesando
 block script
-    script(src="js/script-page/forma-pago.js")
+    script(src="js/script-page/17-forma-pago.js")

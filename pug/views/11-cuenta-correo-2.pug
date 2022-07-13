@@ -10,7 +10,7 @@ block variables
     - var   img     = "elemento-8.svg";
 
 block content_right
-    form(id="form-validate-code").pt-6-89-vh-md.pt-4-vh.mb-5
+    form(id="form-cuenta-correo").pt-6-89-vh-md.pt-4-vh.mb-5
         .text-primary.aling-items-center.d-flex
             i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
             span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 04. Cuenta de correo electrónico
@@ -24,9 +24,11 @@ block content_right
         .font-2-vh-md.fw-light.font-2-vh.mt-4.pt-4  Por favor ingresar una nueva contraseña para #[br.d-md-block.d-none ] la cuenta de Crediminuto
         div.mt-3.col-md-8.pt-10-px-md.pt-1-px
             label.form-label.ps-2.ms-1.font-1-5-vh-md NUEVA CONTRASEÑA
-            input(type="password", name="password", placeholder="********").form-control
+            input(type="password", name="password", placeholder="********")#password.form-control
         div.mt-4.pt-2.col-md-8.pt-10-px-md.pt-1-px
             label.form-label.ps-2.ms-1.font-1-5-vh-md REPITA CONTRASEÑA
             input(type="password", name="password_confirm", placeholder="********").form-control
         .mt-5.justify-content-md-start.justify-content-center.d-flex.d-md-block
-            a(href="").btn.btn-primary.btn-lg.font-14-xs Confirmar
+            button(disabled).btn.btn-primary.btn-lg.font-14-xs.continuar-btn Confirmar
+block script
+    script(src="js/script-page/11-cuenta-correo.js")

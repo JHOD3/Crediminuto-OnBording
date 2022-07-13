@@ -10,25 +10,27 @@ block variables
     - var   img     =   "elemento-16.svg";
 
 block content_right
-    form(id="form-datos-personales").pt-6-89-vh-md.pt-4-vh.mb-5
+    form(id="form-preguntas-seguridad-1").pt-6-89-vh-md.pt-4-vh.mb-5
         .text-primary.justify-content-center.d-grid.d-md-flex.justify-content-md-start
             div.pl-1-vh.fw-normal.mt-0.mt-md-0.font-2-40-vh-md.font-2-50-vh Preguntas de seguridad #[b 1 de 4]
         .font-2-vh-md.fw-light.font-2-vh.mt-3.pt-3.text-center.text-md-start ¿Con cual de las siguientes entidades usted tiene o #[br.d-none.d-md-block] ha tenido en los últimos 5 años (entre mayo 2017 y #[br.d-none.d-md-block] abril 2021) un/una plan/paquete telefonía celular?
         .form-check.mt-md-5.mt-5.mb-md-4.mb-4.align-items-center
-            input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault' checked)
+            input#flexRadioDefault1.form-check-input(type='radio' name='pregunta-1')
             label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault1')
                 | Claro - comunicación celular - comcel SA
         .form-check.mb-md-4.mb-4.align-items-center
-            input#flexRadioDefault2.form-check-input(type='radio' name='flexRadioDefault')
+            input#flexRadioDefault2.form-check-input(type='radio' name='pregunta-1')
             label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault2')
                 | Movistar - telefonia moviles colombia SA
         .form-check.mb-md-4.mb-4.align-items-center
-            input#flexRadioDefault3.form-check-input(type='radio' name='flexRadioDefault')
+            input#flexRadioDefault3.form-check-input(type='radio' name='pregunta-1')
             label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault3')
                 | Tigo - Colombia movil SA
         .form-check.mb-md-4.mb-4.align-items-center
-            input#flexRadioDefault4.form-check-input(type='radio' name='flexRadioDefault')
+            input#flexRadioDefault4.form-check-input(type='radio' name='pregunta-1')
             label.font-2-vh-md.fw-light.font-2-vh.ms-3(for='flexRadioDefault4')
                 | Ninguna de las anteriores
         .mt-80-px-md.mt-40-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            button.btn.btn-primary.btn-lg.continuar-btn.font-14-xs Continuar
+            button(disabled).btn.btn-primary.btn-lg.continuar-btn.font-14-xs Continuar
+block script
+    script(src="js/script-page/19-preguntas-seguridad.js")

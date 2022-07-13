@@ -1,0 +1,45 @@
+extends ../layouts/_layout_one
+block variables
+
+    - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:false}
+    - var   text_1  =   "Recomendación";
+    - var   text_2  =   "<p class='mb-3 mt-2 my-md-0'>¿Cómo cargar la foto de la cédula <br class='d-md-block d-none'> correctamente?</p>";
+    - var   text_3  =   "<b class='lh-1 d-md-block d-none'>Recuerda que la validación puede <br class='d-md-block d-none'> demorar algunos segundos.</b>";
+    - var   ol      =   [ "No tomar foto con flash o a contraluz", "Imagen nítida, atención al efecto del holograma o documentos deteriorados", "Enmarcar bien la cédula en la foto sin dejar tanto espacio alrededor", "Revisar que se vean bien tanto foto como datos", "La foto debe ser tomada al documento original del cliente en formato JPG O PNG (No puede ser fotocopia, escaneado, o cualquier otro tipo de formato)"];
+    - var   ol2     =   false;
+    - var   img     =   "elemento-5-1.svg";
+
+block content_right
+    form(id="upload-dorso-cedula").pt-6-89-vh-md.pt-4-vh
+        .text-primary.aling-items-center.d-flex
+            i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 02. Subir dorso cédula
+        label(for="capture-camera").aling-items-center.d-md-flex.align-items-center.pe-5.col-md-9.mt-4.pt-3.pb-3
+            img(src="image/icono-dni.svg").img-w-7-vh.img-w-7-vh-md.mx-auto.mx-md-0.d-block
+            span.pl-2-vh.font-2-vh-md.fw-light.font-2-vh.d-md-block.d-none Por seguridad del cliente, es necesario cargar o <br class="d-md-block d-none"> tomar una foto del dorso de su cédula de ciudadanía<br class="d-md-block d-none"> y confirmar su identidad.
+            span.pl-2-vh.font-2-vh-md.fw-light.font-2-vh.d-md-none.d-block.text-center.mt-4 Por seguridad del cliente, es necesario tomar una foto del frente de su cédula de ciudadanía y confirmar su identidad.
+        a(data-action="none-click", data-click="#capture-camera" href="").font-1-5-vh.font-1-5-vh-md Por favor haga click para cargar una foto
+        input(type="file", name="dorso-cedula" ).d-none#capture-camera
+        img(src="").d-none#capture-preview.img-w-43-vh.mt-5.img-w-43-vh-md.mx-auto.d-block.mx-md-0
+        div.text-warning#foto_invalida.mt-3.ps-4
+        .mt-md-0.pt-md-0.mt-5.pt-4
+            .form-check.mt-5.pt-5
+                input#flexCheckDefault.form-check-input(type='checkbox' value=''    checked='' name="term" required)
+                label.form-check-label(for='flexCheckDefault').font-1-60-vh-md.mt-1.mt-md-0
+                    | Aceptar
+                    a(href="") Términos y condiciones
+            .form-check
+                input#flexCheckChecked1.form-check-input(type='checkbox' value=''   checked='' name="policy" required)
+                label.form-check-label(for='flexCheckChecked1').font-1-60-vh-md
+                    | Aceptar
+                    a(href="") Políticas de Protección al Consumidor
+            .form-check
+                input#flexCheckChecked2.form-check-input(type='checkbox' value=''   checked='' name="policy-dato" required)
+                label.form-check-label(for='flexCheckChecked2').font-1-60-vh-md
+                    | Aceptar
+                    a(href="") Políticas de Tratamiento de Datos Personales
+        .mt-md-5.pt-md-5.mt-5.pt-4.d-flex.d-md-block.justify-content-between
+            a(href="").btn.btn-outline-primary.btn-lg.ms-md-4.font-14-xs.d-none#btn-option VOLVAR A CARGAR
+            button(type="submit", disabled).btn.btn-primary.btn-lg.ms-md-4.font-14-xs.continuar-btn#btn-submit VALIDAR
+block script
+    script(src="js/script-page/6-gfoto-dorso-cedula.js?v=1")

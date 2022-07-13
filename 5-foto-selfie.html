@@ -26,12 +26,11 @@
           </nav>
           <form class="pt-6-89-vh-md pt-4-vh" id="upload-selfie">
             <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-3-vh-md font-3-vh mt-1 mt-md-1"></i><span class="pl-1-vh font-2-40-vh-md font-2-50-vh fw-normal">02. Subir foto selfie</span></div>
-            <label class="aling-items-center d-flex align-items-center pe-5 col-md-9 mt-4 pt-3" for="capture-camera"><img class="img-w-7-vh img-w-7-vh-md" src="image/icono-2.svg"><span class="font-2-vh-md fw-light font-2-vh ps-4">A continuación debemos validar de la identidad del cliente mediante una selfie.</span></label>
+            <label class="aling-items-center d-flex align-items-center pe-5 col-md-9 mt-4 pt-3 pb-3" for="capture-camera"><a data-action="none-click" data-click="#capture-camera" href=""><img class="img-w-7-vh img-w-7-vh-md" src="image/icono-2.svg"></a><span class="font-2-vh-md fw-light font-2-vh ps-4">A continuación debemos validar de la identidad del cliente mediante una selfie.</span></label><a class="font-1-5-vh font-1-5-vh-md" data-action="none-click" data-click="#capture-camera" href="">Por favor haga click para cargar una foto</a>
             <input class="d-none" type="file" accept="image/*;capture=camera" id="capture-camera"><img class="d-none img-w-43-vh mt-5 img-w-43-vh-md mx-auto d-block mx-md-0" src="" id="capture-preview">
-            <div class="text-warning d-none mt-3 ps-4" id="foto_invalida"><img class="img-w-4-vh img-w-4-vh-md me-2" src="image/icono-i-w.svg"><span class="font-2-vh font-2-vh-md">   Foto no válida</span></div>
+            <div class="text-warning d-none mt-3 ps-4" id="foto_invalida"><img class="img-w-4-vh img-w-4-vh-md me-2" src="image/icono-i-w.svg" accept=".jpg, .jpeg, .pdf"><span class="font-2-vh font-2-vh-md">   Foto no válida</span></div>
             <div class="mt-md-5 pt-md-5 mt-3 pt-4 justify-content-md-start d-flex d-md-block justify-content-center"><a class="btn btn-outline-primary btn-lg ms-md-0 font-14-xs d-none" href="" id="btn-option">VOLVAR A CARGAR</a>
-              <button class="btn btn-primary btn-lg ms-md-0 font-14-xs d-none ms-3" type="submit" id="btn-submit">VALIDAR</button>
-              <label class="btn btn-primary btn-lg ms-md-0 font-14-xs mx-auto mx-md-0" for="capture-camera" id="btn-validate">VALIDAR</label>
+              <button class="btn btn-primary btn-lg ms-md-4 font-14-xs ms-3" type="submit" disabled id="btn-submit">VALIDAR</button>
             </div>
           </form>
         </div>
@@ -65,6 +64,6 @@
     <script src="js/jquery.validate.min-dist.js"> </script>
     <script src="js/additional-methods-dist.js"></script>
     <script src="js/script-global.js"></script>
-    <script src="js/script-page/foto-selfie.js?v=1"></script>
+    <script src="js/script-page/5-foto-selfie.js?v=1"></script>
   </body>
 </html>

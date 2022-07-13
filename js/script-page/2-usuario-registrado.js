@@ -1,9 +1,10 @@
 // Validacion de campo de numero    
-$("#form-page-register").validate({
+let form = $("#form-page-register");
+form.validate({
     rules:{
-        'tel-number':{
+        'dni':{
             required:true,
-            phoneUS:true,
+            minlength: 7,
             pattern: '[0-9]*'
         },
         'term':{
@@ -17,10 +18,10 @@ $("#form-page-register").validate({
         }
     },
     messages:{
-        'tel-number':{
-            required:'Este campo es requerido.',
-            phoneUS:icon_warning+ 'Debe tener un formato valido.',
-            pattern: 'Formato Invalido'
+        'dni':{
+            required: icon_warning+'Este campo es requerido.',
+            minlength:icon_warning+' Minimo 7 numeros.' ,
+            pattern: icon_warning+'Formato Invalido'
         },
         'term':{
             required:icon_warning+ 'Este campo es requerido.',
@@ -41,15 +42,21 @@ $("#form-page-register").validate({
     },
     highlight: function (element, errorClass, validClass) {
         $(element).addClass('is-invalid');
-        $('.continuar-btn').prop("disabled", true);
         $(element).prev().addClass('text-warning');
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
-        $('.continuar-btn').removeAttr("disabled");
         $(element).prev().removeClass('text-warning');
     },
     submitHandler: function(form) {
 
+    }
+});
+
+$('input').on('keyup click', function (event) {
+    if(form.valid()){
+        $('.continuar-btn').removeAttr("disabled");
+    }else {
+        $('.continuar-btn').attr("disabled", true);
     }
 });

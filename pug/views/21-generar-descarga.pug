@@ -23,9 +23,11 @@ block content_right
             div Monto a financiar #[span $324.545]
             div Monto anticipo #[span $100.000]
         .mt-4.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            button.btn.btn-lg.ms-md-4.continuar-btn.btn-light-color.btn-light.col-md-5.col-12.d-flex.justify-content-center
+            button.btn.btn-lg.ms-md-4.continuar-btn.btn-light-color.btn-light.col-md-5.col-12.d-flex.justify-content-center#descargar
                 img(src="image/icono-download.svg").img-w-3-vh.img-w-3-vh-md.me-3
                 | DESCARGAR
         .mt-5.pt-2.justify-content-center.d-flex.d-md-block.justify-content-md-start.justify-content-center
-            button.btn.btn-lg.btn-primary.ms-md-4.d-flex.justify-content-center
+            button(disabled).btn.btn-lg.btn-primary.ms-md-4.d-flex.justify-content-center.continuar-btn
                 | CONTINUAR
+block script
+    script(src="js/script-page/21-generar-descarga.js")
