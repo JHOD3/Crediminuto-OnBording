@@ -1,5 +1,11 @@
 $('input[name="frecuencia"]').on('change', function (event) {
-   $('.plazo').toggle();
+   if($(this).val() == 'quincenal'){
+      $('#' + $(this).val()).css('display', 'block');
+      $('#mensual').css('display', 'none');
+   }else{
+      $('#' + $(this).val()).css('display', 'block');
+      $('#quincenal').css('display', 'none');
+   }
 });
 let myModal = new bootstrap.Modal(document.getElementById("modalProcesandoSolicitud"), {});
 let intervalId = null;
@@ -60,10 +66,17 @@ form.validate({
 
    }
 });
-$('input').on('keyup change', function (event) {
-   if(form.valid()){
+$('input').on('change', function (event){
+   let estado = [];
+   $('input').each(function(index, element) {
+      if (this.value == ''){
+         estado[index] = false;
+      }
+   });
+   if (jQuery.inArray(false, estado) == -1){
       $('.continuar-btn').removeAttr("disabled");
-   }else {
-      $('.continuar-btn').attr("disabled", true);
+      return true;
    }
+   $('.continuar-btn').attr("disabled", true);
+   return false;
 });

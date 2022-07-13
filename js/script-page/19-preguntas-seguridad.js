@@ -21,19 +21,14 @@ form_item_1.validate({
     highlight: function (element, errorClass, validClass) {
         $(element).addClass('is-invalid');
         $(element).prev().addClass('text-warning');
+        $('.continuar-btn').attr("disabled", true);
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
         $(element).prev().removeClass('text-warning');
+        $('.continuar-btn').removeAttr("disabled");
     },
     submitHandler: function(form) {
 
-    }
-});
-$('input').on('keyup change', function (event) {
-    if(form_item_1.valid()){
-        $('.continuar-btn').removeAttr("disabled");
-    }else {
-        $('.continuar-btn').attr("disabled", true);
     }
 });

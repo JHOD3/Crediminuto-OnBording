@@ -10,9 +10,6 @@ form.validate({
         'email':{
             required:true,
             email: true
-        },
-        'celular2':{
-            required: true,
         }
 
     },
@@ -22,11 +19,7 @@ form.validate({
             unique: icon_warning+ 'Este campo debe ser unico.',
         },
         'email':{
-            required:icon_warning+ 'Este campo es requerido.',
             email:icon_warning+ 'Debe tener formato de email'
-        },
-        'celular2':{
-            required:icon_warning+ 'Este campo es requerido.',
         }
     },
     errorElement: 'span',
@@ -48,10 +41,18 @@ form.validate({
 
     }
 });
-$('input').on('keyup change', function (event) {
-    if(form.valid()){
+
+$('input').on('keyup', function (event){
+    let estado = [];
+    $('input').each(function(index, element) {
+        if (this.value == '' && $(this).attr('name') != 'celular2' && $(this).attr('name') != 'email'){
+            estado[index] = false;
+        }
+    });
+    if (jQuery.inArray(false, estado) == -1){
         $('.continuar-btn').removeAttr("disabled");
-    }else {
-        $('.continuar-btn').attr("disabled", true);
+        return true;
     }
+    $('.continuar-btn').attr("disabled", true);
+    return false;
 });

@@ -3,9 +3,9 @@ block variables
 
     - var page_datos = { title: 'crediminuto || Subir foto selfie', back: true, cliente:false}
     - var   text_1  =   "Recomendación";
-    - var   text_2  =   "<p class='mb-3 mt-2 my-md-0'>¿Cómo cargar la foto de la cédula <br class='d-md-block d-none'> correctamente?</p>";
+    - var   text_2  =   "<p class='mb-3 mt-2 my-md-0'>¿¿Cómo cargar un extracto bancario <br class='d-md-block d-none'>  válido?</p>";
     - var   text_3  =   "<b class='lh-1 d-md-block d-none'>Recuerda que la validación puede <br class='d-md-block d-none'> demorar algunos segundos.</b>";
-    - var   ol      =   [ "No tomar foto con flash o a contraluz", "Imagen nítida, atención al efecto del holograma o documentos deteriorados", "Enmarcar bien la cédula en la foto sin dejar tanto espacio alrededor", "Revisar que se vean bien tanto foto como datos", "La foto debe ser tomada al documento original del cliente en formato JPG O PNG (No puede ser fotocopia, escaneado, o cualquier otro tipo de formato)"];
+    - var   ol      =   [ "Que la imagen sea nítida", "Que sea legible el nombre del titular", "Que sea legible la información del documento"];
     - var   ol2     =   false;
     - var   img     =   "elemento-5-1.svg";
 
@@ -13,14 +13,15 @@ block content_right
     form(id="upload-estracto").pt-6-89-vh-md.pt-4-vh
         .text-primary.aling-items-center.d-flex
             i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
-            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 02. Subir frente cédula
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 02. Subir extracto bancario
         label(for="capture-camera").aling-items-center.d-flex.align-items-center.pe-5.col-md-9.mt-4.pt-3.pb-3
             a(data-action="none-click", data-click="#capture-camera" href="")
                 img(src="image/icono-extracto.svg").img-w-7-vh.img-w-7-vh-md
             span.pl-2-vh.font-2-vh-md.fw-light.font-2-vh Ingresar un servicio o extracto bancario <br class="d-md-block d-none"> que esté a nombre del cliente en<br class="d-md-block d-none"> formato JPG, PNG o PDF.
-        a(data-action="none-click", data-click="#capture-camera" href="").font-1-5-vh.font-1-5-vh-md Por favor haga click para cargar una foto
+        a(data-action="none-click", data-click="#capture-camera" href="").font-1-5-vh.font-1-5-vh-md Por favor haga click para cargar un archivo
         input(type="file", name="estracto").d-none#capture-camera
         img(src="").d-none#capture-preview.img-w-43-vh.mt-5.img-w-43-vh-md.mx-auto.d-block.mx-md-0
+        div#pdf-name.font-2-vh.font-2-vh-md.text-primary.mt-md-4.d-none
         div.text-warning#foto_invalida.d-none.mt-3.ps-4
         .mt-md-5.pt-md-5.mt-5.pt-4.d-flex.d-md-block.justify-content-between
             a(href="").btn.btn-outline-primary.btn-lg.ms-md-4.font-14-xs.d-none#btn-option VOLVAR A CARGAR

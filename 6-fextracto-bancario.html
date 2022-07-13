@@ -25,9 +25,10 @@
             </div>
           </nav>
           <form class="pt-6-89-vh-md pt-4-vh" id="upload-estracto">
-            <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-3-vh-md font-3-vh mt-1 mt-md-1"></i><span class="pl-1-vh font-2-40-vh-md font-2-50-vh fw-normal">02. Subir frente cédula</span></div>
-            <label class="aling-items-center d-flex align-items-center pe-5 col-md-9 mt-4 pt-3 pb-3" for="capture-camera"><a data-action="none-click" data-click="#capture-camera" href=""><img class="img-w-7-vh img-w-7-vh-md" src="image/icono-extracto.svg"></a><span class="pl-2-vh font-2-vh-md fw-light font-2-vh">Ingresar un servicio o extracto bancario <br class="d-md-block d-none"> que esté a nombre del cliente en<br class="d-md-block d-none"> formato JPG, PNG o PDF.</span></label><a class="font-1-5-vh font-1-5-vh-md" data-action="none-click" data-click="#capture-camera" href="">Por favor haga click para cargar una foto</a>
+            <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-3-vh-md font-3-vh mt-1 mt-md-1"></i><span class="pl-1-vh font-2-40-vh-md font-2-50-vh fw-normal">02. Subir extracto bancario</span></div>
+            <label class="aling-items-center d-flex align-items-center pe-5 col-md-9 mt-4 pt-3 pb-3" for="capture-camera"><a data-action="none-click" data-click="#capture-camera" href=""><img class="img-w-7-vh img-w-7-vh-md" src="image/icono-extracto.svg"></a><span class="pl-2-vh font-2-vh-md fw-light font-2-vh">Ingresar un servicio o extracto bancario <br class="d-md-block d-none"> que esté a nombre del cliente en<br class="d-md-block d-none"> formato JPG, PNG o PDF.</span></label><a class="font-1-5-vh font-1-5-vh-md" data-action="none-click" data-click="#capture-camera" href="">Por favor haga click para cargar un archivo</a>
             <input class="d-none" type="file" name="estracto" id="capture-camera"><img class="d-none img-w-43-vh mt-5 img-w-43-vh-md mx-auto d-block mx-md-0" src="" id="capture-preview">
+            <div class="font-2-vh font-2-vh-md text-primary mt-md-4 d-none" id="pdf-name"></div>
             <div class="text-warning d-none mt-3 ps-4" id="foto_invalida"></div>
             <div class="mt-md-5 pt-md-5 mt-5 pt-4 d-flex d-md-block justify-content-between"><a class="btn btn-outline-primary btn-lg ms-md-4 font-14-xs d-none" href="" id="btn-option">VOLVAR A CARGAR</a>
               <button class="btn btn-primary btn-lg ms-md-4 font-14-xs continuar-btn" type="submit" disabled id="btn-submit">VALIDAR</button>
@@ -44,13 +45,11 @@
             <div class="col-md-9 col-11 col-sm-11 mx-auto min-vh-50 pb-md-0 pb-0">
               <div class="text-center text-white font-2-24-vh-md col-md-9 col-sm-10 mx-auto pt-10-2-vh-md pt-8-vh font-2-50-vh fw-normal lh-base">Recomendación</div>
               <div class="raya col-md-2 col-2 mx-auto mt-md-3 mb-md-4 my-3"></div>
-              <div class="text-center text-white font-1-80-vh font-1-80-vh-md col-md-9 col-sm-10 mx-auto fw-light">  <p class='mb-3 mt-2 my-md-0'>¿Cómo cargar la foto de la cédula <br class='d-md-block d-none'> correctamente?</p></div>
+              <div class="text-center text-white font-1-80-vh font-1-80-vh-md col-md-9 col-sm-10 mx-auto fw-light">  <p class='mb-3 mt-2 my-md-0'>¿¿Cómo cargar un extracto bancario <br class='d-md-block d-none'>  válido?</p></div>
               <ol class="text-white col-md-10 col-sm-10 mx-auto mt-md-4 ps-md-5">
-                <li class="font-1-80-vh font-1-80-vh-md fw-light">No tomar foto con flash o a contraluz</li>
-                <li class="font-1-80-vh font-1-80-vh-md fw-light">Imagen nítida, atención al efecto del holograma o documentos deteriorados</li>
-                <li class="font-1-80-vh font-1-80-vh-md fw-light">Enmarcar bien la cédula en la foto sin dejar tanto espacio alrededor</li>
-                <li class="font-1-80-vh font-1-80-vh-md fw-light">Revisar que se vean bien tanto foto como datos</li>
-                <li class="font-1-80-vh font-1-80-vh-md fw-light">La foto debe ser tomada al documento original del cliente en formato JPG O PNG (No puede ser fotocopia, escaneado, o cualquier otro tipo de formato)</li>
+                <li class="font-1-80-vh font-1-80-vh-md fw-light">Que la imagen sea nítida</li>
+                <li class="font-1-80-vh font-1-80-vh-md fw-light">Que sea legible el nombre del titular</li>
+                <li class="font-1-80-vh font-1-80-vh-md fw-light">Que sea legible la información del documento</li>
               </ol>
             </div>
             <embed class="img-w-31-97-vh-md img-w-37-vh mx-auto d-block mt-md-4 mt-2" src="image/elemento-5-1.svg" alt="" sizes="" srcset="">

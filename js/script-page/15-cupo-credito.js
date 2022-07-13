@@ -1,6 +1,13 @@
 // Validacion de campo de numero
 let form = $("#form-validate-code");
 form.validate({
+    onkeyup:function (element) {
+        $(element).valid();
+    },
+    focusInvalid: function (element) {
+        console.log(element)
+    },
+    onfocusout: false,
     rules:{
         'code_1':{
             required:true
@@ -42,25 +49,34 @@ form.validate({
     highlight: function (element, errorClass, validClass) {
         $(element).addClass('is-invalid');
         $(element).prev().addClass('text-warning');
+        $('#check-code').addClass('d-none');
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
         $(element).prev().removeClass('text-warning');
+        $('#check-code').removeClass('d-none');
      },
     submitHandler: function(form) {
 
     }
 });
-
-$('input').on('keyup change', function (event) {
-    if(form.valid()){
+$('input[type="text"]').on('keyup', function (event){
+    let estado = [];
+    $('input[type="text"]').each(function(index, element) {
+        if (this.value == ''){
+            estado[index] = false;
+        }
+    });
+    if (jQuery.inArray(false, estado) == -1){
         $('.continuar-btn').removeAttr("disabled");
         $('#check-code').removeClass('d-none');
-    }else {
-        $('.continuar-btn').attr("disabled", true);
-        $('#check-code').addClass('d-none');
+        return true;
     }
+    $('.continuar-btn').attr("disabled", true);
+    $('#check-code').addClass('d-none');
+    return false;
 });
+
 countBack();
 
 $('#resend-code').on('click', function (event) {

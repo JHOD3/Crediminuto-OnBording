@@ -19,9 +19,9 @@ block content_right
             .border-bottom.font-2-vh-md.fw-bold.font-2-vh
                 | Frecuencia
             .btn-group.mt-3.col-12.col-md-10.d-block.d-md-flex.mb-4(role='group' aria-label='Basic radio toggle button group')
-                input#btnradio01.btn-check(type='radio' name='frecuencia' value="m" autocomplete='off' checked='')
+                input#btnradio01.btn-check(type='radio' name='frecuencia' value="mensual" autocomplete='off')
                 label.btn.btn-outline-light.font-16-md.mt-3.mt-md-2.col-md-5.col-12(for='btnradio01') MENSUAL
-                input#btnradio02.btn-check(type='radio' name='frecuencia' value="q" autocomplete='off')
+                input#btnradio02.btn-check(type='radio' name='frecuencia' value="quincenal" autocomplete='off')
                 label.btn.btn-outline-light.ms-md-3.mt-4.mt-md-2.font-16-md.col-md-5.col-12(for='btnradio02') QUINCENAL
         div.mt-md-5.mt-5
             .border-bottom.font-2-vh-md.fw-bold.font-2-vh
@@ -39,7 +39,7 @@ block content_right
                 input#btnradio22.btn-check(type='radio' name='plazo' autocomplete='off', checked='')
                 label.btn.btn-outline-light.font-16-md.col-md-5.me-md-3.col-12.mt-4(for='btnradio22' ) 6 CUOTAS
         .mt-50-px-md.mt-40-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
-            button(data-bs-toggle="modal" role="button").btn.btn-primary.btn-lg.continuar-btn.font-14-xs ENVIAR SOLICITUD
+            button(data-bs-toggle="modal" role="button" , disabled).btn.btn-primary.btn-lg.continuar-btn.font-14-xs ENVIAR SOLICITUD
         include ../components/_modal_procesando
 block script
     script(src="js/script-page/17-forma-pago.js")

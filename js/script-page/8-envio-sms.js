@@ -24,10 +24,12 @@ form.validate({
         $(element).addClass('is-invalid');
         $(element).prev().addClass('text-warning');
         $('#check-code').addClass('d-none');
+        $('.continuar-btn').attr("disabled", true);
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
         $(element).prev().removeClass('text-warning');
+        $('.continuar-btn').removeAttr("disabled");
         if ($("#form-validate-code").validate()){
             // Vefico que el codigo existe mediante una funcion para colocar el check verde
             $('#check-code').removeClass('d-none'); //Hago visible el check verde si el codigo insertado fue el enviado. esto debe estar dentro del done de la funciona que verifica el codigoqw
@@ -36,12 +38,5 @@ form.validate({
     },
     submitHandler: function(form) {
 
-    }
-});
-$('input').on('keyup change', function (event) {
-    if(form.valid()){
-        $('.continuar-btn').removeAttr("disabled");
-    }else {
-        $('.continuar-btn').attr("disabled", true);
     }
 });

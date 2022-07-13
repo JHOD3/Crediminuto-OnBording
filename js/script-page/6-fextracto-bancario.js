@@ -32,32 +32,39 @@ form.validate({
     highlight: function (element, errorClass, validClass) {
         $(element).addClass('is-invalid');
         $(element).prev().addClass('text-warning');
+        $('.continuar-btn').attr("disabled", true);
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
         $(element).prev().removeClass('text-warning');
+        $('.continuar-btn').removeAttr("disabled");
     },
     submitHandler: function(form) {
 
     }
 });
 
-$('input').on('keyup change', function (event) {
-    if(form.valid()){
-        $('.continuar-btn').removeAttr("disabled");
-    }else {
-        $('.continuar-btn').attr("disabled", true);
-    }
-});
 
 
 const imgInput = document.getElementById('capture-camera');
 const imgEl = document.getElementById('capture-preview');
+const pdfname  = document.getElementById('');
 imgInput.addEventListener('change', () => {
     if (imgInput.files && imgInput.files[0]) {
         const reader = new FileReader();
+        var extension = imgInput.files[0].name.split('.').pop().toLowerCase();
+
         reader.onload = (e) => {
-            imgEl.src = e.target.result;
+            if (extension == 'png' || extension == 'jpg') {
+                $('#pdf-name').addClass('d-none');
+                $('#capture-preview').removeClass('d-none');
+                imgEl.src = e.target.result;
+            }else{
+                $('#pdf-name').removeClass('d-none');
+                $('#capture-preview').addClass('d-none');
+                $('#pdf-name').text(imgInput.files[0].name);
+                console.log(imgInput.files[0].name);
+            }
         }
         $('#capture-preview').removeClass('d-none');
         reader.readAsDataURL(imgInput.files[0]);

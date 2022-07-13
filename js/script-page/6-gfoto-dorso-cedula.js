@@ -49,23 +49,18 @@ form.validate({
     highlight: function (element, errorClass, validClass) {
         $(element).addClass('is-invalid');
         $(element).prev().addClass('text-warning');
+        $('.continuar-btn').attr("disabled", true);
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
         $(element).prev().removeClass('text-warning');
+        $('.continuar-btn').removeAttr("disabled");
     },
     submitHandler: function(form) {
 
     }
 });
 
-$('input').on('keyup change', function (event) {
-    if(form.valid()){
-        $('.continuar-btn').removeAttr("disabled");
-    }else {
-        $('.continuar-btn').attr("disabled", true);
-    }
-});
 
 const imgInput = document.getElementById('capture-camera');
 const imgEl = document.getElementById('capture-preview');

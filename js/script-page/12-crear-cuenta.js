@@ -29,7 +29,6 @@ form.validate({
             equalTo : icon_warning+ 'Las contraseñas no coinciden.'
         },
         'email':{
-            required:icon_warning+ 'Este campo es requerido.',
             email: icon_warning+ 'Debe ser un email valido.'
         }
     },
@@ -52,10 +51,17 @@ form.validate({
 
     }
 });
-$('input').on('keyup change', function (event) {
-    if(form.valid()){
+$('input').on('keyup', function (event){
+    let estado = [];
+    $('input').each(function(index, element) {
+        if (this.value == '' && $(this).attr('type') != 'email'){
+            estado[index] = false;
+        }
+    });
+    if (jQuery.inArray(false, estado) == -1){
         $('.continuar-btn').removeAttr("disabled");
-    }else {
-        $('.continuar-btn').attr("disabled", true);
+        return true;
     }
+    $('.continuar-btn').attr("disabled", true);
+    return false;
 });

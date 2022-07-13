@@ -56,9 +56,9 @@ $('input[type="number"]').on('keypress', function(event){
     return false;
 });
 
-$('input[data-type="number-limit"]').on('keyup', function(event){
-    var charCode = (event.which) ? event.which : event.keyCode
-    if ((charCode >= 48 && charCode <= 57) || charCode == 46) {
+$('input[data-type="number-limit"]').on('keyup keypress', function(event){
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if ((charCode >= 48 && charCode <= 57) || jQuery.inArray( charCode, [46,97,101,105,111,117] ) !== -1) {
         if(charCode == 46){
             $(this).prev('input').focus();
         }else {
