@@ -1,11 +1,13 @@
 // Validacion de campo de numero    
 let form = $("#form-page-register");
 form.validate({
+    onkeyup:function (element) {
+        $(element).valid();
+    },
     rules:{
         'tel-number':{
             required:true,
             minlength: 5,
-            pattern: '[0-9]*'
         },
         'term':{
             required:true
@@ -20,8 +22,7 @@ form.validate({
     messages:{
         'tel-number':{
             required:icon_warning+'Este campo es requerido.',
-            minlength:icon_warning+' Minimo 5 numeros.' ,
-            pattern: icon_warning+'Formato Invalido'
+            minlength:icon_warning+' Minimo 5 numeros.'
         },
         'term':{
             required:icon_warning+ 'Este campo es requerido.',
@@ -41,12 +42,20 @@ form.validate({
         $(element).prev().addClass('text-warning');
     },
     highlight: function (element, errorClass, validClass) {
-        $(element).addClass('is-invalid');
+        if ($(element).attr('type') != 'checkbox') {
+            $(element).addClass('is-invalid').removeClass('is-valid');
+        }else {
+            $(element).addClass('is-invalid')
+        }
         $(element).prev().addClass('text-warning');
         $('.continuar-btn').attr("disabled", true);
     },
     unhighlight: function (element, errorClass, validClass) {
-        $(element).removeClass('is-invalid');
+        if ($(element).attr('type') != 'checkbox') {
+            $(element).removeClass('is-invalid').addClass('is-valid');
+        }else{
+            $(element).removeClass('is-invalid')
+        }
         $(element).prev().removeClass('text-warning');
         $('.continuar-btn').removeAttr("disabled");
     },
@@ -55,3 +64,6 @@ form.validate({
     }
 });
 
+$('input').on('click', function (event) {
+    $(this).valid();
+});

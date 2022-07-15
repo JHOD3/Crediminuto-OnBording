@@ -1,6 +1,16 @@
 // Validacion de campo de numero
 let form = $("#form-cuenta-correo");
 form.validate({
+    onkeyup:function (element,e) {
+        if (e.keyCode == 8){
+            $(element).valid();
+        }
+        let digit = ($(element).attr('type') == 'email')?9:8;
+
+        if ($(element).val().length > digit) {
+            $(element).valid();
+        }
+    },
     rules:{
         'email':{
             email:true,
@@ -35,12 +45,12 @@ form.validate({
         $(element).prev().addClass('text-warning');
     },
     highlight: function (element, errorClass, validClass) {
-        $(element).addClass('is-invalid');
+        $(element).addClass('is-invalid').removeClass('is-valid');
         $(element).prev().addClass('text-warning');
         $('.continuar-btn').attr("disabled", true);
     },
     unhighlight: function (element, errorClass, validClass) {
-        $(element).removeClass('is-invalid');
+        $(element).removeClass('is-invalid').addClass('is-valid');
         $(element).prev().removeClass('text-warning');
         $('.continuar-btn').removeAttr("disabled");
     },

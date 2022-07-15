@@ -2,6 +2,25 @@
 // Validacion de campo de numero
 let form = $("#form-datos-contacto");
 form.validate({
+    onkeyup:function (element,e) {
+        if (e.keyCode == 8){
+            $(element).valid();
+        }
+        if($(element).val().length > 4) {
+            $(element).valid();
+        }
+
+        let val = true;
+        $('input').each(function (index, element) {
+            if ($(element).val()==''){
+                val = false;
+            }
+        });
+        if (val == false){
+            $('.continuar-btn').attr("disabled",true);
+        }
+    },
+    onfocusout:false,
     rules:{
         'celular1':{
             required:true,
@@ -30,29 +49,14 @@ form.validate({
         $(element).prev().addClass('text-warning');
     },
     highlight: function (element, errorClass, validClass) {
-        $(element).addClass('is-invalid');
+        $(element).addClass('is-invalid').removeClass('is-valid');
         $(element).prev().addClass('text-warning');
     },
     unhighlight: function (element, errorClass, validClass) {
-        $(element).removeClass('is-invalid');
+        $(element).removeClass('is-invalid').addClass('is-valid');
         $(element).prev().removeClass('text-warning');
     },
     submitHandler: function(form) {
 
     }
-});
-
-$('input').on('keyup', function (event){
-    let estado = [];
-    $('input').each(function(index, element) {
-        if (this.value == '' && $(this).attr('name') != 'celular2' && $(this).attr('name') != 'email'){
-            estado[index] = false;
-        }
-    });
-    if (jQuery.inArray(false, estado) == -1){
-        $('.continuar-btn').removeAttr("disabled");
-        return true;
-    }
-    $('.continuar-btn').attr("disabled", true);
-    return false;
 });

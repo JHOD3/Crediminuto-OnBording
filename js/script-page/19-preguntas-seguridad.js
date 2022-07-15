@@ -1,6 +1,10 @@
 // Validacion de campo de numero
 let form_item_1 = $("#form-preguntas-seguridad-1");
 form_item_1.validate({
+    onclick:function (element,e) {
+        $(element).valid()
+    },
+    onfocusout:false,
     rules:{
         'pregunta-1':{
             required:true

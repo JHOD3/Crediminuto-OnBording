@@ -1,6 +1,25 @@
 // Validacion de campo de numero
 let form = $("#form-crear-cuenta");
 form.validate({
+    onkeyup:function (element,e) {
+        if (e.keyCode == 8){
+            $(element).valid();
+        }
+        if($(element).val().length > 4) {
+            $(element).valid();
+        }
+
+        let val = true;
+        $('input').each(function (index, element) {
+            if ($(element).val()==''){
+                val = false;
+            }
+        });
+        if (val == false){
+            $('.continuar-btn').attr("disabled",true);
+        }
+    },
+    onfocusout:false,
     rules:{
         'usuario':{
             required:true
@@ -40,28 +59,17 @@ form.validate({
         $(element).prev().addClass('text-warning');
     },
     highlight: function (element, errorClass, validClass) {
-        $(element).addClass('is-invalid');
+        $(element).addClass('is-invalid').removeClass('is-valid');
         $(element).prev().addClass('text-warning');
+        $('.continuar-btn').attr("disabled", true);
     },
     unhighlight: function (element, errorClass, validClass) {
-        $(element).removeClass('is-invalid');
+        $(element).removeClass('is-invalid').addClass('is-valid');
         $(element).prev().removeClass('text-warning');
+        $('.continuar-btn').removeAttr("disabled");
     },
     submitHandler: function(form) {
 
     }
 });
-$('input').on('keyup', function (event){
-    let estado = [];
-    $('input').each(function(index, element) {
-        if (this.value == '' && $(this).attr('type') != 'email'){
-            estado[index] = false;
-        }
-    });
-    if (jQuery.inArray(false, estado) == -1){
-        $('.continuar-btn').removeAttr("disabled");
-        return true;
-    }
-    $('.continuar-btn').attr("disabled", true);
-    return false;
-});
+;

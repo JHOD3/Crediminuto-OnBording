@@ -19,7 +19,7 @@ block content_right
             span.pl-2-vh.font-2-vh-md.fw-light.font-2-vh.d-md-block.d-none Por seguridad del cliente, es necesario cargar o <br class="d-md-block d-none"> tomar una foto del frente de su cédula de ciudadanía<br class="d-md-block d-none"> y confirmar su identidad.
             span.pl-2-vh.font-2-vh-md.fw-light.font-2-vh.d-md-none.d-block.text-center.mt-4 Por seguridad del cliente, es necesario tomar una foto del frente de su cédula de ciudadanía y confirmar su identidad.
         a(data-action="none-click", data-click="#capture-camera" href="").font-1-5-vh.font-1-5-vh-md Por favor haga click para cargar una foto
-        input(type="file", name="frente-cedula" ).d-none#capture-camera
+        input(type="file", name="frente-cedula" style="visibility:hidden;")#capture-camera
         img(src="").d-none#capture-preview.img-w-43-vh.mt-5.img-w-43-vh-md.mx-auto.d-block.mx-md-0
         div.text-warning#foto_invalida.mt-3.ps-4
         .mt-md-0.pt-md-0.mt-5.pt-4

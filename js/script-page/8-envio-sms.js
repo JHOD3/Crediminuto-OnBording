@@ -1,6 +1,14 @@
 // Validacion de campo de numero
 let form = $("#form-envio-sms");
 form.validate({
+    onkeyup:function (element,e) {
+        if (e.keyCode == 8){
+            $(element).valid();
+        }
+        if($(element).val().length > 9) {
+            $(element).valid();
+        }
+    },
     rules:{
         'phone':{
             required:true,
@@ -21,13 +29,13 @@ form.validate({
         $(element).prev().addClass('text-warning');
     },
     highlight: function (element, errorClass, validClass) {
-        $(element).addClass('is-invalid');
+         $(element).addClass('is-invalid').removeClass('is-valid');
         $(element).prev().addClass('text-warning');
         $('#check-code').addClass('d-none');
         $('.continuar-btn').attr("disabled", true);
     },
     unhighlight: function (element, errorClass, validClass) {
-        $(element).removeClass('is-invalid');
+        $(element).removeClass('is-invalid').addClass('is-valid');
         $(element).prev().removeClass('text-warning');
         $('.continuar-btn').removeAttr("disabled");
         if ($("#form-validate-code").validate()){

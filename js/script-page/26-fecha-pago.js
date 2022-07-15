@@ -1,5 +1,9 @@
 let form = $('#form-fecha-pago');
 form.validate({
+    onclick:function (element,e) {
+        $(element).valid();
+    },
+    onfocusout:false,
     rules:{
         'fecha-pago':{
             required:true,
@@ -30,4 +34,10 @@ form.validate({
     submitHandler: function(form) {
 
     }
+});
+
+$('select').on('change', function (e) {
+    let valor = $(this).val();
+    let cuotas = "<div class='mt-md-3'>Cuota 01 <span class='text-primary ms-4'>20/05/2022</span></div>"
+    $('#cuotas').append(cuotas);
 });

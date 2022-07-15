@@ -1,29 +1,30 @@
-// Validacion de campo de numero    
-let form = $("#form-page-register");
+// Validacion de campo de numero
+let form = $("#form-selected-device");
 form.validate({
-    onkeyup:function (element,e) {
-        if (e.keyCode == 8){
-            $(element).valid();
-        }
-        if($(element).val().length > 6) {
-            $(element).valid();
-        }
-    },
+    onfocusout:false,
     rules:{
-        'dni':{
-            required:true,
-            minlength: 7,
-            pattern: '[0-9]*'
+        'marca':{
+            required:true
+        },
+        'modelo':{
+            required:true
+        },
+        'monto':{
+            required:true
         }
     },
     messages:{
-        'dni':{
-            required: icon_warning+'Este campo es requerido.',
-            minlength:icon_warning+' Minimo 7 numeros.' ,
-            pattern: icon_warning+'Formato Invalido'
+        'marca':{
+            required:icon_warning+ 'Este campo es requerido.'
+        },
+        'modelo':{
+            required:icon_warning+ 'Este campo es requerido.',
+        },
+        'monto':{
+            required:icon_warning+ 'Este campo es requerido.',
         }
     },
-   errorElement: 'span',
+    errorElement: 'span',
     errorPlacement: function (error, element) {
         error.addClass('invalid-feedback pl-16-px-md pl-10-px aling-items-center d-flex mt-10-px-md mt-10-px');
         element.closest('.form-group').append(error);
@@ -33,7 +34,7 @@ form.validate({
     highlight: function (element, errorClass, validClass) {
         $(element).addClass('is-invalid').removeClass('is-valid');
         $(element).prev().addClass('text-warning');
-        $('.continuar-btn').attr("disabled", true);
+        $('.continuar-btn').attr("disabled",true);
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid').addClass('is-valid');
@@ -44,4 +45,3 @@ form.validate({
 
     }
 });
-
