@@ -5,12 +5,25 @@ form.validate({
         if (e.keyCode == 8){
             $(element).valid();
         }
-        let digit = ($(element).attr('type') == 'email')?9:8;
+        let digit = ($(element).attr('type') == 'email')?9:4;
 
         if ($(element).val().length > digit) {
             $(element).valid();
         }
+
+        let val = true;
+        $('input').each(function (index, element) {
+            if ($(element).val()==''){
+                val = false;
+            }
+        });
+        if (val == false){
+            $('.continuar-btn').attr("disabled",true);
+        }else{
+            $('.continuar-btn').removeAttr("disabled");
+        }
     },
+    onfocusout:false,
     rules:{
         'email':{
             email:true,
@@ -21,8 +34,8 @@ form.validate({
         },
         'password_confirm':{
             required:true,
-            equalTo: "#password"
-        }
+            equalTo:'#password'
+        },
     },
     messages:{
         'email':{

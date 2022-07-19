@@ -37,16 +37,16 @@
               </div>
             </div>
           </div>
-          <form class="pt-6-89-vh-md pt-4-vh" id="form-envio-sms">
+          <form class="pt-6-89-vh-md pt-4-vh" id="form-monto-accesorio">
             <div class="text-primary aling-items-center d-flex"><i class="fa-solid fa-circle-check font-3-vh-md font-3-vh mt-1 mt-md-1"></i><span class="pl-1-vh font-2-40-vh-md font-2-50-vh fw-normal">10. Accesorios</span></div>
             <div class="font-2-vh-md fw-light font-2-vh mt-4 pt-2">  <b class="text-primary fw-bolder"> Juan Pérez Moreno</b> tiene hasta <b class="text-primary fw-bolder"> $XXX.XXX</b> <br class="d-md-block d-none">  para financiar accesorios. ¿Quiere aprovecharlo?</div>
             <div class="mt-4 col-md-8 pt-2">
               <label class="form-label ps-2 ms-1 font-1-5-vh-md">MONTO PARA ACCESORIOS</label>
-              <input class="form-control" type="tel" name="phone" placeholder="$0.00">
+              <input class="form-control" type="text" name="monto" placeholder="$0.00" data-type="currency">
             </div>
             <div class="mt-5 pt-3 pt-md-5 justify-content-center d-flex d-md-block justify-content-md-start justify-content-between">
               <button class="btn btn-lg font-14-xs btn-outline-primary">SIN ACCESORIOS</button>
-              <button class="btn btn-primary btn-lg ms-md-4 continuar-btn font-14-xs" type="submit">CONTINUAR</button>
+              <button class="btn btn-primary btn-lg ms-md-4 continuar-btn font-14-xs" type="submit" disabled>CONTINUAR</button>
             </div>
           </form>
         </div>
@@ -71,6 +71,7 @@
     <script src="js/jquery.validate.min-dist.js"> </script>
     <script src="js/additional-methods-dist.js"></script>
     <script src="js/script-global.js"></script>
-    <script src="js/script-page/8-envio-sms.js"></script>
+    <script src="js/currency-formatter.js"></script>
+    <script src="js/script-page/27-accesorios.js"></script>
   </body>
 </html>

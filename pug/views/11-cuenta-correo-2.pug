@@ -23,10 +23,14 @@ block content_right
             input(type="email", name="email", placeholder="cliente@mail.com").form-control
         .font-2-vh-md.fw-light.font-2-vh.mt-4.pt-4  Por favor ingresar una nueva contraseña para #[br.d-md-block.d-none ] la cuenta de Crediminuto
         div.mt-3.col-md-8.pt-10-px-md.pt-1-px
-            label.form-label.ps-2.ms-1.font-1-5-vh-md NUEVA CONTRASEÑA
+            div.justify-content-between.d-flex
+                label.form-label.ps-2.ms-1.font-1-5-vh-md NUEVA CONTRASEÑA
+                div(data-see-password="show").font-1-5-vh-md
             input(type="password", name="password", placeholder="********")#password.form-control
         div.mt-4.pt-2.col-md-8.pt-10-px-md.pt-1-px
-            label.form-label.ps-2.ms-1.font-1-5-vh-md REPITA CONTRASEÑA
+            div.justify-content-between.d-flex
+                label.form-label.ps-2.ms-1.font-1-5-vh-md REPITA CONTRASEÑA
+                div(data-see-password="show").font-1-5-vh-md
             input(type="password", name="password_confirm", placeholder="********").form-control
         .mt-5.justify-content-md-start.justify-content-center.d-flex.d-md-block
             button(disabled).btn.btn-primary.btn-lg.font-14-xs.continuar-btn Confirmar

@@ -17,6 +17,8 @@ form.validate({
         });
         if (val == false){
             $('.continuar-btn').attr("disabled",true);
+        }else{
+            $('.continuar-btn').removeAttr("disabled");
         }
     },
     onfocusout:false,

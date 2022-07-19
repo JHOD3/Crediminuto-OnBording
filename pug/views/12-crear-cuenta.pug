@@ -20,10 +20,14 @@ block content_right
             input(type="number", name="usuario", placeholder="12345678").form-control
         div.row.pt-3.col-md-11
             div.mt-4.mt-md-3.col-md-6
-                label.form-label.ps-2.ms-1.font-1-5-vh-md NUEVA CONTRASEÑA
+                div.justify-content-between.d-flex.parent
+                    label.form-label.ps-2.ms-1.font-1-5-vh-md NUEVA CONTRASEÑA
+                    div(data-see-password="show").font-1-5-vh-md
                 input(type="password", name="password", placeholder="********")#password.form-control
             div.mt-4.mt-md-3.col-md-6
-                label.form-label.ps-2.ms-1.font-1-5-vh-md REPITA CONTRASEÑA
+                div.justify-content-between.d-flex.parent
+                    label.form-label.ps-2.ms-1.font-1-5-vh-md REPITA CONTRASEÑA
+                    div(data-see-password="show").font-1-5-vh-md
                 input(type="password", name="password_confirm", placeholder="********").form-control
         .font-2-vh-md.fw-light.font-2-vh.mt-4.pt-4  Por favor solicite al cliente una dirección de correo alternativo <br class='d-md-block d-none'> para el envío de documentación:
         div.mt-4.mt-md-3.col-md-8.pt-10-px-md.pt-5-px

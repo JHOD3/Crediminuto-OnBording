@@ -95,3 +95,14 @@ jQuery.validator.addMethod("unique", function(value, element, params) {
 
     return matches.length == 0;
 }, jQuery.validator.format(icon_warning+"Este campo debe ser distinto al anterior"));
+
+$(document).on('click','div[data-see-password="show"]', function (e) {
+    e.preventDefault();
+    $(this).attr('data-see-password', 'hidden');
+    $(this).parent().parent().find('input').attr('type','text');
+})
+$(document).on('click','div[data-see-password="hidden"]', function (e) {
+    e.preventDefault();
+    $(this).attr('data-see-password', 'show');
+    $(this).parent().parent().find('input').attr('type','password');
+})

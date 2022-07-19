@@ -1,46 +1,23 @@
-
 // Validacion de campo de numero
-let form = $("#form-datos-contacto");
+let form = $("#form-monto-accesorio");
 form.validate({
     onkeyup:function (element,e) {
-        if (e.keyCode == 8){
-            $(element).valid();
-        }
-        if($(element).val().length > 4) {
-            $(element).valid();
-        }
+        let digit = 3;
 
-        let val = true;
-        $('input').each(function (index, element) {
-            if ($(element).val()==''){
-                val = false;
-            }
-        });
-        if (val == false){
-            $('.continuar-btn').attr("disabled",true);
-        }else{
-            $('.continuar-btn').removeAttr('disabled');
+        if ($(element).val().length > digit) {
+            $(element).valid();
         }
     },
-    onfocusout:false,
     rules:{
-        'celular1':{
+        'monto':{
             required:true,
-            unique:true
-        },
-        'email':{
-            required:true,
-            email: true
+            minlength:3
         }
-
     },
     messages:{
-        'cedular1':{
+        'monto':{
             required:icon_warning+ 'Este campo es requerido.',
-            unique: icon_warning+ 'Este campo debe ser unico.',
-        },
-        'email':{
-            email:icon_warning+ 'Debe tener formato de email'
+            minlength:icon_warning+ 'Debe tener al menos {0} digitos'
         }
     },
     errorElement: 'span',
@@ -53,10 +30,12 @@ form.validate({
     highlight: function (element, errorClass, validClass) {
         $(element).addClass('is-invalid').removeClass('is-valid');
         $(element).prev().addClass('text-warning');
+        $('.continuar-btn').attr("disabled",true);
     },
     unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid').addClass('is-valid');
         $(element).prev().removeClass('text-warning');
+        $('.continuar-btn').removeAttr("disabled");
     },
     submitHandler: function(form) {
 

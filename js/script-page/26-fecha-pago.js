@@ -38,6 +38,12 @@ form.validate({
 
 $('select').on('change', function (e) {
     let valor = $(this).val();
-    let cuotas = "<div class='mt-md-3'>Cuota 01 <span class='text-primary ms-4'>20/05/2022</span></div>"
-    $('#cuotas').append(cuotas);
+
+    let monthNames = ["01", "02", "03", "04", "05", "06",
+        "07", "08", "09", "10", "11", "12"
+    ];
+    let mes = monthNames[new Date ().getMonth()].substring(0,2);
+    let year = new Date().getFullYear();
+    let cuotas = "<div class='mt-md-3'>Cuota 01 <span class='text-primary ms-4'>"+valor+"/"+mes+"/"+year+"</span></div><input type='hidden' name='fecha' value='"+valor+"/"+mes+"/"+year+"' >"
+    $('#cuotas').html(cuotas);
 });

@@ -1,13 +1,17 @@
 // Validacion de campo de numero
 let form_item_1 = $("#form-preguntas-seguridad-2");
 form_item_1.validate({
+    onclick:function (element,e) {
+        $(element).valid()
+    },
+    onfocusout:false,
     rules:{
-        'pregunta-1':{
+        'pregunta-2':{
             required:true
         }
     },
     messages:{
-        'pregunta-1':{
+        'pregunta-2':{
             required:icon_warning+ 'Este campo es requerido.'
         }
     },

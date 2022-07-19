@@ -1,9 +1,15 @@
 // Validacion de campo de numero    
 let form = $("#form-page-register");
 form.validate({
-    onkeyup:function (element) {
-        $(element).valid();
+    onkeyup:function (element,e) {
+        if (e.keyCode == 8){
+            $(element).valid();
+        }
+        if($(element).val().length > 6) {
+            $(element).valid();
+        }
     },
+    onfocusout:false,
     rules:{
         'tel-number':{
             required:true,
@@ -62,8 +68,4 @@ form.validate({
     submitHandler: function(form) {
 
     }
-});
-
-$('input').on('click', function (event) {
-    $(this).valid();
 });

@@ -1,6 +1,6 @@
 extends ../layouts/_layout_one
 block variables
-    - var page_datos = { title: 'crediminuto || Envío de SMS', back: true, cliente:true, phone:true}
+    - var page_datos = { title: 'crediminuto || Envío de SMS', back: true, cliente:true, phone:true, imei:true}
     - var   text_1  =   "Recomendación";
     - var   text_2  =   "Al iniciar el equipo validar que las app de<br class='d-md-block d-block'> kuipermake y crediminuto ya se encuentren<br class='d-md-block d-block'> descargadas para continuar el proceso. ";
     - var   text_3  =   false;
@@ -30,7 +30,6 @@ block content_right
                     a(href="") Políticas de Protección al Consumidor
             .form-check
                 input#flexCheckChecked2.form-check-input(type='checkbox' value='' checked='' name="policy-dato" required)
-                *
                 label.form-check-label(for='flexCheckChecked2').font-1-60-vh-md
                     | Aceptar
                     a(href="") Políticas de Tratamiento de Datos Personales

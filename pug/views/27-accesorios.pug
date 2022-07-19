@@ -10,7 +10,7 @@ block variables
     - var   img     =   "elemento-20.svg";
 
 block content_right
-    form(id="form-envio-sms").pt-6-89-vh-md.pt-4-vh
+    form(id="form-monto-accesorio").pt-6-89-vh-md.pt-4-vh
         .text-primary.aling-items-center.d-flex
             i.fa-solid.fa-circle-check.font-3-vh-md.font-3-vh.mt-1.mt-md-1
             span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal 10. Accesorios
@@ -18,9 +18,10 @@ block content_right
             |   para financiar accesorios. ¿Quiere aprovecharlo?
         div.mt-4.col-md-8.pt-2
             label.form-label.ps-2.ms-1.font-1-5-vh-md MONTO PARA ACCESORIOS
-            input(type="tel", name="phone", placeholder="$0.00").form-control
+            input(type="text", name="monto", placeholder="$0.00", data-type='currency').form-control
         .mt-5.pt-3.pt-md-5.justify-content-center.d-flex.d-md-block.justify-content-md-start.justify-content-between
             button.btn.btn-lg.font-14-xs.btn-outline-primary SIN ACCESORIOS
-            button(type="submit").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
+            button(type="submit" , disabled).btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs CONTINUAR
 block script
-    script(src="js/script-page/8-envio-sms.js")
+    script(src="js/currency-formatter.js")
+    script(src="js/script-page/27-accesorios.js")

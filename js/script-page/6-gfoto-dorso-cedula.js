@@ -9,30 +9,12 @@ form.validate({
         'dorso-cedula':{
             required:true,
             extension: "png|jpg|pdf"
-        },
-        'term':{
-            required:true
-        },
-        'policy':{
-            required:true
-        },
-        'policy-dato':{
-            required:true
         }
     },
     messages:{
         'dorso-cedula':{
             required:icon_warning+'Este campo es requerido.',
             extension: icon_warning+'El archivo debe ser png, jpg o pdf'
-        },
-        'term':{
-            required:icon_warning+ 'Este campo es requerido.',
-        },
-        'policy':{
-            required:icon_warning+ 'Este campo es requerido.',
-        },
-        'policy-dato':{
-            required:icon_warning+ 'Este campo es requerido.',
         }
     },
     errorElement: 'span',
