@@ -1,0 +1,66 @@
+extends ../layouts/_layout_one
+block variables
+
+    - var page_datos = { title: 'crediminuto || Preguntas se seguridad', back: true, cliente:true}
+    - var   text_1  =   "¡Importante!";
+    - var   text_2  =   "Si alguna de las 4 preguntas no son <br class='d-md-block d-none'> respuestas<br class='d-md-none d-block'> correctamente le daremos al <br class='d-md-block d-none'> cliente la posibilidad<br class='d-md-none d-block'> de responder 4 nuevas <br class='d-md-block d-none'> preguntas. Se podrá dar <br class='d-md-none d-block'>cuenta si nota que <br class='d-md-block d-none'> vuelve a la pregunta 1";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-16.svg";
+
+block content_right
+    form(id="form-preguntas-seguridad-1").pt-6-89-vh-md.pt-4-vh.mb-5
+        .text-primary.justify-content-center.d-grid.d-md-flex.justify-content-md-start
+            div.pl-1-vh.fw-normal.mt-0.mt-md-0.font-2-40-vh-md.font-2-50-vh Preguntas de seguridad
+        .row.pt-5-vh
+            .col-lg-6.d-flex
+                b.font-2-40-vh-md.font-2-50-vh.text-primary 01
+                b.font-2-40-vh-md.font-2-50-vh.text-primary.pl-5-px.pr-10-px /
+                p ¿Con cual de la siguientes entidades usted tiene o ha tenido en los ultimos 5 años (entre mayo 2017 y abril 2021) un/una plan/paquete telefonico celular?
+            .col-lg-5.col-10.ml-5-vh
+                select.form-select(name="pregunta1", id="pregunta1")
+                    option(value="") Seleccione una opción
+                    option(value="1") Claro
+                    option(value="2") Movistar
+                    option(value="3") Tuenti
+                    option(value="4") Personal
+        .row.pt-5-vh
+            .col-lg-6.d-flex
+                b.font-2-40-vh-md.font-2-50-vh.text-primary 02
+                b.font-2-40-vh-md.font-2-50-vh.text-primary.pl-5-px.pr-10-px /
+                p En marzo 2022 su compra de cartera con red Vulva Instancias SAS:
+            .col-lg-5.col-10.ml-5-vh
+                select.form-select(name="pregunta2", id="pregunta2")
+                    option(value="") Seleccione una opción
+                    option(value="1") option 1
+                    option(value="2") option 2
+                    option(value="3") option 3
+        .row.pt-5-vh
+            .col-lg-6.d-flex
+                b.font-2-40-vh-md.font-2-50-vh.text-primary 03
+                b.font-2-40-vh-md.font-2-50-vh.text-primary.pl-5-px.pr-10-px /
+                p ¿Con cual de la siguientes entidades usted tiene o ha tenido en los ultimos 5 años (entre mayo 2017 y abril 2021) un/una plan/paquete telefonico celular?
+            .col-lg-5.col-10.ml-5-vh
+                select.form-select(name="pregunta3", id="pregunta3")
+                    option(value="") Seleccione una opción
+                    option(value="1") Claro
+                    option(value="2") Movistar
+                    option(value="3") Tuenti
+                    option(value="4") Personal
+        .row.pt-5-vh
+            .col-lg-6.d-flex
+                b.font-2-40-vh-md.font-2-50-vh.text-primary 04
+                b.font-2-40-vh-md.font-2-50-vh.text-primary.pl-5-px.pr-10-px /
+                p En marzo 2022 su compra de cartera con red Vulva Instancias SAS:
+            .col-lg-5.col-10.ml-5-vh
+                select.form-select(name="pregunta4", id="pregunta4")
+                    option(value="") Seleccione una opción
+                    option(value="1") option 1
+                    option(value="2") option 2
+                    option(value="3") option 3
+
+        .mt-80-px-md.mt-40-px.justify-content-center.d-flex.d-md-block.justify-content-md-between
+            button(disabled).btn.btn-primary.btn-lg.continuar-btn.font-14-xs Continuar
+block script
+    script(src="js/script-page/19-preguntas-seguridad-NEW.js")
