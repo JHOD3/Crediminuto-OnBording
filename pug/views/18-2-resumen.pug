@@ -1,0 +1,34 @@
+extends ../layouts/_layout_one
+block variables
+
+    - var page_datos = { title: 'crediminuto || Envío de SMS', back: true, cliente:true, phone:false}
+    - var   text_1  =   "¡Ya casi!";
+    - var   text_2  =   "Antes de enrolar al cliente y configurar el<br class='d-md-block d-block'> nuevo dispositivo es importante revisar todos<br class='d-md-block d-block'> los datos para reconfortar con el cliente.";
+    - var   text_3  =   false;
+    - var   ol      =   false;
+    - var   ol2     =   false;
+    - var   img     =   "elemento-21.svg";
+
+block content_right
+    form(id="form-datos-personales").pt-6-89-vh-md.pt-4-vh
+        .text-primary.text-center.text-md-start.mb-3
+            span.pl-1-vh.font-2-40-vh-md.font-2-50-vh.fw-normal Resumen para pago
+        div.bg-light.bg-opacity-50.p-md-5.px-4.py-5
+            div.row
+                span.col-md-4.col-6.font-1-80-vh.font-1-80-vh-md.text-black-50   Precio del equipo
+                span.col-md-6.col-6.font-1-80-vh.font-1-80-vh-md  $1.000.000
+            div.row.mt-md-3.mt-3
+                span.col-md-4.col-6.font-1-80-vh.font-1-80-vh-md.text-black-50  Monto a pagar en POS
+                span.col-md-6.col-6.font-1-80-vh.font-1-80-vh-md  $300.000
+            div.row.mt-md-3.mt-3
+                span.col-md-4.col-6.font-1-80-vh.font-1-80-vh-md.text-black-50  Monto a pagar por OTP
+                span.col-md-6.col-6.font-1-80-vh.font-1-80-vh-md  $700.000
+            div.row.mt-md-3.mt-5.pt-5
+                span.col-md-12.col-6.font-1-80-vh.font-1-80-vh-md.text-black-50.text-center  Tiempo de vencimiento OTP: #[span.timeout] 5 min
+            
+        .mt-40-px-md.mt-60-px.justify-content-center.d-flex.d-md-flex.justify-content-md-center.justify-content-center
+            button(type="submit", style="height: 55px;").btn.btn-primary.btn-lg.ms-md-4.continuar-btn.font-14-xs Generar nuevo #[br] Código OTP
+        div.d-flex.justify-content-center.mt-4
+            span.text-center Si se vence el tiempo para uso de OTP dar #[br] clic en generar nuevo Código OTP 
+block script
+    script(src="js/script-page/resumen-final.js")
